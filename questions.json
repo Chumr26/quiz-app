@@ -1,0 +1,242 @@
+[
+  {
+    "id": 1,
+    "question": "Triết học Mác – Lênin nghiên cứu những quy luật chung nhất của lĩnh vực nào?",
+    "options": [
+      "Tự nhiên, xã hội và tư duy",
+      "Kinh tế và chính trị",
+      "Văn hóa và xã hội",
+      "Khoa học và công nghệ"
+    ],
+    "answer": 0,
+    "hint": "Triết học Mác – Lênin là khoa học về những quy luật chung nhất của tự nhiên, xã hội và tư duy."
+  },
+  {
+    "id": 2,
+    "question": "Chủ nghĩa Mác – Lênin có hai chức năng cơ bản nào?",
+    "options": [
+      "Thế giới quan và nhận thức luận",
+      "Thế giới quan và phương pháp luận",
+      "Bản thể luận và nhận thức luận",
+      "Thế giới quan và bản thể luận"
+    ],
+    "answer": 1,
+    "hint": "Hai chức năng cơ bản của triết học Mác – Lênin là chức năng thế giới quan và chức năng phương pháp luận."
+  },
+  {
+    "id": 3,
+    "question": "Theo quan điểm của chủ nghĩa duy vật biện chứng, vật chất là gì?",
+    "options": [
+      "Là thực tại khách quan được con người nhận thức",
+      "Là tất cả những gì tồn tại xung quanh con người",
+      "Là thực tại khách quan tồn tại độc lập với ý thức con người",
+      "Là những gì con người có thể cảm nhận được"
+    ],
+    "answer": 2,
+    "hint": "Vật chất là phạm trù triết học dùng để chỉ thực tại khách quan, tồn tại không phụ thuộc vào ý thức con người."
+  },
+  {
+    "id": 4,
+    "question": "Quy luật nào được coi là 'hạt nhân' của phép biện chứng duy vật?",
+    "options": [
+      "Quy luật lượng – chất",
+      "Quy luật phủ định của phủ định",
+      "Quy luật thống nhất và đấu tranh của các mặt đối lập",
+      "Quy luật nhân quả"
+    ],
+    "answer": 2,
+    "hint": "Quy luật thống nhất và đấu tranh của các mặt đối lập (quy luật mâu thuẫn) là hạt nhân của phép biện chứng."
+  },
+  {
+    "id": 5,
+    "question": "Hình thức cao nhất của vận động là gì?",
+    "options": [
+      "Vận động cơ học",
+      "Vận động vật lý",
+      "Vận động hóa học",
+      "Vận động xã hội"
+    ],
+    "answer": 3,
+    "hint": "Theo Ăngghen, vận động xã hội là hình thức vận động cao nhất và phức tạp nhất."
+  },
+  {
+    "id": 6,
+    "question": "Phạm trù nào phản ánh mối liên hệ bản chất, tất nhiên, bên trong của sự vật?",
+    "options": [
+      "Hiện tượng",
+      "Bản chất",
+      "Nội dung",
+      "Hình thức"
+    ],
+    "answer": 1,
+    "hint": "Bản chất là phạm trù phản ánh cái chung, cái tất yếu, cái bên trong quyết định sự tồn tại và phát triển của sự vật."
+  },
+  {
+    "id": 7,
+    "question": "Kinh tế chính trị Mác – Lênin nghiên cứu đối tượng chính là gì?",
+    "options": [
+      "Lực lượng sản xuất",
+      "Quan hệ sản xuất",
+      "Phương thức sản xuất",
+      "Kiến trúc thượng tầng"
+    ],
+    "answer": 1,
+    "hint": "Kinh tế chính trị Mác – Lênin nghiên cứu quan hệ sản xuất trong sự tác động qua lại với lực lượng sản xuất và kiến trúc thượng tầng."
+  },
+  {
+    "id": 8,
+    "question": "Giá trị thặng dư là gì?",
+    "options": [
+      "Phần giá trị mới dôi ra ngoài giá trị sức lao động do công nhân tạo ra",
+      "Tổng giá trị hàng hóa trừ đi chi phí sản xuất",
+      "Lợi nhuận mà nhà tư bản thu được",
+      "Phần giá trị còn lại sau khi trừ tiền lương"
+    ],
+    "answer": 0,
+    "hint": "Giá trị thặng dư (m) là phần giá trị mới dôi ra ngoài giá trị sức lao động, do công nhân làm thuê tạo ra và bị nhà tư bản chiếm không."
+  },
+  {
+    "id": 9,
+    "question": "Tư tưởng Hồ Chí Minh về đại đoàn kết dân tộc có vai trò gì?",
+    "options": [
+      "Là phương tiện đấu tranh",
+      "Là chiến lược cách mạng",
+      "Là đường lối tạm thời",
+      "Là sách lược trước mắt"
+    ],
+    "answer": 1,
+    "hint": "Đại đoàn kết dân tộc là một chiến lược cách mạng, không phải là sách lược hay thủ đoạn chính trị."
+  },
+  {
+    "id": 10,
+    "question": "Theo Hiến pháp 2013, quyền con người và quyền công dân được quy định tại chương nào?",
+    "options": [
+      "Chương I",
+      "Chương II",
+      "Chương III",
+      "Chương IV"
+    ],
+    "answer": 1,
+    "hint": "Chương II của Hiến pháp 2013 quy định về quyền con người, quyền và nghĩa vụ cơ bản của công dân."
+  },
+  {
+    "id": 11,
+    "question": "Nhà nước Cộng hòa Xã hội Chủ nghĩa Việt Nam là nhà nước pháp quyền của ai?",
+    "options": [
+      "Của Đảng Cộng sản",
+      "Của giai cấp công nhân",
+      "Của nhân dân, do nhân dân, vì nhân dân",
+      "Của toàn thể dân tộc Việt Nam"
+    ],
+    "answer": 2,
+    "hint": "Nhà nước pháp quyền xã hội chủ nghĩa Việt Nam là nhà nước của nhân dân, do nhân dân, vì nhân dân."
+  },
+  {
+    "id": 12,
+    "question": "Quốc phòng toàn dân là gì?",
+    "options": [
+      "Là sức mạnh quốc phòng của lực lượng vũ trang",
+      "Là nền quốc phòng mang tính chất toàn dân, toàn diện",
+      "Là sức mạnh quân sự của đất nước",
+      "Là sự phòng thủ của các lực lượng quân đội"
+    ],
+    "answer": 1,
+    "hint": "Quốc phòng toàn dân là nền quốc phòng mang tính chất 'của dân, do dân, vì dân', có tính toàn dân, toàn diện."
+  },
+  {
+    "id": 13,
+    "question": "An ninh quốc gia bao gồm những nội dung nào?",
+    "options": [
+      "An ninh chính trị và an ninh kinh tế",
+      "An ninh chính trị, an ninh kinh tế, an ninh văn hóa tư tưởng, an ninh xã hội",
+      "An ninh quân sự và an ninh biên giới",
+      "An ninh nội bộ và an ninh đối ngoại"
+    ],
+    "answer": 1,
+    "hint": "An ninh quốc gia bao gồm an ninh trên tất cả các lĩnh vực: chính trị, kinh tế, văn hóa tư tưởng, xã hội, quốc phòng, đối ngoại..."
+  },
+  {
+    "id": 14,
+    "question": "Phương thức sản xuất bao gồm hai mặt nào?",
+    "options": [
+      "Cơ sở hạ tầng và kiến trúc thượng tầng",
+      "Lực lượng sản xuất và quan hệ sản xuất",
+      "Sản xuất và tiêu dùng",
+      "Kinh tế và chính trị"
+    ],
+    "answer": 1,
+    "hint": "Phương thức sản xuất là sự thống nhất giữa lực lượng sản xuất và quan hệ sản xuất."
+  },
+  {
+    "id": 15,
+    "question": "Ý thức xã hội bao gồm những cấp độ nào?",
+    "options": [
+      "Ý thức cá nhân và ý thức tập thể",
+      "Ý thức thông thường và ý thức lý luận (ý thức khoa học)",
+      "Ý thức chủ quan và ý thức khách quan",
+      "Ý thức tích cực và ý thức tiêu cực"
+    ],
+    "answer": 1,
+    "hint": "Ý thức xã hội có hai cấp độ: ý thức thông thường (tâm lý xã hội) và ý thức lý luận (hệ tư tưởng)."
+  },
+  {
+    "id": 16,
+    "question": "Đảng Cộng sản Việt Nam được thành lập vào ngày tháng năm nào?",
+    "options": [
+      "3 tháng 2 năm 1930",
+      "19 tháng 8 năm 1945",
+      "2 tháng 9 năm 1945",
+      "7 tháng 5 năm 1954"
+    ],
+    "answer": 0,
+    "hint": "Đảng Cộng sản Việt Nam được thành lập ngày 3/2/1930 tại Hương Cảng (Trung Quốc)."
+  },
+  {
+    "id": 17,
+    "question": "Hàng hóa có những thuộc tính nào?",
+    "options": [
+      "Giá trị và giá cả",
+      "Giá trị sử dụng và giá trị",
+      "Giá trị sử dụng và giá cả",
+      "Chất lượng và số lượng"
+    ],
+    "answer": 1,
+    "hint": "Hàng hóa có hai thuộc tính: giá trị sử dụng (công dụng) và giá trị (lao động xã hội cần thiết kết tinh trong hàng hóa)."
+  },
+  {
+    "id": 18,
+    "question": "Trong tư tưởng Hồ Chí Minh, đạo đức cách mạng gồm những phẩm chất nào?",
+    "options": [
+      "Trí, dũng, nhân, tín",
+      "Cần, kiệm, liêm, chính, chí công vô tư",
+      "Trung, hiếu, nhân, nghĩa",
+      "Đức, trí, thể, mỹ"
+    ],
+    "answer": 1,
+    "hint": "Hồ Chí Minh coi cần, kiệm, liêm, chính, chí công vô tư là những phẩm chất đạo đức cách mạng cơ bản."
+  },
+  {
+    "id": 19,
+    "question": "Pháp luật là gì?",
+    "options": [
+      "Là hệ thống quy tắc xử sự do xã hội đặt ra",
+      "Là hệ thống quy tắc xử sự do nhà nước ban hành và bảo đảm thực hiện",
+      "Là các quy định do tổ chức chính trị ban hành",
+      "Là các phong tục tập quán được văn bản hóa"
+    ],
+    "answer": 1,
+    "hint": "Pháp luật là hệ thống quy tắc xử sự chung do nhà nước ban hành hoặc thừa nhận và bảo đảm thực hiện bằng quyền lực nhà nước."
+  },
+  {
+    "id": 20,
+    "question": "Chủ nghĩa xã hội khoa học ra đời vào thế kỷ nào?",
+    "options": [
+      "Thế kỷ XVII",
+      "Thế kỷ XVIII",
+      "Thế kỷ XIX",
+      "Thế kỷ XX"
+    ],
+    "answer": 2,
+    "hint": "Chủ nghĩa xã hội khoa học ra đời vào những năm 40 của thế kỷ XIX, gắn liền với tên tuổi của C. Mác và Ph. Ăngghen."
+  }
+]
