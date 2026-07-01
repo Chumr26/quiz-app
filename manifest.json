@@ -1,8 +1,10 @@
 {
+  "id": "/quiz-app/index.html",
   "name": "Ôn tập Giáo dục Chính trị K26",
   "short_name": "Quiz GDCT",
   "description": "Trọn bộ câu hỏi ôn tập Giáo dục Chính trị K26",
   "start_url": "./index.html",
+  "scope": "./",
   "display": "standalone",
   "background_color": "#131314",
   "theme_color": "#131314",
@@ -12,13 +14,49 @@
       "src": "icons/icon-192.png",
       "sizes": "192x192",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "any"
     },
     {
       "src": "icons/icon-512.png",
       "sizes": "512x512",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "screenshots/desktop-start.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Bắt đầu làm bài"
+    },
+    {
+      "src": "screenshots/desktop-mid.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Đang làm bài"
+    },
+    {
+      "src": "screenshots/mobile-start.png",
+      "sizes": "750x1334",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Bắt đầu làm bài"
+    },
+    {
+      "src": "screenshots/mobile-mid.png",
+      "sizes": "750x1334",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Đang làm bài"
     }
   ]
 }
