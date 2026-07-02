@@ -13,6 +13,7 @@ class QuizApp {
     this.autoAdvanceTimer = null;
     this.audioCtx = null; // lazy-init on first interaction
     this.touch = { active: false, startX: 0, startY: 0, offset: 0, lastDy: 0 };
+    this.devMode = new URLSearchParams(location.search).get('dev') === '1';
 
     this.init();
   }
@@ -54,6 +55,17 @@ class QuizApp {
     }
 
     container.innerHTML = this.renderQuizScreen();
+    this.bindTouchListeners();
+  }
+
+  bindTouchListeners() {
+    const content = document.querySelector('.quiz-content');
+    if (!content) return;
+    // innerHTML replaced the old node, so its listeners are GC'd. Re-bind fresh.
+    content.addEventListener('touchstart', this.onTouchStart.bind(this), { passive: true });
+    content.addEventListener('touchmove', this.onTouchMove.bind(this), { passive: true });
+    content.addEventListener('touchend', this.onTouchEnd.bind(this), { passive: true });
+    content.addEventListener('touchcancel', this.onTouchEnd.bind(this), { passive: true });
   }
 
   renderQuizScreen() {
@@ -67,6 +79,7 @@ class QuizApp {
       <div class="quiz-header">
         <div class="header-top">
           <span class="quiz-title" title="${this.quizTitle}">${this.quizTitle}</span>
+          ${this.devMode ? '<span class="dev-badge">DEV</span>' : ''}
         </div>
       </div>
 
@@ -87,21 +100,7 @@ class QuizApp {
           </div>
         </div>
       </div>
-
-      <div class="quiz-footer">
-        <button class="btn btn-outline" id="btn-back" ${this.currentIndex === 0 ? 'disabled' : ''}>Back</button>
-      </div>
     `;
-
-    // Bind touch listeners on the freshly-rendered .quiz-content. The previous
-    // node is destroyed by innerHTML, so its listeners are GC'd with it.
-    const content = container.querySelector('.quiz-content');
-    if (content) {
-      content.addEventListener('touchstart', this.onTouchStart.bind(this), { passive: true });
-      content.addEventListener('touchmove', this.onTouchMove.bind(this), { passive: true });
-      content.addEventListener('touchend', this.onTouchEnd.bind(this), { passive: true });
-      content.addEventListener('touchcancel', this.onTouchEnd.bind(this), { passive: true });
-    }
   }
 
   renderOption(text, index, selectedOption, result, correctAnswer) {
@@ -132,8 +131,9 @@ class QuizApp {
   renderProgressSegments() {
     return this.questions.map((_, i) => {
       let className = 'progress-segment';
-      // Allow clicking any answered question, any before current, or the furthest reached
-      const isClickable = i !== this.currentIndex && (this.results[i] || i <= this.furthestIndex);
+      // Allow clicking any answered question, any before current, or the furthest reached.
+      // In dev mode, bypass the gate so every question is reachable.
+      const isClickable = i !== this.currentIndex && (this.devMode || this.results[i] || i <= this.furthestIndex);
 
       if (this.results[i] === 'correct') {
         className += ' answered-correct';
@@ -181,6 +181,7 @@ class QuizApp {
       <div class="quiz-header">
         <div class="header-top">
           <span class="quiz-title">${this.quizTitle}</span>
+          ${this.devMode ? '<span class="dev-badge">DEV</span>' : ''}
         </div>
       </div>
 
@@ -246,12 +247,6 @@ class QuizApp {
       if (segment) {
         const segIndex = parseInt(segment.dataset.segIndex);
         this.goToQuestion(segIndex);
-        return;
-      }
-
-      // Back button
-      if (target.closest('#btn-back')) {
-        this.goBack();
         return;
       }
 
@@ -360,7 +355,11 @@ class QuizApp {
 
   tryGoForward() {
     const target = this.currentIndex + 1;
-    if (target <= this.furthestIndex) {
+    // At the last question, return false so the bump animation plays instead of
+    // going out of bounds. In dev mode, bypass the furthestIndex gate so swipes
+    // can traverse freely between questions.
+    if (target >= this.questions.length) return false;
+    if (this.devMode || target <= this.furthestIndex) {
       this.goToQuestion(target);
       return true;
     }
@@ -374,17 +373,23 @@ class QuizApp {
     const t = e.touches[0];
     this.touch = {
       active: true,
+      // `swiping` is added lazily on first qualifying move (see onTouchMove),
+      // so a tap on an option still receives its synthetic click.
+      armSwipingClass: true,
       startX: t.clientX,
       startY: t.clientY,
       offset: 0,
       lastDy: 0,
     };
-    const el = document.querySelector('.quiz-content');
-    if (el) el.classList.add('swiping');
   }
 
   onTouchMove(e) {
     if (!this.touch.active) return;
+    // Second finger landed — abort this swipe so a stale end doesn't fire a navigation.
+    if (e.touches.length !== 1) {
+      this.abortSwipe();
+      return;
+    }
     const t = e.touches[0];
     const dx = t.clientX - this.touch.startX;
     const dy = t.clientY - this.touch.startY;
@@ -398,12 +403,37 @@ class QuizApp {
     const absY = Math.abs(dy);
     // Small deadzone before we touch the transform.
     if (absX < 6 && absY < 6) return;
+
+    // Crossed deadzone — now safe to apply .swiping (which disables pointer-events
+    // on children so the trailing synthetic click can't fire mid-swipe).
+    if (this.touch.armSwipingClass) {
+      el.classList.add('swiping');
+      this.touch.armSwipingClass = false;
+    }
+
     // Only translate when horizontal dominates; otherwise let native vertical scroll work.
     el.style.setProperty('--swipe-offset', absX > absY ? `${dx}px` : '0px');
   }
 
-  onTouchEnd() {
+  abortSwipe() {
+    this.touch.active = false;
+    const el = document.querySelector('.quiz-content');
+    if (!el) return;
+    el.style.transition = 'transform 180ms ease-out';
+    el.style.setProperty('--swipe-offset', '0px');
+    setTimeout(() => {
+      el.style.transition = '';
+      el.classList.remove('swiping');
+    }, 200);
+  }
+
+  onTouchEnd(e) {
     if (!this.touch.active) return;
+    // Another finger is still down — don't navigate, just snap back.
+    if (e && e.touches && e.touches.length > 0) {
+      this.abortSwipe();
+      return;
+    }
     const { offset, lastDy } = this.touch;
     const absX = Math.abs(offset);
     const absY = Math.abs(lastDy);
@@ -498,9 +528,10 @@ class QuizApp {
   }
 
   goToQuestion(index) {
-    // Allow navigating to any answered question or any up to furthest reached
+    // Allow navigating to any answered question or any up to furthest reached.
+    // In dev mode, bypass the furthestIndex gate so all questions are reachable.
     if (index === this.currentIndex) return;
-    if (index > this.furthestIndex) return;
+    if (!this.devMode && index > this.furthestIndex) return;
 
     // Clear any pending auto-advance
     if (this.autoAdvanceTimer) clearTimeout(this.autoAdvanceTimer);
