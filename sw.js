@@ -1,5 +1,5 @@
 // Service Worker for offline quiz app
-const CACHE_NAME = 'quiz-gdct-v1';
+const CACHE_NAME = 'quiz-gdct-v2';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',

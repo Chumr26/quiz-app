@@ -1,4 +1,5 @@
 // ==================== QUIZ ENGINE ====================
+import './style.css';
 
 class QuizApp {
   constructor() {
@@ -313,7 +314,7 @@ class QuizApp {
         const gain = ctx.createGain();
         osc.type = 'triangle'; // triangle is perceptually louder than sine
         osc.frequency.value = freq;
-        gain.gain.setValueAtTime(0.5, now + i * 0.12); 
+        gain.gain.setValueAtTime(0.3, now + i * 0.12); 
         gain.gain.exponentialRampToValueAtTime(0.001, now + i * 0.12 + 0.5);
         osc.connect(gain).connect(ctx.destination);
         osc.start(now + i * 0.12);

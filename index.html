@@ -17,8 +17,7 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-  <!-- Styles -->
-  <link rel="stylesheet" href="style.css">
+  <!-- Styles loaded via JS module import so Vite's dev server serves CSS correctly -->
 </head>
 <body>
 
@@ -30,7 +29,7 @@
   </div>
 
   <!-- Quiz Engine -->
-  <script src="script.js"></script>
+  <script type="module" src="script.js"></script>
 
   <!-- Register Service Worker -->
   <script>
