@@ -38,14 +38,32 @@ self.addEventListener('activate', (event) => {
   self.clients.claim();
 });
 
-// Fetch — serve from cache first, fallback to network
+// Fetch — network-first for app shell (HTML/JS/CSS/questions.json) so deploys
+// propagate on the first reload; cache-first for icons and manifest. Offline
+// fallback reaches the precached copy when the network is unreachable.
+const APP_SHELL = /\/(index\.html|script\.js|style\.css|questions\.json)(\?|$)/;
+
 self.addEventListener('fetch', (event) => {
+  const url = new URL(event.request.url);
+  const isAppShell = APP_SHELL.test(url.pathname);
+
+  if (isAppShell) {
+    event.respondWith(
+      fetch(event.request)
+        .then((networkResponse) => {
+          if (networkResponse && networkResponse.ok) {
+            const clone = networkResponse.clone();
+            caches.open(CACHE_NAME).then((cache) => cache.put(event.request, clone));
+          }
+          return networkResponse;
+        })
+        .catch(() => caches.match(event.request))
+    );
+    return;
+  }
+
+  // Icons, manifest: cache-first
   event.respondWith(
-    caches.match(event.request).then((cachedResponse) => {
-      if (cachedResponse) {
-        return cachedResponse;
-      }
-      return fetch(event.request);
-    })
+    caches.match(event.request).then((cached) => cached || fetch(event.request))
   );
 });

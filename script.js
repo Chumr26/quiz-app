@@ -23,6 +23,7 @@ class QuizApp {
     await this.loadQuestions();
     this.render();
     this.bindEvents();
+    this.bindServiceWorkerUpdates();
   }
 
   // ==================== DATA LOADING ====================
@@ -306,6 +307,18 @@ class QuizApp {
           this.selectOption(3);
           break;
       }
+    });
+  }
+
+  // New SW has activated and taken control of this page — reload once so the
+  // cached script.js/style.css we already loaded gets replaced by the new shell.
+  // Guard against loops with a window-scoped flag set on the first reload.
+  bindServiceWorkerUpdates() {
+    if (!('serviceWorker' in navigator)) return;
+    navigator.serviceWorker.addEventListener('controllerchange', () => {
+      if (window.__swReloading) return;
+      window.__swReloading = true;
+      location.reload();
     });
   }
 
