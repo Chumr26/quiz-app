@@ -337,19 +337,6 @@ body {
   opacity: 0.6;
 }
 
-.option-item.wrong-tried {
-  pointer-events: none;
-  opacity: 0.4;
-  border-color: var(--border-incorrect);
-  background: var(--bg-incorrect);
-}
-
-.option-item.wrong-tried .option-letter,
-.option-item.wrong-tried .option-text {
-  text-decoration: line-through;
-  color: var(--text-secondary);
-}
-
 .option-item.correct .option-letter,
 .option-item.correct .option-text {
   color: var(--text-correct);

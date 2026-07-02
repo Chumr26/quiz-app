@@ -7,7 +7,6 @@ class QuizApp {
     this.furthestIndex = 0; // tracks the furthest question reached
     this.answers = {}; // { questionIndex: selectedOptionIndex }
     this.results = {}; // { questionIndex: 'correct' | 'incorrect' }
-    this.wrongGuesses = {}; // { questionIndex: Set of wrong option indices }
     this.isShowingResult = false;
     this.quizTitle = '';
     this.autoAdvanceTimer = null;
@@ -96,8 +95,6 @@ class QuizApp {
   renderOption(text, index, selectedOption, result, correctAnswer) {
     const letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'];
     const letter = letters[index] || String.fromCharCode(65 + index);
-    const wrongSet = this.wrongGuesses[this.currentIndex] || new Set();
-    const isWrongGuess = wrongSet.has(index);
 
     let className = 'option-item';
     let isInteractive = true;
@@ -109,10 +106,6 @@ class QuizApp {
       } else {
         className += ' disabled';
       }
-      isInteractive = false;
-    } else if (isWrongGuess) {
-      // Previously guessed wrong — grey it out
-      className += ' disabled wrong-tried';
       isInteractive = false;
     }
 
@@ -360,10 +353,6 @@ class QuizApp {
     // Prevent re-selection if already answered correctly
     if (this.results[this.currentIndex] === 'correct') return;
 
-    // Prevent clicking an already-tried wrong option
-    const wrongSet = this.wrongGuesses[this.currentIndex] || new Set();
-    if (wrongSet.has(index)) return;
-
     // Check answer
     const q = this.questions[this.currentIndex];
     const isCorrect = index === q.answer;
@@ -394,12 +383,7 @@ class QuizApp {
         }
       }, 800);
     } else {
-      // Wrong answer — track it, flash red briefly, then return to normal (no re-render)
-      if (!this.wrongGuesses[this.currentIndex]) {
-        this.wrongGuesses[this.currentIndex] = new Set();
-      }
-      this.wrongGuesses[this.currentIndex].add(index);
-
+      // Wrong answer — flash red briefly, then re-render back to normal interactive state
       const optionEls = document.querySelectorAll('.option-item');
       const wrongEl = optionEls[index];
       if (wrongEl) {
@@ -448,7 +432,6 @@ class QuizApp {
     this.furthestIndex = 0;
     this.answers = {};
     this.results = {};
-    this.wrongGuesses = {};
     this.isShowingResult = false;
     this.render();
     this.bindEvents();
