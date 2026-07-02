@@ -83,13 +83,6 @@ class QuizApp {
         </div>
       </div>
 
-      <div class="progress-section">
-        <div class="progress-bar">
-          ${this.renderProgressSegments()}
-        </div>
-        <span class="question-counter">${current} / ${total}</span>
-      </div>
-
       <div class="quiz-content">
         <div class="question-wrapper" id="question-wrapper">
           <div class="question-label">Question ${current}</div>
@@ -98,6 +91,15 @@ class QuizApp {
           <div class="options-list">
             ${q.options.map((opt, i) => this.renderOption(opt, i, selectedOption, result, q.answer)).join('')}
           </div>
+        </div>
+      </div>
+
+      <div class="progress-rail">
+        <div class="progress-bar">
+          ${this.renderProgressSegments()}
+        </div>
+        <div class="rail-meta">
+          <span class="question-counter">${current} / ${total}</span>
         </div>
       </div>
     `;
