@@ -181,36 +181,44 @@ body {
   height: 20px;
 }
 
-/* ==================== PROGRESS BAR ==================== */
-.progress-section {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 0 24px 16px;
+/* ==================== BOTTOM PROGRESS RAIL ==================== */
+.progress-rail {
   flex-shrink: 0;
-}
-
-.progress-bar {
+  background: var(--bg-surface);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 10px 24px max(12px, env(safe-area-inset-bottom));
   display: flex;
-  gap: 3px;
-  flex: 1;
-  height: 4px;
+  flex-direction: column;
+  gap: 8px;
 }
 
-.progress-segment {
+.progress-rail .progress-bar {
+  display: flex;
+  gap: 2px;
+  height: 8px;
+}
+
+.progress-rail .progress-segment {
   flex: 1;
   border-radius: 2px;
   background: var(--progress-inactive);
   transition: background var(--transition-normal);
   position: relative;
-  overflow: hidden;
+  cursor: pointer;
 }
 
-.progress-segment.completed {
+/* Invisible hit-area expansion: segment still 8px tall, but tappable for ~32px. */
+.progress-rail .progress-segment::before {
+  content: '';
+  position: absolute;
+  inset: -12px 0;
+}
+
+.progress-rail .progress-segment.completed {
   background: var(--progress-completed);
 }
 
-.progress-segment.active {
+.progress-rail .progress-segment.active {
   background: var(--progress-active);
   animation: pulse-glow 2s ease-in-out infinite;
 }
@@ -220,25 +228,67 @@ body {
   50% { opacity: 0.7; }
 }
 
-.progress-segment.answered-correct {
+.progress-rail .progress-segment.answered-correct {
   background: var(--border-correct);
 }
 
-.progress-segment.answered-incorrect {
+.progress-rail .progress-segment.answered-incorrect {
   background: var(--border-incorrect);
 }
 
-.progress-segment.clickable {
-  cursor: pointer;
-  transition: background var(--transition-normal), transform var(--transition-fast), opacity var(--transition-fast);
+.progress-rail .progress-segment.clickable {
+  transition: background var(--transition-normal), opacity var(--transition-fast);
 }
 
-.progress-segment.clickable:hover {
-  transform: scaleY(2);
+.progress-rail .progress-segment.clickable:hover {
   opacity: 0.8;
 }
 
-.question-counter {
+.rail-meta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 24px;
+}
+
+.rail-meta .question-counter {
+  font-size: 13px;
+  color: var(--text-secondary);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* Results screen still uses the older .progress-section wrapper. Keep a
+   minimal style so the bar renders correctly on the post-quiz summary. */
+.progress-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 24px 16px;
+  flex-shrink: 0;
+}
+
+.progress-section .progress-bar {
+  display: flex;
+  gap: 3px;
+  flex: 1;
+  height: 4px;
+}
+
+.progress-section .progress-segment {
+  flex: 1;
+  border-radius: 2px;
+  background: var(--progress-inactive);
+  transition: background var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+}
+
+.progress-section .progress-segment.completed { background: var(--progress-completed); }
+.progress-section .progress-segment.answered-correct { background: var(--border-correct); }
+.progress-section .progress-segment.answered-incorrect { background: var(--border-incorrect); }
+
+.progress-section .question-counter {
   font-size: 14px;
   color: var(--text-secondary);
   font-weight: 500;
@@ -250,12 +300,39 @@ body {
 /* ==================== CONTENT (SCROLLABLE) ==================== */
 .quiz-content {
   flex: 1;
-  overflow-y: auto;
+  overflow: hidden;
   padding: 0 24px;
   scrollbar-width: thin;
   scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+  position: relative;
   --swipe-offset: 0px;
-  transform: translateX(var(--swipe-offset));
+}
+
+/* ==================== SWIPE PANES ==================== */
+.quiz-stack {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.quiz-pane {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  will-change: transform;
+}
+
+.quiz-pane.prev    { transform: translateX(calc(-100% + var(--swipe-offset, 0px))); }
+.quiz-pane.current { transform: translateX(var(--swipe-offset, 0px)); }
+.quiz-pane.next    { transform: translateX(calc(100% + var(--swipe-offset, 0px))); }
+
+/* Neighbors never receive pointer events — only current pane is interactive */
+.quiz-pane.prev,
+.quiz-pane.next {
+  pointer-events: none;
 }
 
 .quiz-content.swiping {
@@ -263,7 +340,7 @@ body {
   will-change: transform;
 }
 
-.quiz-content.swiping * {
+.quiz-content.swiping .quiz-pane * {
   pointer-events: none;
 }
 
@@ -695,8 +772,8 @@ body {
     padding: 16px 16px 0;
   }
 
-  .progress-section {
-    padding: 0 16px 12px;
+  .progress-rail {
+    padding: 8px 16px max(10px, env(safe-area-inset-bottom));
   }
 
   .quiz-content {
