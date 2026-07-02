@@ -322,13 +322,12 @@ class QuizApp {
       const ctx = this.getAudioCtx();
       const now = ctx.currentTime;
 
-      // Two-note ascending chime, louder and longer (0.45 gain, 0.5s duration)
       [523.25, 659.25].forEach((freq, i) => {
         const osc = ctx.createOscillator();
         const gain = ctx.createGain();
-        osc.type = 'sine';
+        osc.type = 'triangle'; // triangle is perceptually louder than sine
         osc.frequency.value = freq;
-        gain.gain.setValueAtTime(0.45, now + i * 0.12);
+        gain.gain.setValueAtTime(0.5, now + i * 0.12); 
         gain.gain.exponentialRampToValueAtTime(0.001, now + i * 0.12 + 0.5);
         osc.connect(gain).connect(ctx.destination);
         osc.start(now + i * 0.12);
