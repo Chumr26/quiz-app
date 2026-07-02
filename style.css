@@ -98,6 +98,7 @@ body {
   animation: fadeInUp 0.5s ease-out;
   border: 1px solid rgba(255, 255, 255, 0.06);
   max-height: 92vh;
+  min-height: 92vh;
 }
 
 @keyframes fadeInUp {
@@ -306,14 +307,20 @@ body {
   scrollbar-width: thin;
   scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
   position: relative;
+  display: flex;
+  flex-direction: column;
   --swipe-offset: 0px;
+  /* Defense-in-depth: iOS Safari's dual-layer transform compositor on
+     .quiz-pane + .quiz-content.swiping can leak a 6-8px RGB(34,34,34) strip
+     at the bottom during swipe. Solid bg at every level fills that gap. */
+  background: var(--bg-surface);
 }
 
 /* ==================== SWIPE PANES ==================== */
 .quiz-stack {
   position: relative;
   width: 100%;
-  height: 100%;
+  flex: 1;
   overflow: hidden;
   background: var(--bg-surface);
 }
@@ -324,7 +331,7 @@ body {
   width: 100%;
   height: 100%;
   overflow-y: auto;
-  will-change: transform;
+  background: var(--bg-surface);
 }
 
 .quiz-pane.prev    { transform: translateX(calc(-100% + var(--swipe-offset, 0px))); }
