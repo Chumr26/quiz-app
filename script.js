@@ -221,13 +221,12 @@ class QuizApp {
   }
 
   // ==================== EVENT HANDLING ====================
+  // Attached exactly once in init(). render() replaces #quiz-app children only,
+  // so this delegated listener on the parent survives every rebuild.
   bindEvents() {
-    // Remove existing event listener if any to prevent duplicate binding
     const appEl = document.getElementById('quiz-app');
-    const newAppEl = appEl.cloneNode(true);
-    appEl.parentNode.replaceChild(newAppEl, appEl);
 
-    newAppEl.addEventListener('click', (e) => {
+    appEl.addEventListener('click', (e) => {
       const target = e.target;
 
       // Option click
@@ -264,12 +263,7 @@ class QuizApp {
       }
     });
 
-    // Keyboard navigation
-    // Remove existing keydown listener to prevent duplication
-    if (this._keydownHandler) {
-      document.removeEventListener('keydown', this._keydownHandler);
-    }
-    this._keydownHandler = (e) => {
+    document.addEventListener('keydown', (e) => {
       if (this.isShowingResult) return;
 
       switch (e.key) {
@@ -289,8 +283,7 @@ class QuizApp {
           this.selectOption(3);
           break;
       }
-    };
-    document.addEventListener('keydown', this._keydownHandler);
+    });
   }
 
   // ==================== HAPTIC & SOUND FEEDBACK ====================
@@ -363,11 +356,15 @@ class QuizApp {
       this.answers[this.currentIndex] = index;
       this.results[this.currentIndex] = 'correct';
 
-      // Re-render to show correct feedback
-      this.render();
-      this.bindEvents();
+      // Patch in place: mark the picked option correct, disable the others.
+      // No innerHTML rebuild here — keeps focus, CSS transitions, and screen-reader state.
+      const picked = document.querySelector(`.option-item[data-index="${index}"]`);
+      if (picked) picked.classList.add('correct');
+      document.querySelectorAll('.options-list .option-item').forEach((el) => {
+        if (el.dataset.index !== String(index)) el.classList.add('disabled');
+      });
 
-      // Auto-advance after short delay
+      // Auto-advance after short delay (this IS a real content change, so re-render is legitimate)
       if (this.autoAdvanceTimer) clearTimeout(this.autoAdvanceTimer);
 
       this.autoAdvanceTimer = setTimeout(() => {
@@ -375,27 +372,22 @@ class QuizApp {
           this.currentIndex++;
           this.furthestIndex = Math.max(this.furthestIndex, this.currentIndex);
           this.render();
-          this.bindEvents();
         } else if (Object.keys(this.results).length === this.questions.length) {
           this.isShowingResult = true;
           this.render();
-          this.bindEvents();
         }
       }, 800);
     } else {
-      // Wrong answer — flash red briefly, then re-render back to normal interactive state
-      const optionEls = document.querySelectorAll('.option-item');
-      const wrongEl = optionEls[index];
+      // Wrong answer — flash red briefly, then just remove the class.
+      // No rebuild: the DOM still represents the correct question, no auto-advance fires.
+      const wrongEl = document.querySelector(`.option-item[data-index="${index}"]`);
       if (wrongEl) {
         this.vibrate([40, 30, 40]);
         this.playWrongSound();
         wrongEl.classList.add('incorrect');
 
-        // Remove the red flash after a moment — back to normal & disabled
         setTimeout(() => {
           wrongEl.classList.remove('incorrect');
-          this.render();
-          this.bindEvents();
         }, 500);
       }
     }
@@ -412,7 +404,6 @@ class QuizApp {
     this.currentIndex = index;
     this.isShowingResult = false;
     this.render();
-    this.bindEvents();
   }
 
   goBack() {
@@ -422,7 +413,6 @@ class QuizApp {
 
       this.currentIndex--;
       this.render();
-      this.bindEvents();
     }
   }
 
@@ -434,7 +424,6 @@ class QuizApp {
     this.results = {};
     this.isShowingResult = false;
     this.render();
-    this.bindEvents();
   }
 
   review() {
@@ -442,7 +431,6 @@ class QuizApp {
     this.currentIndex = 0;
     this.isShowingResult = false;
     this.render();
-    this.bindEvents();
   }
 
   animateResultsBar() {
