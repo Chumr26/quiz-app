@@ -366,19 +366,6 @@ body {
   flex: 1;
 }
 
-.option-icon {
-  width: 20px;
-  height: 20px;
-  flex-shrink: 0;
-  opacity: 0;
-  transition: opacity var(--transition-fast);
-}
-
-.option-item.correct .option-icon.check-icon,
-.option-item.incorrect .option-icon.cross-icon {
-  opacity: 1;
-}
-
 /* ==================== HINT ==================== */
 .hint-section {
   margin-bottom: 16px;
