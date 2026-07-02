@@ -238,5 +238,245 @@
     ],
     "answer": 2,
     "hint": "Chủ nghĩa xã hội khoa học ra đời vào những năm 40 của thế kỷ XIX, gắn liền với tên tuổi của C. Mác và Ph. Ăngghen."
+  },
+  {
+    "id": 21,
+    "question": "[MOCK] Phạm trù 'cách mạng xã hội' trong triết học Mác – Lênin được hiểu là gì?",
+    "options": [
+      "Sự thay đổi hình thức nhà nước",
+      "Sự chuyển biến có tính chất bước ngoặt trong toàn bộ đời sống xã hội",
+      "Sự thay đổi trong phương thức sản xuất nông nghiệp",
+      "Sự điều chỉnh quan hệ ngoại giao giữa các quốc gia"
+    ],
+    "answer": 1,
+    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
+  },
+  {
+    "id": 22,
+    "question": "[MOCK] Theo C. Mác, cấu trúc xã hội tư bản gồm hai tầng nào?",
+    "options": [
+      "Tầng lãnh đạo và tầng cơ sở",
+      "Cơ sở hạ tầng và kiến trúc thượng tầng",
+      "Nhà nước và thị trường",
+      "Doanh nghiệp và người lao động"
+    ],
+    "answer": 1,
+    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
+  },
+  {
+    "id": 23,
+    "question": "[MOCK] Khái niệm 'tích lũy tư bản' nghĩa là gì?",
+    "options": [
+      "Biến một phần giá trị thặng dư thành tư bản để mở rộng sản xuất",
+      "Gộp vốn của nhiều doanh nghiệp thành tập đoàn",
+      "Chuyển đổi tư bản cố định sang tư bản lưu động",
+      "Tăng lãi suất ngân hàng"
+    ],
+    "answer": 0,
+    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
+  },
+  {
+    "id": 24,
+    "question": "[MOCK] Nguyên tắc nào là cơ bản nhất trong đạo đức Hồ Chí Minh?",
+    "options": [
+      "Vì lợi ích chung",
+      "Vì bản thân trước",
+      "Vì gia đình rồi mới đến xã hội",
+      "Vì quốc gia là trên hết"
+    ],
+    "answer": 0,
+    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
+  },
+  {
+    "id": 25,
+    "question": "[MOCK] Vai trò lãnh đạo của Đảng Cộng sản Việt Nam đối với Nhà nước được thể hiện ở đâu?",
+    "options": [
+      "Đảng trực tiếp điều hành bộ máy nhà nước hằng ngày",
+      "Đảng lãnh đạo Nhà nước thông qua đường lối, chủ trương và công tác cán bộ",
+      "Đảng chỉ tham gia lãnh đạo trong lĩnh vực quốc phòng",
+      "Đảng lãnh đạo thông qua phong trào quần chúng"
+    ],
+    "answer": 1,
+    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
+  },
+  {
+    "id": 26,
+    "question": "[MOCK] Mục đích của công tác tư tưởng trong Đảng là gì?",
+    "options": [
+      "Xây dựng nền tảng tinh thần cho toàn Đảng và xã hội",
+      "Tuyên truyền đối ngoại",
+      "Quản lý báo chí nhà nước",
+      "Đánh giá cán bộ theo hệ số"
+    ],
+    "answer": 0,
+    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
+  },
+  {
+    "id": 27,
+    "question": "[MOCK] Nguyên lý 'lấy dân làm gốc' (dân vi bản) trong tư tưởng Hồ Chí Minh có ý nghĩa gì?",
+    "options": [
+      "Nhà nước đặt lợi ích nhân dân làm mục tiêu phục vụ",
+      "Nhân dân phải phục tùng tuyệt đối nhà nước",
+      "Nhân dân tự quản lý không cần nhà nước",
+      "Đảng thay mặt nhân dân ra quyết định"
+    ],
+    "answer": 0,
+    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
+  },
+  {
+    "id": 28,
+    "question": "[MOCK] 'Quy luật giá trị' điều chỉnh nền kinh tế hàng hóa dựa trên yếu tố nào?",
+    "options": [
+      "Cung – cầu hàng hóa trên thị trường",
+      "Lao động xã hội cần thiết hao phí để sản xuất hàng hóa",
+      "Mệnh lệnh hành chính của nhà nước",
+      "Giá cả do nhà sản xuất định trước"
+    ],
+    "answer": 1,
+    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
+  },
+  {
+    "id": 29,
+    "question": "[MOCK] Tính tất yếu khách quan của con đường đi lên chủ nghĩa xã hội ở Việt Nam thể hiện ở điểm nào?",
+    "options": [
+      "Do lựa chọn chủ quan của một số nhà lãnh đạo",
+      "Do mâu thuẫn của xã hội và yêu cầu phát triển khách quan",
+      "Do sức ép từ các cường quốc quốc tế",
+      "Do ngẫu nhiên lịch sử"
+    ],
+    "answer": 1,
+    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
+  },
+  {
+    "id": 30,
+    "question": "[MOCK] Bản chất của Nhà nước pháp quyền XHCN Việt Nam được xác định bởi yếu tố nào?",
+    "options": [
+      "Cơ chế thị trường tự do",
+      "Sự lãnh đạo của Đảng Cộng sản và quyền làm chủ của nhân dân",
+      "Truyền thống phong kiến lâu đời",
+      "Ảnh hưởng của luật pháp phương Tây"
+    ],
+    "answer": 1,
+    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
+  },
+  {
+    "id": 31,
+    "question": "[MOCK] 'Dân chủ XHCN' khác với 'dân chủ tư sản' ở điểm cơ bản nào?",
+    "options": [
+      "Dân chủ XHCN là dân chủ cho giai cấp vô sản và nhân dân lao động",
+      "Dân chủ XHCN chỉ dành cho cán bộ nhà nước",
+      "Dân chủ XHCN không cần thiết vì nhà nước đại diện cho dân",
+      "Dân chủ XHCN và dân chủ tư sản không có điểm khác"
+    ],
+    "answer": 0,
+    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
+  },
+  {
+    "id": 32,
+    "question": "[MOCK] Phép biện chứng duy vật gồm bao nhiêu quy luật cơ bản?",
+    "options": [
+      "Hai quy luật",
+      "Ba quy luật",
+      "Bốn quy luật",
+      "Năm quy luật"
+    ],
+    "answer": 1,
+    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
+  },
+  {
+    "id": 33,
+    "question": "[MOCK] Lực lượng sản xuất bao gồm những yếu tố nào?",
+    "options": [
+      "Người lao động và tư liệu sản xuất",
+      "Chỉ bao gồm máy móc thiết bị",
+      "Chỉ bao gồm con người",
+      "Bao gồm tất cả tiền tệ trong nền kinh tế"
+    ],
+    "answer": 0,
+    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
+  },
+  {
+    "id": 34,
+    "question": "[MOCK] Tư tưởng Hồ Chí Minh về phát triển kinh tế nhấn mạnh nguyên tắc nào?",
+    "options": [
+      "Phát triển dựa trên tăng trưởng GDP là mục tiêu duy nhất",
+      "Phát triển toàn diện, hài hòa giữa tăng trưởng và công bằng xã hội",
+      "Chỉ phát triển công nghiệp nặng",
+      "Dựa hoàn toàn vào vốn đầu tư nước ngoài"
+    ],
+    "answer": 1,
+    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
+  },
+  {
+    "id": 35,
+    "question": "[MOCK] Vai trò của khoa học – công nghệ trong xây dựng CNXH ở Việt Nam được Hồ Chí Minh xác định là gì?",
+    "options": [
+      "Là một sân chơi riêng của giới trí thức",
+      "Là then chốt để phát triển đất nước",
+      "Là yếu tố phụ, không quan trọng",
+      "Chỉ phục vụ quốc phòng"
+    ],
+    "answer": 1,
+    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
+  },
+  {
+    "id": 36,
+    "question": "[MOCK] 'Cơ sở hạ tầng' trong một hình thái kinh tế – xã hội bao gồm?",
+    "options": [
+      "Hệ tư tưởng, văn hóa, khoa học",
+      "Toàn bộ quan hệ sản xuất và lực lượng sản xuất",
+      "Chỉ bao gồm hệ thống chính trị",
+      "Chỉ bao gồm tôn giáo và tín ngưỡng"
+    ],
+    "answer": 1,
+    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
+  },
+  {
+    "id": 37,
+    "question": "[MOCK] Đặc trưng nào KHÔNG thuộc về chủ nghĩa xã hội?",
+    "options": [
+      "Sở hữu tư nhân về tư liệu sản xuất là chủ đạo",
+      "Có nền kinh tế phát triển cao, dựa trên lực lượng sản xuất hiện đại",
+      "Có nhà nước của nhân dân, do nhân dân, vì nhân dân",
+      "Có nền dân chủ XHCN"
+    ],
+    "answer": 0,
+    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
+  },
+  {
+    "id": 38,
+    "question": "[MOCK] Theo Hồ Chí Minh, cán bộ là gì?",
+    "options": [
+      "Là người được nhân dân ủy thác quyền lực để phục vụ nhân dân",
+      "Là người đứng trên nhân dân",
+      "Là người có đặc quyền trong bộ máy nhà nước",
+      "Là người đại diện cho Đảng quản lý xã hội"
+    ],
+    "answer": 0,
+    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
+  },
+  {
+    "id": 39,
+    "question": "[MOCK] Ý nghĩa của việc học tập và làm theo tấm gương đạo đức Hồ Chí Minh là gì?",
+    "options": [
+      "Để hoàn thành chỉ tiêu thi đua",
+      "Để xây dựng Đảng trong sạch, vững mạnh và phát triển đất nước",
+      "Để đánh giá xếp loại cán bộ cuối năm",
+      "Để phục vụ công tác tuyên truyền"
+    ],
+    "answer": 1,
+    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
+  },
+  {
+    "id": 40,
+    "question": "[MOCK] Vai trò của nhân dân trong hệ thống chính trị Việt Nam được thể hiện qua nguyên tắc nào?",
+    "options": [
+      "Nhân dân là đối tượng quản lý của Nhà nước",
+      "Nhân dân là gốc, là chủ thể của quyền lực nhà nước",
+      "Nhân dân tham gia lãnh đạo thông qua đại biểu được chỉ định",
+      "Nhân dân không có vai trò trực tiếp"
+    ],
+    "answer": 1,
+    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
   }
 ]

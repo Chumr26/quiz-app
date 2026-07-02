@@ -30,7 +30,7 @@ class QuizApp {
       const response = await fetch('./questions.json');
       if (!response.ok) throw new Error('Failed to load questions');
       this.questions = await response.json();
-      this.quizTitle = `Trọn bộ ${this.questions.length} câu ôn tập Giáo dục Chính trị`;
+      this.quizTitle = `${this.questions.length} câu ôn tập Giáo dục Chính trị`;
     } catch (error) {
       console.error('Error loading questions:', error);
       this.questions = [{
@@ -68,12 +68,29 @@ class QuizApp {
     content.addEventListener('touchcancel', this.onTouchEnd.bind(this), { passive: true });
   }
 
+  renderPane(q, idx, position) {
+    const paneNum = idx + 1;
+    const selectedOption = this.answers[idx];
+    const result = this.results[idx];
+
+    return `
+      <div class="quiz-pane ${position}" data-position="${position}" data-index="${idx}">
+        <div class="question-wrapper">
+          <div class="question-label">Câu ${paneNum}</div>
+          <div class="question-text">${q.question}</div>
+
+          <div class="options-list">
+            ${q.options.map((opt, i) => this.renderOption(opt, i, selectedOption, result, q.answer)).join('')}
+          </div>
+        </div>
+      </div>
+    `;
+  }
+
   renderQuizScreen() {
     const q = this.questions[this.currentIndex];
     const total = this.questions.length;
     const current = this.currentIndex + 1;
-    const selectedOption = this.answers[this.currentIndex];
-    const result = this.results[this.currentIndex];
 
     return `
       <div class="quiz-header">
@@ -84,13 +101,8 @@ class QuizApp {
       </div>
 
       <div class="quiz-content">
-        <div class="question-wrapper" id="question-wrapper">
-          <div class="question-label">Question ${current}</div>
-          <div class="question-text">${q.question}</div>
-
-          <div class="options-list">
-            ${q.options.map((opt, i) => this.renderOption(opt, i, selectedOption, result, q.answer)).join('')}
-          </div>
+        <div class="quiz-stack" id="quiz-stack">
+          ${this.renderPane(q, this.currentIndex, 'current')}
         </div>
       </div>
 
