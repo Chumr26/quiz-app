@@ -13,6 +13,7 @@ class QuizApp {
     this.autoAdvanceTimer = null;
     this.audioCtx = null; // lazy-init on first interaction
     this.touch = { active: false, startX: 0, startY: 0, offset: 0, lastDy: 0 };
+    this.lastSwipeDirection = null; // 'right'|'left'|null — set by onTouchEnd, consumed by renderQuizScreen
     this.devMode = new URLSearchParams(location.search).get('dev') === '1';
 
     this.init();
@@ -68,14 +69,14 @@ class QuizApp {
     content.addEventListener('touchcancel', this.onTouchEnd.bind(this), { passive: true });
   }
 
-  renderPane(q, idx, position) {
+  renderPane(q, idx, position, swipeFromLeft = false) {
     const paneNum = idx + 1;
     const selectedOption = this.answers[idx];
     const result = this.results[idx];
 
     return `
       <div class="quiz-pane ${position}" data-position="${position}" data-index="${idx}">
-        <div class="question-wrapper">
+        <div class="question-wrapper ${swipeFromLeft ? 'slide-from-left' : ''}">
           <div class="question-label">Câu ${paneNum}</div>
           <div class="question-text">${q.question}</div>
 
@@ -88,6 +89,11 @@ class QuizApp {
   }
 
   renderQuizScreen() {
+    // Consume-and-clear: direction is set on successful swipe in onTouchEnd.
+    // Other nav paths leave this null → wrapper keeps the default from-right animation.
+    const swipeFromLeft = this.lastSwipeDirection === 'left';
+    this.lastSwipeDirection = null;
+
     const q = this.questions[this.currentIndex];
     const total = this.questions.length;
     const current = this.currentIndex + 1;
@@ -102,7 +108,7 @@ class QuizApp {
 
       <div class="quiz-content">
         <div class="quiz-stack" id="quiz-stack">
-          ${this.renderPane(q, this.currentIndex, 'current')}
+          ${this.renderPane(q, this.currentIndex, 'current', swipeFromLeft)}
         </div>
       </div>
 
@@ -463,6 +469,11 @@ class QuizApp {
     const isHorizontal = absX >= 50 && absX > absY / 0.6;
 
     if (isHorizontal) {
+      // New pane enters FROM the side opposite the finger's pull:
+      // swipe LEFT (offset<0) → next from the RIGHT; swipe RIGHT → previous from the LEFT.
+      // Set this BEFORE the navigation call — tryGoBack/tryGoForward render synchronously
+      // and consume lastSwipeDirection from the very next render call.
+      this.lastSwipeDirection = offset < 0 ? 'right' : 'left';
       const moved = offset < 0 ? this.tryGoForward() : this.tryGoBack();
       if (moved) {
         // Navigation will re-render; clear offset so the new node starts clean.
@@ -470,6 +481,8 @@ class QuizApp {
         el.classList.remove('swiping');
         return;
       }
+      // Navigation didn't fire (e.g., gated by furthestIndex) — undo the direction.
+      this.lastSwipeDirection = null;
       // At edge → bump feedback then snap back.
       el.classList.add('swipe-bump');
       setTimeout(() => {
