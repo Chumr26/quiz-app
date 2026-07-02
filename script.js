@@ -11,6 +11,7 @@ class QuizApp {
     this.isShowingResult = false;
     this.quizTitle = '';
     this.autoAdvanceTimer = null;
+    this.audioCtx = null; // lazy-init on first interaction
 
     this.init();
   }
@@ -102,7 +103,7 @@ class QuizApp {
     let isInteractive = true;
 
     if (result === 'correct') {
-      // Correct answer found — show it, disable everything
+      // Correct answer found — show it, disable everything else
       if (index === correctAnswer) {
         className += ' correct';
       } else {
@@ -128,21 +129,6 @@ class QuizApp {
         </svg>
       </div>
     `;
-  }
-
-  renderFeedback(result, question) {
-    if (result === 'correct') {
-      return `
-        <div class="feedback-section">
-          <div class="feedback-message correct">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-            Chính xác!
-          </div>
-        </div>
-      `;
-    }
-    // No feedback message for wrong — the greyed-out option is enough
-    return '';
   }
 
   renderProgressSegments() {
@@ -243,7 +229,12 @@ class QuizApp {
 
   // ==================== EVENT HANDLING ====================
   bindEvents() {
-    document.getElementById('quiz-app').addEventListener('click', (e) => {
+    // Remove existing event listener if any to prevent duplicate binding
+    const appEl = document.getElementById('quiz-app');
+    const newAppEl = appEl.cloneNode(true);
+    appEl.parentNode.replaceChild(newAppEl, appEl);
+
+    newAppEl.addEventListener('click', (e) => {
       const target = e.target;
 
       // Option click
@@ -281,7 +272,11 @@ class QuizApp {
     });
 
     // Keyboard navigation
-    document.addEventListener('keydown', (e) => {
+    // Remove existing keydown listener to prevent duplication
+    if (this._keydownHandler) {
+      document.removeEventListener('keydown', this._keydownHandler);
+    }
+    this._keydownHandler = (e) => {
       if (this.isShowingResult) return;
 
       switch (e.key) {
@@ -301,7 +296,64 @@ class QuizApp {
           this.selectOption(3);
           break;
       }
-    });
+    };
+    document.addEventListener('keydown', this._keydownHandler);
+  }
+
+  // ==================== HAPTIC & SOUND FEEDBACK ====================
+  vibrate(pattern) {
+    if (navigator.vibrate) {
+      navigator.vibrate(pattern);
+    }
+  }
+
+  getAudioCtx() {
+    if (!this.audioCtx) {
+      this.audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    }
+    if (this.audioCtx.state === 'suspended') {
+      this.audioCtx.resume();
+    }
+    return this.audioCtx;
+  }
+
+  playCorrectSound() {
+    try {
+      const ctx = this.getAudioCtx();
+      const now = ctx.currentTime;
+
+      // Two-note ascending chime, louder and longer (0.45 gain, 0.5s duration)
+      [523.25, 659.25].forEach((freq, i) => {
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.type = 'sine';
+        osc.frequency.value = freq;
+        gain.gain.setValueAtTime(0.45, now + i * 0.12);
+        gain.gain.exponentialRampToValueAtTime(0.001, now + i * 0.12 + 0.5);
+        osc.connect(gain).connect(ctx.destination);
+        osc.start(now + i * 0.12);
+        osc.stop(now + i * 0.12 + 0.5);
+      });
+    } catch (e) { /* silent fail */ }
+  }
+
+  playWrongSound() {
+    try {
+      const ctx = this.getAudioCtx();
+      const now = ctx.currentTime;
+
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+      osc.type = 'square';
+      osc.frequency.value = 200;
+      osc.frequency.setValueAtTime(200, now);
+      osc.frequency.linearRampToValueAtTime(150, now + 0.15);
+      gain.gain.setValueAtTime(0.12, now);
+      gain.gain.exponentialRampToValueAtTime(0.001, now + 0.2);
+      osc.connect(gain).connect(ctx.destination);
+      osc.start(now);
+      osc.stop(now + 0.2);
+    } catch (e) { /* silent fail */ }
   }
 
   // ==================== ACTIONS ====================
@@ -318,6 +370,8 @@ class QuizApp {
     const isCorrect = index === q.answer;
 
     if (isCorrect) {
+      this.vibrate(50);
+      this.playCorrectSound();
       this.answers[this.currentIndex] = index;
       this.results[this.currentIndex] = 'correct';
 
@@ -341,15 +395,24 @@ class QuizApp {
         }
       }, 800);
     } else {
-      // Wrong answer — flash red briefly, then return to normal (no re-render)
+      // Wrong answer — track it, flash red briefly, then return to normal (no re-render)
+      if (!this.wrongGuesses[this.currentIndex]) {
+        this.wrongGuesses[this.currentIndex] = new Set();
+      }
+      this.wrongGuesses[this.currentIndex].add(index);
+
       const optionEls = document.querySelectorAll('.option-item');
       const wrongEl = optionEls[index];
       if (wrongEl) {
+        this.vibrate([40, 30, 40]);
+        this.playWrongSound();
         wrongEl.classList.add('incorrect');
 
-        // Remove the red flash after a moment — back to normal
+        // Remove the red flash after a moment — back to normal & disabled
         setTimeout(() => {
           wrongEl.classList.remove('incorrect');
+          this.render();
+          this.bindEvents();
         }, 500);
       }
     }
