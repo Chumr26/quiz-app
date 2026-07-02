@@ -238,6 +238,28 @@ body {
   padding: 0 24px;
   scrollbar-width: thin;
   scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+  --swipe-offset: 0px;
+  transform: translateX(var(--swipe-offset));
+}
+
+.quiz-content.swiping {
+  transition: none;
+  will-change: transform;
+}
+
+.quiz-content.swiping * {
+  pointer-events: none;
+}
+
+@keyframes swipe-bump {
+  0%   { transform: translateX(0); }
+  35%  { transform: translateX(var(--swipe-offset)); }
+  70%  { transform: translateX(calc(var(--swipe-offset) * 0.4)); }
+  100% { transform: translateX(0); }
+}
+
+.quiz-content.swipe-bump {
+  animation: swipe-bump 220ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .quiz-content::-webkit-scrollbar {

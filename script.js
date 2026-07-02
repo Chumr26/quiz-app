@@ -12,6 +12,7 @@ class QuizApp {
     this.quizTitle = '';
     this.autoAdvanceTimer = null;
     this.audioCtx = null; // lazy-init on first interaction
+    this.touch = { active: false, startX: 0, startY: 0, offset: 0, lastDy: 0 };
 
     this.init();
   }
@@ -91,6 +92,16 @@ class QuizApp {
         <button class="btn btn-outline" id="btn-back" ${this.currentIndex === 0 ? 'disabled' : ''}>Back</button>
       </div>
     `;
+
+    // Bind touch listeners on the freshly-rendered .quiz-content. The previous
+    // node is destroyed by innerHTML, so its listeners are GC'd with it.
+    const content = container.querySelector('.quiz-content');
+    if (content) {
+      content.addEventListener('touchstart', this.onTouchStart.bind(this), { passive: true });
+      content.addEventListener('touchmove', this.onTouchMove.bind(this), { passive: true });
+      content.addEventListener('touchend', this.onTouchEnd.bind(this), { passive: true });
+      content.addEventListener('touchcancel', this.onTouchEnd.bind(this), { passive: true });
+    }
   }
 
   renderOption(text, index, selectedOption, result, correctAnswer) {
@@ -264,6 +275,9 @@ class QuizApp {
         case 'ArrowLeft':
           this.goBack();
           break;
+        case 'ArrowRight':
+          this.tryGoForward();
+          break;
         case '1': case 'a': case 'A':
           this.selectOption(0);
           break;
@@ -333,6 +347,102 @@ class QuizApp {
       osc.start(now);
       osc.stop(now + 0.2);
     } catch (e) { /* silent fail */ }
+  }
+
+  // ==================== NAVIGATION WRAPPERS (return success) ====================
+  tryGoBack() {
+    if (this.currentIndex > 0) {
+      this.goBack();
+      return true;
+    }
+    return false;
+  }
+
+  tryGoForward() {
+    const target = this.currentIndex + 1;
+    if (target <= this.furthestIndex) {
+      this.goToQuestion(target);
+      return true;
+    }
+    return false;
+  }
+
+  // ==================== TOUCH HANDLERS ====================
+  onTouchStart(e) {
+    if (this.isShowingResult) return;
+    if (e.touches.length !== 1) return;
+    const t = e.touches[0];
+    this.touch = {
+      active: true,
+      startX: t.clientX,
+      startY: t.clientY,
+      offset: 0,
+      lastDy: 0,
+    };
+    const el = document.querySelector('.quiz-content');
+    if (el) el.classList.add('swiping');
+  }
+
+  onTouchMove(e) {
+    if (!this.touch.active) return;
+    const t = e.touches[0];
+    const dx = t.clientX - this.touch.startX;
+    const dy = t.clientY - this.touch.startY;
+    this.touch.offset = dx;
+    this.touch.lastDy = dy;
+
+    const el = document.querySelector('.quiz-content');
+    if (!el) return;
+
+    const absX = Math.abs(dx);
+    const absY = Math.abs(dy);
+    // Small deadzone before we touch the transform.
+    if (absX < 6 && absY < 6) return;
+    // Only translate when horizontal dominates; otherwise let native vertical scroll work.
+    el.style.setProperty('--swipe-offset', absX > absY ? `${dx}px` : '0px');
+  }
+
+  onTouchEnd() {
+    if (!this.touch.active) return;
+    const { offset, lastDy } = this.touch;
+    const absX = Math.abs(offset);
+    const absY = Math.abs(lastDy);
+    this.touch.active = false;
+
+    const el = document.querySelector('.quiz-content');
+    if (!el) {
+      this.touch = { active: false, startX: 0, startY: 0, offset: 0, lastDy: 0 };
+      return;
+    }
+
+    // Horizontal gate: ≥50px movement AND |Δy/Δx| < 0.6 (≈ 30° from horizontal).
+    const isHorizontal = absX >= 50 && absX > absY / 0.6;
+
+    if (isHorizontal) {
+      const moved = offset < 0 ? this.tryGoForward() : this.tryGoBack();
+      if (moved) {
+        // Navigation will re-render; clear offset so the new node starts clean.
+        el.style.setProperty('--swipe-offset', '0px');
+        el.classList.remove('swiping');
+        return;
+      }
+      // At edge → bump feedback then snap back.
+      el.classList.add('swipe-bump');
+      setTimeout(() => {
+        el.classList.remove('swipe-bump');
+        el.style.setProperty('--swipe-offset', '0px');
+        el.classList.remove('swiping');
+      }, 220);
+      return;
+    }
+
+    // Diagonal / vertical / under-threshold → smooth snap back.
+    el.style.transition = 'transform 180ms ease-out';
+    el.style.setProperty('--swipe-offset', '0px');
+    setTimeout(() => {
+      el.style.transition = '';
+      el.classList.remove('swiping');
+    }, 200);
   }
 
   // ==================== ACTIONS ====================
