@@ -1,30 +1,6 @@
 [
   {
     "id": 1,
-    "question": "Triết học Mác – Lênin nghiên cứu những quy luật chung nhất của lĩnh vực nào?",
-    "options": [
-      "Tự nhiên, xã hội và tư duy",
-      "Kinh tế và chính trị",
-      "Văn hóa và xã hội",
-      "Khoa học và công nghệ"
-    ],
-    "answer": 0,
-    "hint": "Triết học Mác – Lênin là khoa học về những quy luật chung nhất của tự nhiên, xã hội và tư duy."
-  },
-  {
-    "id": 2,
-    "question": "Chủ nghĩa Mác – Lênin có hai chức năng cơ bản nào?",
-    "options": [
-      "Thế giới quan và nhận thức luận",
-      "Thế giới quan và phương pháp luận",
-      "Bản thể luận và nhận thức luận",
-      "Thế giới quan và bản thể luận"
-    ],
-    "answer": 1,
-    "hint": "Hai chức năng cơ bản của triết học Mác – Lênin là chức năng thế giới quan và chức năng phương pháp luận."
-  },
-  {
-    "id": 3,
     "question": "Theo quan điểm của chủ nghĩa duy vật biện chứng, vật chất là gì?",
     "options": [
       "Là thực tại khách quan được con người nhận thức",
@@ -36,223 +12,7 @@
     "hint": "Vật chất là phạm trù triết học dùng để chỉ thực tại khách quan, tồn tại không phụ thuộc vào ý thức con người."
   },
   {
-    "id": 4,
-    "question": "Quy luật nào được coi là 'hạt nhân' của phép biện chứng duy vật?",
-    "options": [
-      "Quy luật lượng – chất",
-      "Quy luật phủ định của phủ định",
-      "Quy luật thống nhất và đấu tranh của các mặt đối lập",
-      "Quy luật nhân quả"
-    ],
-    "answer": 2,
-    "hint": "Quy luật thống nhất và đấu tranh của các mặt đối lập (quy luật mâu thuẫn) là hạt nhân của phép biện chứng."
-  },
-  {
-    "id": 5,
-    "question": "Hình thức cao nhất của vận động là gì?",
-    "options": [
-      "Vận động cơ học",
-      "Vận động vật lý",
-      "Vận động hóa học",
-      "Vận động xã hội"
-    ],
-    "answer": 3,
-    "hint": "Theo Ăngghen, vận động xã hội là hình thức vận động cao nhất và phức tạp nhất."
-  },
-  {
-    "id": 6,
-    "question": "Phạm trù nào phản ánh mối liên hệ bản chất, tất nhiên, bên trong của sự vật?",
-    "options": [
-      "Hiện tượng",
-      "Bản chất",
-      "Nội dung",
-      "Hình thức"
-    ],
-    "answer": 1,
-    "hint": "Bản chất là phạm trù phản ánh cái chung, cái tất yếu, cái bên trong quyết định sự tồn tại và phát triển của sự vật."
-  },
-  {
-    "id": 7,
-    "question": "Kinh tế chính trị Mác – Lênin nghiên cứu đối tượng chính là gì?",
-    "options": [
-      "Lực lượng sản xuất",
-      "Quan hệ sản xuất",
-      "Phương thức sản xuất",
-      "Kiến trúc thượng tầng"
-    ],
-    "answer": 1,
-    "hint": "Kinh tế chính trị Mác – Lênin nghiên cứu quan hệ sản xuất trong sự tác động qua lại với lực lượng sản xuất và kiến trúc thượng tầng."
-  },
-  {
-    "id": 8,
-    "question": "Giá trị thặng dư là gì?",
-    "options": [
-      "Phần giá trị mới dôi ra ngoài giá trị sức lao động do công nhân tạo ra",
-      "Tổng giá trị hàng hóa trừ đi chi phí sản xuất",
-      "Lợi nhuận mà nhà tư bản thu được",
-      "Phần giá trị còn lại sau khi trừ tiền lương"
-    ],
-    "answer": 0,
-    "hint": "Giá trị thặng dư (m) là phần giá trị mới dôi ra ngoài giá trị sức lao động, do công nhân làm thuê tạo ra và bị nhà tư bản chiếm không."
-  },
-  {
-    "id": 9,
-    "question": "Tư tưởng Hồ Chí Minh về đại đoàn kết dân tộc có vai trò gì?",
-    "options": [
-      "Là phương tiện đấu tranh",
-      "Là chiến lược cách mạng",
-      "Là đường lối tạm thời",
-      "Là sách lược trước mắt"
-    ],
-    "answer": 1,
-    "hint": "Đại đoàn kết dân tộc là một chiến lược cách mạng, không phải là sách lược hay thủ đoạn chính trị."
-  },
-  {
-    "id": 10,
-    "question": "Theo Hiến pháp 2013, quyền con người và quyền công dân được quy định tại chương nào?",
-    "options": [
-      "Chương I",
-      "Chương II",
-      "Chương III",
-      "Chương IV"
-    ],
-    "answer": 1,
-    "hint": "Chương II của Hiến pháp 2013 quy định về quyền con người, quyền và nghĩa vụ cơ bản của công dân."
-  },
-  {
-    "id": 11,
-    "question": "Nhà nước Cộng hòa Xã hội Chủ nghĩa Việt Nam là nhà nước pháp quyền của ai?",
-    "options": [
-      "Của Đảng Cộng sản",
-      "Của giai cấp công nhân",
-      "Của nhân dân, do nhân dân, vì nhân dân",
-      "Của toàn thể dân tộc Việt Nam"
-    ],
-    "answer": 2,
-    "hint": "Nhà nước pháp quyền xã hội chủ nghĩa Việt Nam là nhà nước của nhân dân, do nhân dân, vì nhân dân."
-  },
-  {
-    "id": 12,
-    "question": "Quốc phòng toàn dân là gì?",
-    "options": [
-      "Là sức mạnh quốc phòng của lực lượng vũ trang",
-      "Là nền quốc phòng mang tính chất toàn dân, toàn diện",
-      "Là sức mạnh quân sự của đất nước",
-      "Là sự phòng thủ của các lực lượng quân đội"
-    ],
-    "answer": 1,
-    "hint": "Quốc phòng toàn dân là nền quốc phòng mang tính chất 'của dân, do dân, vì dân', có tính toàn dân, toàn diện."
-  },
-  {
-    "id": 13,
-    "question": "An ninh quốc gia bao gồm những nội dung nào?",
-    "options": [
-      "An ninh chính trị và an ninh kinh tế",
-      "An ninh chính trị, an ninh kinh tế, an ninh văn hóa tư tưởng, an ninh xã hội",
-      "An ninh quân sự và an ninh biên giới",
-      "An ninh nội bộ và an ninh đối ngoại"
-    ],
-    "answer": 1,
-    "hint": "An ninh quốc gia bao gồm an ninh trên tất cả các lĩnh vực: chính trị, kinh tế, văn hóa tư tưởng, xã hội, quốc phòng, đối ngoại..."
-  },
-  {
-    "id": 14,
-    "question": "Phương thức sản xuất bao gồm hai mặt nào?",
-    "options": [
-      "Cơ sở hạ tầng và kiến trúc thượng tầng",
-      "Lực lượng sản xuất và quan hệ sản xuất",
-      "Sản xuất và tiêu dùng",
-      "Kinh tế và chính trị"
-    ],
-    "answer": 1,
-    "hint": "Phương thức sản xuất là sự thống nhất giữa lực lượng sản xuất và quan hệ sản xuất."
-  },
-  {
-    "id": 15,
-    "question": "Ý thức xã hội bao gồm những cấp độ nào?",
-    "options": [
-      "Ý thức cá nhân và ý thức tập thể",
-      "Ý thức thông thường và ý thức lý luận (ý thức khoa học)",
-      "Ý thức chủ quan và ý thức khách quan",
-      "Ý thức tích cực và ý thức tiêu cực"
-    ],
-    "answer": 1,
-    "hint": "Ý thức xã hội có hai cấp độ: ý thức thông thường (tâm lý xã hội) và ý thức lý luận (hệ tư tưởng)."
-  },
-  {
-    "id": 16,
-    "question": "Đảng Cộng sản Việt Nam được thành lập vào ngày tháng năm nào?",
-    "options": [
-      "3 tháng 2 năm 1930",
-      "19 tháng 8 năm 1945",
-      "2 tháng 9 năm 1945",
-      "7 tháng 5 năm 1954"
-    ],
-    "answer": 0,
-    "hint": "Đảng Cộng sản Việt Nam được thành lập ngày 3/2/1930 tại Hương Cảng (Trung Quốc)."
-  },
-  {
-    "id": 17,
-    "question": "Hàng hóa có những thuộc tính nào?",
-    "options": [
-      "Giá trị và giá cả",
-      "Giá trị sử dụng và giá trị",
-      "Giá trị sử dụng và giá cả",
-      "Chất lượng và số lượng"
-    ],
-    "answer": 1,
-    "hint": "Hàng hóa có hai thuộc tính: giá trị sử dụng (công dụng) và giá trị (lao động xã hội cần thiết kết tinh trong hàng hóa)."
-  },
-  {
-    "id": 18,
-    "question": "Trong tư tưởng Hồ Chí Minh, đạo đức cách mạng gồm những phẩm chất nào?",
-    "options": [
-      "Trí, dũng, nhân, tín",
-      "Cần, kiệm, liêm, chính, chí công vô tư",
-      "Trung, hiếu, nhân, nghĩa",
-      "Đức, trí, thể, mỹ"
-    ],
-    "answer": 1,
-    "hint": "Hồ Chí Minh coi cần, kiệm, liêm, chính, chí công vô tư là những phẩm chất đạo đức cách mạng cơ bản."
-  },
-  {
-    "id": 19,
-    "question": "Pháp luật là gì?",
-    "options": [
-      "Là hệ thống quy tắc xử sự do xã hội đặt ra",
-      "Là hệ thống quy tắc xử sự do nhà nước ban hành và bảo đảm thực hiện",
-      "Là các quy định do tổ chức chính trị ban hành",
-      "Là các phong tục tập quán được văn bản hóa"
-    ],
-    "answer": 1,
-    "hint": "Pháp luật là hệ thống quy tắc xử sự chung do nhà nước ban hành hoặc thừa nhận và bảo đảm thực hiện bằng quyền lực nhà nước."
-  },
-  {
-    "id": 20,
-    "question": "Chủ nghĩa xã hội khoa học ra đời vào thế kỷ nào?",
-    "options": [
-      "Thế kỷ XVII",
-      "Thế kỷ XVIII",
-      "Thế kỷ XIX",
-      "Thế kỷ XX"
-    ],
-    "answer": 2,
-    "hint": "Chủ nghĩa xã hội khoa học ra đời vào những năm 40 của thế kỷ XIX, gắn liền với tên tuổi của C. Mác và Ph. Ăngghen."
-  },
-  {
-    "id": 21,
-    "question": "[MOCK] Phạm trù 'cách mạng xã hội' trong triết học Mác – Lênin được hiểu là gì?",
-    "options": [
-      "Sự thay đổi hình thức nhà nước",
-      "Sự chuyển biến có tính chất bước ngoặt trong toàn bộ đời sống xã hội",
-      "Sự thay đổi trong phương thức sản xuất nông nghiệp",
-      "Sự điều chỉnh quan hệ ngoại giao giữa các quốc gia"
-    ],
-    "answer": 1,
-    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
-  },
-  {
-    "id": 22,
+    "id": 2,
     "question": "[MOCK] Theo C. Mác, cấu trúc xã hội tư bản gồm hai tầng nào?",
     "options": [
       "Tầng lãnh đạo và tầng cơ sở",
@@ -264,43 +24,7 @@
     "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
   },
   {
-    "id": 23,
-    "question": "[MOCK] Khái niệm 'tích lũy tư bản' nghĩa là gì?",
-    "options": [
-      "Biến một phần giá trị thặng dư thành tư bản để mở rộng sản xuất",
-      "Gộp vốn của nhiều doanh nghiệp thành tập đoàn",
-      "Chuyển đổi tư bản cố định sang tư bản lưu động",
-      "Tăng lãi suất ngân hàng"
-    ],
-    "answer": 0,
-    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
-  },
-  {
-    "id": 24,
-    "question": "[MOCK] Nguyên tắc nào là cơ bản nhất trong đạo đức Hồ Chí Minh?",
-    "options": [
-      "Vì lợi ích chung",
-      "Vì bản thân trước",
-      "Vì gia đình rồi mới đến xã hội",
-      "Vì quốc gia là trên hết"
-    ],
-    "answer": 0,
-    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
-  },
-  {
-    "id": 25,
-    "question": "[MOCK] Vai trò lãnh đạo của Đảng Cộng sản Việt Nam đối với Nhà nước được thể hiện ở đâu?",
-    "options": [
-      "Đảng trực tiếp điều hành bộ máy nhà nước hằng ngày",
-      "Đảng lãnh đạo Nhà nước thông qua đường lối, chủ trương và công tác cán bộ",
-      "Đảng chỉ tham gia lãnh đạo trong lĩnh vực quốc phòng",
-      "Đảng lãnh đạo thông qua phong trào quần chúng"
-    ],
-    "answer": 1,
-    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
-  },
-  {
-    "id": 26,
+    "id": 3,
     "question": "[MOCK] Mục đích của công tác tư tưởng trong Đảng là gì?",
     "options": [
       "Xây dựng nền tảng tinh thần cho toàn Đảng và xã hội",
@@ -312,37 +36,313 @@
     "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
   },
   {
-    "id": 27,
-    "question": "[MOCK] Nguyên lý 'lấy dân làm gốc' (dân vi bản) trong tư tưởng Hồ Chí Minh có ý nghĩa gì?",
+    "id": 4,
+    "question": "[MOCK] Tư tưởng Hồ Chí Minh về phát triển kinh tế nhấn mạnh nguyên tắc nào?",
     "options": [
-      "Nhà nước đặt lợi ích nhân dân làm mục tiêu phục vụ",
-      "Nhân dân phải phục tùng tuyệt đối nhà nước",
-      "Nhân dân tự quản lý không cần nhà nước",
-      "Đảng thay mặt nhân dân ra quyết định"
-    ],
-    "answer": 0,
-    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
-  },
-  {
-    "id": 28,
-    "question": "[MOCK] 'Quy luật giá trị' điều chỉnh nền kinh tế hàng hóa dựa trên yếu tố nào?",
-    "options": [
-      "Cung – cầu hàng hóa trên thị trường",
-      "Lao động xã hội cần thiết hao phí để sản xuất hàng hóa",
-      "Mệnh lệnh hành chính của nhà nước",
-      "Giá cả do nhà sản xuất định trước"
+      "Phát triển dựa trên tăng trưởng GDP là mục tiêu duy nhất",
+      "Phát triển toàn diện, hài hòa giữa tăng trưởng và công bằng xã hội",
+      "Chỉ phát triển công nghiệp nặng",
+      "Dựa hoàn toàn vào vốn đầu tư nước ngoài"
     ],
     "answer": 1,
     "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
   },
   {
-    "id": 29,
-    "question": "[MOCK] Tính tất yếu khách quan của con đường đi lên chủ nghĩa xã hội ở Việt Nam thể hiện ở điểm nào?",
+    "id": 5,
+    "question": "An ninh quốc gia bao gồm những nội dung nào?",
     "options": [
-      "Do lựa chọn chủ quan của một số nhà lãnh đạo",
-      "Do mâu thuẫn của xã hội và yêu cầu phát triển khách quan",
-      "Do sức ép từ các cường quốc quốc tế",
-      "Do ngẫu nhiên lịch sử"
+      "An ninh chính trị và an ninh kinh tế",
+      "An ninh chính trị, an ninh kinh tế, an ninh văn hóa tư tưởng, an ninh xã hội",
+      "An ninh quân sự và an ninh biên giới",
+      "An ninh nội bộ và an ninh đối ngoại"
+    ],
+    "answer": 1,
+    "hint": "An ninh quốc gia bao gồm an ninh trên tất cả các lĩnh vực: chính trị, kinh tế, văn hóa tư tưởng, xã hội, quốc phòng, đối ngoại..."
+  },
+  {
+    "id": 6,
+    "question": "[MOCK] 'Cơ sở hạ tầng' trong một hình thái kinh tế – xã hội bao gồm?",
+    "options": [
+      "Hệ tư tưởng, văn hóa, khoa học",
+      "Toàn bộ quan hệ sản xuất và lực lượng sản xuất",
+      "Chỉ bao gồm hệ thống chính trị",
+      "Chỉ bao gồm tôn giáo và tín ngưỡng"
+    ],
+    "answer": 1,
+    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
+  },
+  {
+    "id": 7,
+    "question": "[MOCK] Bản chất của Nhà nước pháp quyền XHCN Việt Nam được xác định bởi yếu tố nào?",
+    "options": [
+      "Cơ chế thị trường tự do",
+      "Sự lãnh đạo của Đảng Cộng sản và quyền làm chủ của nhân dân",
+      "Truyền thống phong kiến lâu đời",
+      "Ảnh hưởng của luật pháp phương Tây"
+    ],
+    "answer": 1,
+    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
+  },
+  {
+    "id": 8,
+    "question": "[MOCK] Khái niệm 'tích lũy tư bản' nghĩa là gì?",
+    "options": [
+      "Biến một phần giá trị thặng dư thành tư bản để mở rộng sản xuất",
+      "Gộp vốn của nhiều doanh nghiệp thành tập đoàn",
+      "Chuyển đổi tư bản cố định sang tư bản lưu động",
+      "Tăng lãi suất ngân hàng"
+    ],
+    "answer": 0,
+    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
+  },
+  {
+    "id": 9,
+    "question": "Kinh tế chính trị Mác – Lênin nghiên cứu đối tượng chính là gì?",
+    "options": [
+      "Lực lượng sản xuất",
+      "Quan hệ sản xuất",
+      "Phương thức sản xuất",
+      "Kiến trúc thượng tầng"
+    ],
+    "answer": 1,
+    "hint": "Kinh tế chính trị Mác – Lênin nghiên cứu quan hệ sản xuất trong sự tác động qua lại với lực lượng sản xuất và kiến trúc thượng tầng."
+  },
+  {
+    "id": 10,
+    "question": "Đảng Cộng sản Việt Nam được thành lập vào ngày tháng năm nào?",
+    "options": [
+      "3 tháng 2 năm 1930",
+      "19 tháng 8 năm 1945",
+      "2 tháng 9 năm 1945",
+      "7 tháng 5 năm 1954"
+    ],
+    "answer": 0,
+    "hint": "Đảng Cộng sản Việt Nam được thành lập ngày 3/2/1930 tại Hương Cảng (Trung Quốc)."
+  },
+  {
+    "id": 11,
+    "question": "Ý thức xã hội bao gồm những cấp độ nào?",
+    "options": [
+      "Ý thức cá nhân và ý thức tập thể",
+      "Ý thức thông thường và ý thức lý luận (ý thức khoa học)",
+      "Ý thức chủ quan và ý thức khách quan",
+      "Ý thức tích cực và ý thức tiêu cực"
+    ],
+    "answer": 1,
+    "hint": "Ý thức xã hội có hai cấp độ: ý thức thông thường (tâm lý xã hội) và ý thức lý luận (hệ tư tưởng)."
+  },
+  {
+    "id": 12,
+    "question": "Chủ nghĩa Mác – Lênin có hai chức năng cơ bản nào?",
+    "options": [
+      "Thế giới quan và nhận thức luận",
+      "Thế giới quan và phương pháp luận",
+      "Bản thể luận và nhận thức luận",
+      "Thế giới quan và bản thể luận"
+    ],
+    "answer": 1,
+    "hint": "Hai chức năng cơ bản của triết học Mác – Lênin là chức năng thế giới quan và chức năng phương pháp luận."
+  },
+  {
+    "id": 13,
+    "question": "[MOCK] Vai trò của khoa học – công nghệ trong xây dựng CNXH ở Việt Nam được Hồ Chí Minh xác định là gì?",
+    "options": [
+      "Là một sân chơi riêng của giới trí thức",
+      "Là then chốt để phát triển đất nước",
+      "Là yếu tố phụ, không quan trọng",
+      "Chỉ phục vụ quốc phòng"
+    ],
+    "answer": 1,
+    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
+  },
+  {
+    "id": 14,
+    "question": "Ý thức xã hội bao gồm những cấp độ nào?",
+    "options": [
+      "Ý thức cá nhân và ý thức tập thể",
+      "Ý thức thông thường và ý thức lý luận (ý thức khoa học)",
+      "Ý thức chủ quan và ý thức khách quan",
+      "Ý thức tích cực và ý thức tiêu cực"
+    ],
+    "answer": 1,
+    "hint": "Ý thức xã hội có hai cấp độ: ý thức thông thường (tâm lý xã hội) và ý thức lý luận (hệ tư tưởng)."
+  },
+  {
+    "id": 15,
+    "question": "Theo quan điểm của chủ nghĩa duy vật biện chứng, vật chất là gì?",
+    "options": [
+      "Là thực tại khách quan được con người nhận thức",
+      "Là tất cả những gì tồn tại xung quanh con người",
+      "Là thực tại khách quan tồn tại độc lập với ý thức con người",
+      "Là những gì con người có thể cảm nhận được"
+    ],
+    "answer": 2,
+    "hint": "Vật chất là phạm trù triết học dùng để chỉ thực tại khách quan, tồn tại không phụ thuộc vào ý thức con người."
+  },
+  {
+    "id": 16,
+    "question": "Pháp luật là gì?",
+    "options": [
+      "Là hệ thống quy tắc xử sự do xã hội đặt ra",
+      "Là hệ thống quy tắc xử sự do nhà nước ban hành và bảo đảm thực hiện",
+      "Là các quy định do tổ chức chính trị ban hành",
+      "Là các phong tục tập quán được văn bản hóa"
+    ],
+    "answer": 1,
+    "hint": "Pháp luật là hệ thống quy tắc xử sự chung do nhà nước ban hành hoặc thừa nhận và bảo đảm thực hiện bằng quyền lực nhà nước."
+  },
+  {
+    "id": 17,
+    "question": "[MOCK] Bản chất của Nhà nước pháp quyền XHCN Việt Nam được xác định bởi yếu tố nào?",
+    "options": [
+      "Cơ chế thị trường tự do",
+      "Sự lãnh đạo của Đảng Cộng sản và quyền làm chủ của nhân dân",
+      "Truyền thống phong kiến lâu đời",
+      "Ảnh hưởng của luật pháp phương Tây"
+    ],
+    "answer": 1,
+    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
+  },
+  {
+    "id": 18,
+    "question": "Chủ nghĩa xã hội khoa học ra đời vào thế kỷ nào?",
+    "options": [
+      "Thế kỷ XVII",
+      "Thế kỷ XVIII",
+      "Thế kỷ XIX",
+      "Thế kỷ XX"
+    ],
+    "answer": 2,
+    "hint": "Chủ nghĩa xã hội khoa học ra đời vào những năm 40 của thế kỷ XIX, gắn liền với tên tuổi của C. Mác và Ph. Ăngghen."
+  },
+  {
+    "id": 19,
+    "question": "[MOCK] Theo Hồ Chí Minh, cán bộ là gì?",
+    "options": [
+      "Là người được nhân dân ủy thác quyền lực để phục vụ nhân dân",
+      "Là người đứng trên nhân dân",
+      "Là người có đặc quyền trong bộ máy nhà nước",
+      "Là người đại diện cho Đảng quản lý xã hội"
+    ],
+    "answer": 0,
+    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
+  },
+  {
+    "id": 20,
+    "question": "An ninh quốc gia bao gồm những nội dung nào?",
+    "options": [
+      "An ninh chính trị và an ninh kinh tế",
+      "An ninh chính trị, an ninh kinh tế, an ninh văn hóa tư tưởng, an ninh xã hội",
+      "An ninh quân sự và an ninh biên giới",
+      "An ninh nội bộ và an ninh đối ngoại"
+    ],
+    "answer": 1,
+    "hint": "An ninh quốc gia bao gồm an ninh trên tất cả các lĩnh vực: chính trị, kinh tế, văn hóa tư tưởng, xã hội, quốc phòng, đối ngoại..."
+  },
+  {
+    "id": 21,
+    "question": "Trong tư tưởng Hồ Chí Minh, đạo đức cách mạng gồm những phẩm chất nào?",
+    "options": [
+      "Trí, dũng, nhân, tín",
+      "Cần, kiệm, liêm, chính, chí công vô tư",
+      "Trung, hiếu, nhân, nghĩa",
+      "Đức, trí, thể, mỹ"
+    ],
+    "answer": 1,
+    "hint": "Hồ Chí Minh coi cần, kiệm, liêm, chính, chí công vô tư là những phẩm chất đạo đức cách mạng cơ bản."
+  },
+  {
+    "id": 22,
+    "question": "Nhà nước Cộng hòa Xã hội Chủ nghĩa Việt Nam là nhà nước pháp quyền của ai?",
+    "options": [
+      "Của Đảng Cộng sản",
+      "Của giai cấp công nhân",
+      "Của nhân dân, do nhân dân, vì nhân dân",
+      "Của toàn thể dân tộc Việt Nam"
+    ],
+    "answer": 2,
+    "hint": "Nhà nước pháp quyền xã hội chủ nghĩa Việt Nam là nhà nước của nhân dân, do nhân dân, vì nhân dân."
+  },
+  {
+    "id": 23,
+    "question": "[MOCK] Vai trò của nhân dân trong hệ thống chính trị Việt Nam được thể hiện qua nguyên tắc nào?",
+    "options": [
+      "Nhân dân là đối tượng quản lý của Nhà nước",
+      "Nhân dân là gốc, là chủ thể của quyền lực nhà nước",
+      "Nhân dân tham gia lãnh đạo thông qua đại biểu được chỉ định",
+      "Nhân dân không có vai trò trực tiếp"
+    ],
+    "answer": 1,
+    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
+  },
+  {
+    "id": 24,
+    "question": "[MOCK] Đặc trưng nào KHÔNG thuộc về chủ nghĩa xã hội?",
+    "options": [
+      "Sở hữu tư nhân về tư liệu sản xuất là chủ đạo",
+      "Có nền kinh tế phát triển cao, dựa trên lực lượng sản xuất hiện đại",
+      "Có nhà nước của nhân dân, do nhân dân, vì nhân dân",
+      "Có nền dân chủ XHCN"
+    ],
+    "answer": 0,
+    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
+  },
+  {
+    "id": 25,
+    "question": "Hàng hóa có những thuộc tính nào?",
+    "options": [
+      "Giá trị và giá cả",
+      "Giá trị sử dụng và giá trị",
+      "Giá trị sử dụng và giá cả",
+      "Chất lượng và số lượng"
+    ],
+    "answer": 1,
+    "hint": "Hàng hóa có hai thuộc tính: giá trị sử dụng (công dụng) và giá trị (lao động xã hội cần thiết kết tinh trong hàng hóa)."
+  },
+  {
+    "id": 26,
+    "question": "Pháp luật là gì?",
+    "options": [
+      "Là hệ thống quy tắc xử sự do xã hội đặt ra",
+      "Là hệ thống quy tắc xử sự do nhà nước ban hành và bảo đảm thực hiện",
+      "Là các quy định do tổ chức chính trị ban hành",
+      "Là các phong tục tập quán được văn bản hóa"
+    ],
+    "answer": 1,
+    "hint": "Pháp luật là hệ thống quy tắc xử sự chung do nhà nước ban hành hoặc thừa nhận và bảo đảm thực hiện bằng quyền lực nhà nước."
+  },
+  {
+    "id": 27,
+    "question": "[MOCK] Ý nghĩa của việc học tập và làm theo tấm gương đạo đức Hồ Chí Minh là gì?",
+    "options": [
+      "Để hoàn thành chỉ tiêu thi đua",
+      "Để xây dựng Đảng trong sạch, vững mạnh và phát triển đất nước",
+      "Để đánh giá xếp loại cán bộ cuối năm",
+      "Để phục vụ công tác tuyên truyền"
+    ],
+    "answer": 1,
+    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
+  },
+  {
+    "id": 28,
+    "question": "Tư tưởng Hồ Chí Minh về đại đoàn kết dân tộc có vai trò gì?",
+    "options": [
+      "Là phương tiện đấu tranh",
+      "Là chiến lược cách mạng",
+      "Là đường lối tạm thời",
+      "Là sách lược trước mắt"
+    ],
+    "answer": 1,
+    "hint": "Đại đoàn kết dân tộc là một chiến lược cách mạng, không phải là sách lược hay thủ đoạn chính trị."
+  },
+  {
+    "id": 29,
+    "question": "[MOCK] 'Cơ sở hạ tầng' trong một hình thái kinh tế – xã hội bao gồm?",
+    "options": [
+      "Hệ tư tưởng, văn hóa, khoa học",
+      "Toàn bộ quan hệ sản xuất và lực lượng sản xuất",
+      "Chỉ bao gồm hệ thống chính trị",
+      "Chỉ bao gồm tôn giáo và tín ngưỡng"
     ],
     "answer": 1,
     "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
@@ -361,72 +361,72 @@
   },
   {
     "id": 31,
-    "question": "[MOCK] 'Dân chủ XHCN' khác với 'dân chủ tư sản' ở điểm cơ bản nào?",
+    "question": "Hình thức cao nhất của vận động là gì?",
     "options": [
-      "Dân chủ XHCN là dân chủ cho giai cấp vô sản và nhân dân lao động",
-      "Dân chủ XHCN chỉ dành cho cán bộ nhà nước",
-      "Dân chủ XHCN không cần thiết vì nhà nước đại diện cho dân",
-      "Dân chủ XHCN và dân chủ tư sản không có điểm khác"
+      "Vận động cơ học",
+      "Vận động vật lý",
+      "Vận động hóa học",
+      "Vận động xã hội"
+    ],
+    "answer": 3,
+    "hint": "Theo Ăngghen, vận động xã hội là hình thức vận động cao nhất và phức tạp nhất."
+  },
+  {
+    "id": 32,
+    "question": "[MOCK] Nguyên tắc nào là cơ bản nhất trong đạo đức Hồ Chí Minh?",
+    "options": [
+      "Vì lợi ích chung",
+      "Vì bản thân trước",
+      "Vì gia đình rồi mới đến xã hội",
+      "Vì quốc gia là trên hết"
     ],
     "answer": 0,
     "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
   },
   {
-    "id": 32,
+    "id": 33,
+    "question": "Trong tư tưởng Hồ Chí Minh, đạo đức cách mạng gồm những phẩm chất nào?",
+    "options": [
+      "Trí, dũng, nhân, tín",
+      "Cần, kiệm, liêm, chính, chí công vô tư",
+      "Trung, hiếu, nhân, nghĩa",
+      "Đức, trí, thể, mỹ"
+    ],
+    "answer": 1,
+    "hint": "Hồ Chí Minh coi cần, kiệm, liêm, chính, chí công vô tư là những phẩm chất đạo đức cách mạng cơ bản."
+  },
+  {
+    "id": 34,
+    "question": "[MOCK] Đặc trưng nào KHÔNG thuộc về chủ nghĩa xã hội?",
+    "options": [
+      "Sở hữu tư nhân về tư liệu sản xuất là chủ đạo",
+      "Có nền kinh tế phát triển cao, dựa trên lực lượng sản xuất hiện đại",
+      "Có nhà nước của nhân dân, do nhân dân, vì nhân dân",
+      "Có nền dân chủ XHCN"
+    ],
+    "answer": 0,
+    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
+  },
+  {
+    "id": 35,
+    "question": "Đảng Cộng sản Việt Nam được thành lập vào ngày tháng năm nào?",
+    "options": [
+      "3 tháng 2 năm 1930",
+      "19 tháng 8 năm 1945",
+      "2 tháng 9 năm 1945",
+      "7 tháng 5 năm 1954"
+    ],
+    "answer": 0,
+    "hint": "Đảng Cộng sản Việt Nam được thành lập ngày 3/2/1930 tại Hương Cảng (Trung Quốc)."
+  },
+  {
+    "id": 36,
     "question": "[MOCK] Phép biện chứng duy vật gồm bao nhiêu quy luật cơ bản?",
     "options": [
       "Hai quy luật",
       "Ba quy luật",
       "Bốn quy luật",
       "Năm quy luật"
-    ],
-    "answer": 1,
-    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
-  },
-  {
-    "id": 33,
-    "question": "[MOCK] Lực lượng sản xuất bao gồm những yếu tố nào?",
-    "options": [
-      "Người lao động và tư liệu sản xuất",
-      "Chỉ bao gồm máy móc thiết bị",
-      "Chỉ bao gồm con người",
-      "Bao gồm tất cả tiền tệ trong nền kinh tế"
-    ],
-    "answer": 0,
-    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
-  },
-  {
-    "id": 34,
-    "question": "[MOCK] Tư tưởng Hồ Chí Minh về phát triển kinh tế nhấn mạnh nguyên tắc nào?",
-    "options": [
-      "Phát triển dựa trên tăng trưởng GDP là mục tiêu duy nhất",
-      "Phát triển toàn diện, hài hòa giữa tăng trưởng và công bằng xã hội",
-      "Chỉ phát triển công nghiệp nặng",
-      "Dựa hoàn toàn vào vốn đầu tư nước ngoài"
-    ],
-    "answer": 1,
-    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
-  },
-  {
-    "id": 35,
-    "question": "[MOCK] Vai trò của khoa học – công nghệ trong xây dựng CNXH ở Việt Nam được Hồ Chí Minh xác định là gì?",
-    "options": [
-      "Là một sân chơi riêng của giới trí thức",
-      "Là then chốt để phát triển đất nước",
-      "Là yếu tố phụ, không quan trọng",
-      "Chỉ phục vụ quốc phòng"
-    ],
-    "answer": 1,
-    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
-  },
-  {
-    "id": 36,
-    "question": "[MOCK] 'Cơ sở hạ tầng' trong một hình thái kinh tế – xã hội bao gồm?",
-    "options": [
-      "Hệ tư tưởng, văn hóa, khoa học",
-      "Toàn bộ quan hệ sản xuất và lực lượng sản xuất",
-      "Chỉ bao gồm hệ thống chính trị",
-      "Chỉ bao gồm tôn giáo và tín ngưỡng"
     ],
     "answer": 1,
     "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
@@ -445,6 +445,162 @@
   },
   {
     "id": 38,
+    "question": "Theo quan điểm của chủ nghĩa duy vật biện chứng, vật chất là gì?",
+    "options": [
+      "Là thực tại khách quan được con người nhận thức",
+      "Là tất cả những gì tồn tại xung quanh con người",
+      "Là thực tại khách quan tồn tại độc lập với ý thức con người",
+      "Là những gì con người có thể cảm nhận được"
+    ],
+    "answer": 2,
+    "hint": "Vật chất là phạm trù triết học dùng để chỉ thực tại khách quan, tồn tại không phụ thuộc vào ý thức con người."
+  },
+  {
+    "id": 39,
+    "question": "Tư tưởng Hồ Chí Minh về đại đoàn kết dân tộc có vai trò gì?",
+    "options": [
+      "Là phương tiện đấu tranh",
+      "Là chiến lược cách mạng",
+      "Là đường lối tạm thời",
+      "Là sách lược trước mắt"
+    ],
+    "answer": 1,
+    "hint": "Đại đoàn kết dân tộc là một chiến lược cách mạng, không phải là sách lược hay thủ đoạn chính trị."
+  },
+  {
+    "id": 40,
+    "question": "Chủ nghĩa xã hội khoa học ra đời vào thế kỷ nào?",
+    "options": [
+      "Thế kỷ XVII",
+      "Thế kỷ XVIII",
+      "Thế kỷ XIX",
+      "Thế kỷ XX"
+    ],
+    "answer": 2,
+    "hint": "Chủ nghĩa xã hội khoa học ra đời vào những năm 40 của thế kỷ XIX, gắn liền với tên tuổi của C. Mác và Ph. Ăngghen."
+  },
+  {
+    "id": 41,
+    "question": "Hình thức cao nhất của vận động là gì?",
+    "options": [
+      "Vận động cơ học",
+      "Vận động vật lý",
+      "Vận động hóa học",
+      "Vận động xã hội"
+    ],
+    "answer": 3,
+    "hint": "Theo Ăngghen, vận động xã hội là hình thức vận động cao nhất và phức tạp nhất."
+  },
+  {
+    "id": 42,
+    "question": "Quy luật nào được coi là 'hạt nhân' của phép biện chứng duy vật?",
+    "options": [
+      "Quy luật lượng – chất",
+      "Quy luật phủ định của phủ định",
+      "Quy luật thống nhất và đấu tranh của các mặt đối lập",
+      "Quy luật nhân quả"
+    ],
+    "answer": 2,
+    "hint": "Quy luật thống nhất và đấu tranh của các mặt đối lập (quy luật mâu thuẫn) là hạt nhân của phép biện chứng."
+  },
+  {
+    "id": 43,
+    "question": "Hàng hóa có những thuộc tính nào?",
+    "options": [
+      "Giá trị và giá cả",
+      "Giá trị sử dụng và giá trị",
+      "Giá trị sử dụng và giá cả",
+      "Chất lượng và số lượng"
+    ],
+    "answer": 1,
+    "hint": "Hàng hóa có hai thuộc tính: giá trị sử dụng (công dụng) và giá trị (lao động xã hội cần thiết kết tinh trong hàng hóa)."
+  },
+  {
+    "id": 44,
+    "question": "[MOCK] Lực lượng sản xuất bao gồm những yếu tố nào?",
+    "options": [
+      "Người lao động và tư liệu sản xuất",
+      "Chỉ bao gồm máy móc thiết bị",
+      "Chỉ bao gồm con người",
+      "Bao gồm tất cả tiền tệ trong nền kinh tế"
+    ],
+    "answer": 0,
+    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
+  },
+  {
+    "id": 45,
+    "question": "[MOCK] Nguyên lý 'lấy dân làm gốc' (dân vi bản) trong tư tưởng Hồ Chí Minh có ý nghĩa gì?",
+    "options": [
+      "Nhà nước đặt lợi ích nhân dân làm mục tiêu phục vụ",
+      "Nhân dân phải phục tùng tuyệt đối nhà nước",
+      "Nhân dân tự quản lý không cần nhà nước",
+      "Đảng thay mặt nhân dân ra quyết định"
+    ],
+    "answer": 0,
+    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
+  },
+  {
+    "id": 46,
+    "question": "[MOCK] Lực lượng sản xuất bao gồm những yếu tố nào?",
+    "options": [
+      "Người lao động và tư liệu sản xuất",
+      "Chỉ bao gồm máy móc thiết bị",
+      "Chỉ bao gồm con người",
+      "Bao gồm tất cả tiền tệ trong nền kinh tế"
+    ],
+    "answer": 0,
+    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
+  },
+  {
+    "id": 47,
+    "question": "[MOCK] Tư tưởng Hồ Chí Minh về phát triển kinh tế nhấn mạnh nguyên tắc nào?",
+    "options": [
+      "Phát triển dựa trên tăng trưởng GDP là mục tiêu duy nhất",
+      "Phát triển toàn diện, hài hòa giữa tăng trưởng và công bằng xã hội",
+      "Chỉ phát triển công nghiệp nặng",
+      "Dựa hoàn toàn vào vốn đầu tư nước ngoài"
+    ],
+    "answer": 1,
+    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
+  },
+  {
+    "id": 48,
+    "question": "[MOCK] 'Quy luật giá trị' điều chỉnh nền kinh tế hàng hóa dựa trên yếu tố nào?",
+    "options": [
+      "Cung – cầu hàng hóa trên thị trường",
+      "Lao động xã hội cần thiết hao phí để sản xuất hàng hóa",
+      "Mệnh lệnh hành chính của nhà nước",
+      "Giá cả do nhà sản xuất định trước"
+    ],
+    "answer": 1,
+    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
+  },
+  {
+    "id": 49,
+    "question": "[MOCK] Tính tất yếu khách quan của con đường đi lên chủ nghĩa xã hội ở Việt Nam thể hiện ở điểm nào?",
+    "options": [
+      "Do lựa chọn chủ quan của một số nhà lãnh đạo",
+      "Do mâu thuẫn của xã hội và yêu cầu phát triển khách quan",
+      "Do sức ép từ các cường quốc quốc tế",
+      "Do ngẫu nhiên lịch sử"
+    ],
+    "answer": 1,
+    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
+  },
+  {
+    "id": 50,
+    "question": "Phạm trù nào phản ánh mối liên hệ bản chất, tất nhiên, bên trong của sự vật?",
+    "options": [
+      "Hiện tượng",
+      "Bản chất",
+      "Nội dung",
+      "Hình thức"
+    ],
+    "answer": 1,
+    "hint": "Bản chất là phạm trù phản ánh cái chung, cái tất yếu, cái bên trong quyết định sự tồn tại và phát triển của sự vật."
+  },
+  {
+    "id": 51,
     "question": "[MOCK] Theo Hồ Chí Minh, cán bộ là gì?",
     "options": [
       "Là người được nhân dân ủy thác quyền lực để phục vụ nhân dân",
@@ -456,7 +612,247 @@
     "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
   },
   {
-    "id": 39,
+    "id": 52,
+    "question": "Nhà nước Cộng hòa Xã hội Chủ nghĩa Việt Nam là nhà nước pháp quyền của ai?",
+    "options": [
+      "Của Đảng Cộng sản",
+      "Của giai cấp công nhân",
+      "Của nhân dân, do nhân dân, vì nhân dân",
+      "Của toàn thể dân tộc Việt Nam"
+    ],
+    "answer": 2,
+    "hint": "Nhà nước pháp quyền xã hội chủ nghĩa Việt Nam là nhà nước của nhân dân, do nhân dân, vì nhân dân."
+  },
+  {
+    "id": 53,
+    "question": "[MOCK] Mục đích của công tác tư tưởng trong Đảng là gì?",
+    "options": [
+      "Xây dựng nền tảng tinh thần cho toàn Đảng và xã hội",
+      "Tuyên truyền đối ngoại",
+      "Quản lý báo chí nhà nước",
+      "Đánh giá cán bộ theo hệ số"
+    ],
+    "answer": 0,
+    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
+  },
+  {
+    "id": 54,
+    "question": "Triết học Mác – Lênin nghiên cứu những quy luật chung nhất của lĩnh vực nào?",
+    "options": [
+      "Tự nhiên, xã hội và tư duy",
+      "Kinh tế và chính trị",
+      "Văn hóa và xã hội",
+      "Khoa học và công nghệ"
+    ],
+    "answer": 0,
+    "hint": "Triết học Mác – Lênin là khoa học về những quy luật chung nhất của tự nhiên, xã hội và tư duy."
+  },
+  {
+    "id": 55,
+    "question": "Giá trị thặng dư là gì?",
+    "options": [
+      "Phần giá trị mới dôi ra ngoài giá trị sức lao động do công nhân tạo ra",
+      "Tổng giá trị hàng hóa trừ đi chi phí sản xuất",
+      "Lợi nhuận mà nhà tư bản thu được",
+      "Phần giá trị còn lại sau khi trừ tiền lương"
+    ],
+    "answer": 0,
+    "hint": "Giá trị thặng dư (m) là phần giá trị mới dôi ra ngoài giá trị sức lao động, do công nhân làm thuê tạo ra và bị nhà tư bản chiếm không."
+  },
+  {
+    "id": 56,
+    "question": "Ý thức xã hội bao gồm những cấp độ nào?",
+    "options": [
+      "Ý thức cá nhân và ý thức tập thể",
+      "Ý thức thông thường và ý thức lý luận (ý thức khoa học)",
+      "Ý thức chủ quan và ý thức khách quan",
+      "Ý thức tích cực và ý thức tiêu cực"
+    ],
+    "answer": 1,
+    "hint": "Ý thức xã hội có hai cấp độ: ý thức thông thường (tâm lý xã hội) và ý thức lý luận (hệ tư tưởng)."
+  },
+  {
+    "id": 57,
+    "question": "[MOCK] Tính tất yếu khách quan của con đường đi lên chủ nghĩa xã hội ở Việt Nam thể hiện ở điểm nào?",
+    "options": [
+      "Do lựa chọn chủ quan của một số nhà lãnh đạo",
+      "Do mâu thuẫn của xã hội và yêu cầu phát triển khách quan",
+      "Do sức ép từ các cường quốc quốc tế",
+      "Do ngẫu nhiên lịch sử"
+    ],
+    "answer": 1,
+    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
+  },
+  {
+    "id": 58,
+    "question": "[MOCK] Phép biện chứng duy vật gồm bao nhiêu quy luật cơ bản?",
+    "options": [
+      "Hai quy luật",
+      "Ba quy luật",
+      "Bốn quy luật",
+      "Năm quy luật"
+    ],
+    "answer": 1,
+    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
+  },
+  {
+    "id": 59,
+    "question": "Hình thức cao nhất của vận động là gì?",
+    "options": [
+      "Vận động cơ học",
+      "Vận động vật lý",
+      "Vận động hóa học",
+      "Vận động xã hội"
+    ],
+    "answer": 3,
+    "hint": "Theo Ăngghen, vận động xã hội là hình thức vận động cao nhất và phức tạp nhất."
+  },
+  {
+    "id": 60,
+    "question": "[MOCK] 'Dân chủ XHCN' khác với 'dân chủ tư sản' ở điểm cơ bản nào?",
+    "options": [
+      "Dân chủ XHCN là dân chủ cho giai cấp vô sản và nhân dân lao động",
+      "Dân chủ XHCN chỉ dành cho cán bộ nhà nước",
+      "Dân chủ XHCN không cần thiết vì nhà nước đại diện cho dân",
+      "Dân chủ XHCN và dân chủ tư sản không có điểm khác"
+    ],
+    "answer": 0,
+    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
+  },
+  {
+    "id": 61,
+    "question": "Hàng hóa có những thuộc tính nào?",
+    "options": [
+      "Giá trị và giá cả",
+      "Giá trị sử dụng và giá trị",
+      "Giá trị sử dụng và giá cả",
+      "Chất lượng và số lượng"
+    ],
+    "answer": 1,
+    "hint": "Hàng hóa có hai thuộc tính: giá trị sử dụng (công dụng) và giá trị (lao động xã hội cần thiết kết tinh trong hàng hóa)."
+  },
+  {
+    "id": 62,
+    "question": "Chủ nghĩa xã hội khoa học ra đời vào thế kỷ nào?",
+    "options": [
+      "Thế kỷ XVII",
+      "Thế kỷ XVIII",
+      "Thế kỷ XIX",
+      "Thế kỷ XX"
+    ],
+    "answer": 2,
+    "hint": "Chủ nghĩa xã hội khoa học ra đời vào những năm 40 của thế kỷ XIX, gắn liền với tên tuổi của C. Mác và Ph. Ăngghen."
+  },
+  {
+    "id": 63,
+    "question": "Giá trị thặng dư là gì?",
+    "options": [
+      "Phần giá trị mới dôi ra ngoài giá trị sức lao động do công nhân tạo ra",
+      "Tổng giá trị hàng hóa trừ đi chi phí sản xuất",
+      "Lợi nhuận mà nhà tư bản thu được",
+      "Phần giá trị còn lại sau khi trừ tiền lương"
+    ],
+    "answer": 0,
+    "hint": "Giá trị thặng dư (m) là phần giá trị mới dôi ra ngoài giá trị sức lao động, do công nhân làm thuê tạo ra và bị nhà tư bản chiếm không."
+  },
+  {
+    "id": 64,
+    "question": "Giá trị thặng dư là gì?",
+    "options": [
+      "Phần giá trị mới dôi ra ngoài giá trị sức lao động do công nhân tạo ra",
+      "Tổng giá trị hàng hóa trừ đi chi phí sản xuất",
+      "Lợi nhuận mà nhà tư bản thu được",
+      "Phần giá trị còn lại sau khi trừ tiền lương"
+    ],
+    "answer": 0,
+    "hint": "Giá trị thặng dư (m) là phần giá trị mới dôi ra ngoài giá trị sức lao động, do công nhân làm thuê tạo ra và bị nhà tư bản chiếm không."
+  },
+  {
+    "id": 65,
+    "question": "[MOCK] Phạm trù 'cách mạng xã hội' trong triết học Mác – Lênin được hiểu là gì?",
+    "options": [
+      "Sự thay đổi hình thức nhà nước",
+      "Sự chuyển biến có tính chất bước ngoặt trong toàn bộ đời sống xã hội",
+      "Sự thay đổi trong phương thức sản xuất nông nghiệp",
+      "Sự điều chỉnh quan hệ ngoại giao giữa các quốc gia"
+    ],
+    "answer": 1,
+    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
+  },
+  {
+    "id": 66,
+    "question": "Đảng Cộng sản Việt Nam được thành lập vào ngày tháng năm nào?",
+    "options": [
+      "3 tháng 2 năm 1930",
+      "19 tháng 8 năm 1945",
+      "2 tháng 9 năm 1945",
+      "7 tháng 5 năm 1954"
+    ],
+    "answer": 0,
+    "hint": "Đảng Cộng sản Việt Nam được thành lập ngày 3/2/1930 tại Hương Cảng (Trung Quốc)."
+  },
+  {
+    "id": 67,
+    "question": "Giá trị thặng dư là gì?",
+    "options": [
+      "Phần giá trị mới dôi ra ngoài giá trị sức lao động do công nhân tạo ra",
+      "Tổng giá trị hàng hóa trừ đi chi phí sản xuất",
+      "Lợi nhuận mà nhà tư bản thu được",
+      "Phần giá trị còn lại sau khi trừ tiền lương"
+    ],
+    "answer": 0,
+    "hint": "Giá trị thặng dư (m) là phần giá trị mới dôi ra ngoài giá trị sức lao động, do công nhân làm thuê tạo ra và bị nhà tư bản chiếm không."
+  },
+  {
+    "id": 68,
+    "question": "Kinh tế chính trị Mác – Lênin nghiên cứu đối tượng chính là gì?",
+    "options": [
+      "Lực lượng sản xuất",
+      "Quan hệ sản xuất",
+      "Phương thức sản xuất",
+      "Kiến trúc thượng tầng"
+    ],
+    "answer": 1,
+    "hint": "Kinh tế chính trị Mác – Lênin nghiên cứu quan hệ sản xuất trong sự tác động qua lại với lực lượng sản xuất và kiến trúc thượng tầng."
+  },
+  {
+    "id": 69,
+    "question": "Quy luật nào được coi là 'hạt nhân' của phép biện chứng duy vật?",
+    "options": [
+      "Quy luật lượng – chất",
+      "Quy luật phủ định của phủ định",
+      "Quy luật thống nhất và đấu tranh của các mặt đối lập",
+      "Quy luật nhân quả"
+    ],
+    "answer": 2,
+    "hint": "Quy luật thống nhất và đấu tranh của các mặt đối lập (quy luật mâu thuẫn) là hạt nhân của phép biện chứng."
+  },
+  {
+    "id": 70,
+    "question": "[MOCK] 'Cơ sở hạ tầng' trong một hình thái kinh tế – xã hội bao gồm?",
+    "options": [
+      "Hệ tư tưởng, văn hóa, khoa học",
+      "Toàn bộ quan hệ sản xuất và lực lượng sản xuất",
+      "Chỉ bao gồm hệ thống chính trị",
+      "Chỉ bao gồm tôn giáo và tín ngưỡng"
+    ],
+    "answer": 1,
+    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
+  },
+  {
+    "id": 71,
+    "question": "Tư tưởng Hồ Chí Minh về đại đoàn kết dân tộc có vai trò gì?",
+    "options": [
+      "Là phương tiện đấu tranh",
+      "Là chiến lược cách mạng",
+      "Là đường lối tạm thời",
+      "Là sách lược trước mắt"
+    ],
+    "answer": 1,
+    "hint": "Đại đoàn kết dân tộc là một chiến lược cách mạng, không phải là sách lược hay thủ đoạn chính trị."
+  },
+  {
+    "id": 72,
     "question": "[MOCK] Ý nghĩa của việc học tập và làm theo tấm gương đạo đức Hồ Chí Minh là gì?",
     "options": [
       "Để hoàn thành chỉ tiêu thi đua",
@@ -468,7 +864,379 @@
     "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
   },
   {
-    "id": 40,
+    "id": 73,
+    "question": "Kinh tế chính trị Mác – Lênin nghiên cứu đối tượng chính là gì?",
+    "options": [
+      "Lực lượng sản xuất",
+      "Quan hệ sản xuất",
+      "Phương thức sản xuất",
+      "Kiến trúc thượng tầng"
+    ],
+    "answer": 1,
+    "hint": "Kinh tế chính trị Mác – Lênin nghiên cứu quan hệ sản xuất trong sự tác động qua lại với lực lượng sản xuất và kiến trúc thượng tầng."
+  },
+  {
+    "id": 74,
+    "question": "Đảng Cộng sản Việt Nam được thành lập vào ngày tháng năm nào?",
+    "options": [
+      "3 tháng 2 năm 1930",
+      "19 tháng 8 năm 1945",
+      "2 tháng 9 năm 1945",
+      "7 tháng 5 năm 1954"
+    ],
+    "answer": 0,
+    "hint": "Đảng Cộng sản Việt Nam được thành lập ngày 3/2/1930 tại Hương Cảng (Trung Quốc)."
+  },
+  {
+    "id": 75,
+    "question": "Quy luật nào được coi là 'hạt nhân' của phép biện chứng duy vật?",
+    "options": [
+      "Quy luật lượng – chất",
+      "Quy luật phủ định của phủ định",
+      "Quy luật thống nhất và đấu tranh của các mặt đối lập",
+      "Quy luật nhân quả"
+    ],
+    "answer": 2,
+    "hint": "Quy luật thống nhất và đấu tranh của các mặt đối lập (quy luật mâu thuẫn) là hạt nhân của phép biện chứng."
+  },
+  {
+    "id": 76,
+    "question": "[MOCK] Khái niệm 'tích lũy tư bản' nghĩa là gì?",
+    "options": [
+      "Biến một phần giá trị thặng dư thành tư bản để mở rộng sản xuất",
+      "Gộp vốn của nhiều doanh nghiệp thành tập đoàn",
+      "Chuyển đổi tư bản cố định sang tư bản lưu động",
+      "Tăng lãi suất ngân hàng"
+    ],
+    "answer": 0,
+    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
+  },
+  {
+    "id": 77,
+    "question": "Quốc phòng toàn dân là gì?",
+    "options": [
+      "Là sức mạnh quốc phòng của lực lượng vũ trang",
+      "Là nền quốc phòng mang tính chất toàn dân, toàn diện",
+      "Là sức mạnh quân sự của đất nước",
+      "Là sự phòng thủ của các lực lượng quân đội"
+    ],
+    "answer": 1,
+    "hint": "Quốc phòng toàn dân là nền quốc phòng mang tính chất 'của dân, do dân, vì dân', có tính toàn dân, toàn diện."
+  },
+  {
+    "id": 78,
+    "question": "Kinh tế chính trị Mác – Lênin nghiên cứu đối tượng chính là gì?",
+    "options": [
+      "Lực lượng sản xuất",
+      "Quan hệ sản xuất",
+      "Phương thức sản xuất",
+      "Kiến trúc thượng tầng"
+    ],
+    "answer": 1,
+    "hint": "Kinh tế chính trị Mác – Lênin nghiên cứu quan hệ sản xuất trong sự tác động qua lại với lực lượng sản xuất và kiến trúc thượng tầng."
+  },
+  {
+    "id": 79,
+    "question": "[MOCK] 'Quy luật giá trị' điều chỉnh nền kinh tế hàng hóa dựa trên yếu tố nào?",
+    "options": [
+      "Cung – cầu hàng hóa trên thị trường",
+      "Lao động xã hội cần thiết hao phí để sản xuất hàng hóa",
+      "Mệnh lệnh hành chính của nhà nước",
+      "Giá cả do nhà sản xuất định trước"
+    ],
+    "answer": 1,
+    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
+  },
+  {
+    "id": 80,
+    "question": "[MOCK] Vai trò lãnh đạo của Đảng Cộng sản Việt Nam đối với Nhà nước được thể hiện ở đâu?",
+    "options": [
+      "Đảng trực tiếp điều hành bộ máy nhà nước hằng ngày",
+      "Đảng lãnh đạo Nhà nước thông qua đường lối, chủ trương và công tác cán bộ",
+      "Đảng chỉ tham gia lãnh đạo trong lĩnh vực quốc phòng",
+      "Đảng lãnh đạo thông qua phong trào quần chúng"
+    ],
+    "answer": 1,
+    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
+  },
+  {
+    "id": 81,
+    "question": "[MOCK] Theo C. Mác, cấu trúc xã hội tư bản gồm hai tầng nào?",
+    "options": [
+      "Tầng lãnh đạo và tầng cơ sở",
+      "Cơ sở hạ tầng và kiến trúc thượng tầng",
+      "Nhà nước và thị trường",
+      "Doanh nghiệp và người lao động"
+    ],
+    "answer": 1,
+    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
+  },
+  {
+    "id": 82,
+    "question": "[MOCK] Vai trò của khoa học – công nghệ trong xây dựng CNXH ở Việt Nam được Hồ Chí Minh xác định là gì?",
+    "options": [
+      "Là một sân chơi riêng của giới trí thức",
+      "Là then chốt để phát triển đất nước",
+      "Là yếu tố phụ, không quan trọng",
+      "Chỉ phục vụ quốc phòng"
+    ],
+    "answer": 1,
+    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
+  },
+  {
+    "id": 83,
+    "question": "Trong tư tưởng Hồ Chí Minh, đạo đức cách mạng gồm những phẩm chất nào?",
+    "options": [
+      "Trí, dũng, nhân, tín",
+      "Cần, kiệm, liêm, chính, chí công vô tư",
+      "Trung, hiếu, nhân, nghĩa",
+      "Đức, trí, thể, mỹ"
+    ],
+    "answer": 1,
+    "hint": "Hồ Chí Minh coi cần, kiệm, liêm, chính, chí công vô tư là những phẩm chất đạo đức cách mạng cơ bản."
+  },
+  {
+    "id": 84,
+    "question": "Quy luật nào được coi là 'hạt nhân' của phép biện chứng duy vật?",
+    "options": [
+      "Quy luật lượng – chất",
+      "Quy luật phủ định của phủ định",
+      "Quy luật thống nhất và đấu tranh của các mặt đối lập",
+      "Quy luật nhân quả"
+    ],
+    "answer": 2,
+    "hint": "Quy luật thống nhất và đấu tranh của các mặt đối lập (quy luật mâu thuẫn) là hạt nhân của phép biện chứng."
+  },
+  {
+    "id": 85,
+    "question": "Phương thức sản xuất bao gồm hai mặt nào?",
+    "options": [
+      "Cơ sở hạ tầng và kiến trúc thượng tầng",
+      "Lực lượng sản xuất và quan hệ sản xuất",
+      "Sản xuất và tiêu dùng",
+      "Kinh tế và chính trị"
+    ],
+    "answer": 1,
+    "hint": "Phương thức sản xuất là sự thống nhất giữa lực lượng sản xuất và quan hệ sản xuất."
+  },
+  {
+    "id": 86,
+    "question": "[MOCK] 'Quy luật giá trị' điều chỉnh nền kinh tế hàng hóa dựa trên yếu tố nào?",
+    "options": [
+      "Cung – cầu hàng hóa trên thị trường",
+      "Lao động xã hội cần thiết hao phí để sản xuất hàng hóa",
+      "Mệnh lệnh hành chính của nhà nước",
+      "Giá cả do nhà sản xuất định trước"
+    ],
+    "answer": 1,
+    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
+  },
+  {
+    "id": 87,
+    "question": "[MOCK] Lực lượng sản xuất bao gồm những yếu tố nào?",
+    "options": [
+      "Người lao động và tư liệu sản xuất",
+      "Chỉ bao gồm máy móc thiết bị",
+      "Chỉ bao gồm con người",
+      "Bao gồm tất cả tiền tệ trong nền kinh tế"
+    ],
+    "answer": 0,
+    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
+  },
+  {
+    "id": 88,
+    "question": "[MOCK] Ý nghĩa của việc học tập và làm theo tấm gương đạo đức Hồ Chí Minh là gì?",
+    "options": [
+      "Để hoàn thành chỉ tiêu thi đua",
+      "Để xây dựng Đảng trong sạch, vững mạnh và phát triển đất nước",
+      "Để đánh giá xếp loại cán bộ cuối năm",
+      "Để phục vụ công tác tuyên truyền"
+    ],
+    "answer": 1,
+    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
+  },
+  {
+    "id": 89,
+    "question": "Theo quan điểm của chủ nghĩa duy vật biện chứng, vật chất là gì?",
+    "options": [
+      "Là thực tại khách quan được con người nhận thức",
+      "Là tất cả những gì tồn tại xung quanh con người",
+      "Là thực tại khách quan tồn tại độc lập với ý thức con người",
+      "Là những gì con người có thể cảm nhận được"
+    ],
+    "answer": 2,
+    "hint": "Vật chất là phạm trù triết học dùng để chỉ thực tại khách quan, tồn tại không phụ thuộc vào ý thức con người."
+  },
+  {
+    "id": 90,
+    "question": "Đảng Cộng sản Việt Nam được thành lập vào ngày tháng năm nào?",
+    "options": [
+      "3 tháng 2 năm 1930",
+      "19 tháng 8 năm 1945",
+      "2 tháng 9 năm 1945",
+      "7 tháng 5 năm 1954"
+    ],
+    "answer": 0,
+    "hint": "Đảng Cộng sản Việt Nam được thành lập ngày 3/2/1930 tại Hương Cảng (Trung Quốc)."
+  },
+  {
+    "id": 91,
+    "question": "Phương thức sản xuất bao gồm hai mặt nào?",
+    "options": [
+      "Cơ sở hạ tầng và kiến trúc thượng tầng",
+      "Lực lượng sản xuất và quan hệ sản xuất",
+      "Sản xuất và tiêu dùng",
+      "Kinh tế và chính trị"
+    ],
+    "answer": 1,
+    "hint": "Phương thức sản xuất là sự thống nhất giữa lực lượng sản xuất và quan hệ sản xuất."
+  },
+  {
+    "id": 92,
+    "question": "Tư tưởng Hồ Chí Minh về đại đoàn kết dân tộc có vai trò gì?",
+    "options": [
+      "Là phương tiện đấu tranh",
+      "Là chiến lược cách mạng",
+      "Là đường lối tạm thời",
+      "Là sách lược trước mắt"
+    ],
+    "answer": 1,
+    "hint": "Đại đoàn kết dân tộc là một chiến lược cách mạng, không phải là sách lược hay thủ đoạn chính trị."
+  },
+  {
+    "id": 93,
+    "question": "[MOCK] 'Cơ sở hạ tầng' trong một hình thái kinh tế – xã hội bao gồm?",
+    "options": [
+      "Hệ tư tưởng, văn hóa, khoa học",
+      "Toàn bộ quan hệ sản xuất và lực lượng sản xuất",
+      "Chỉ bao gồm hệ thống chính trị",
+      "Chỉ bao gồm tôn giáo và tín ngưỡng"
+    ],
+    "answer": 1,
+    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
+  },
+  {
+    "id": 94,
+    "question": "[MOCK] Ý nghĩa của việc học tập và làm theo tấm gương đạo đức Hồ Chí Minh là gì?",
+    "options": [
+      "Để hoàn thành chỉ tiêu thi đua",
+      "Để xây dựng Đảng trong sạch, vững mạnh và phát triển đất nước",
+      "Để đánh giá xếp loại cán bộ cuối năm",
+      "Để phục vụ công tác tuyên truyền"
+    ],
+    "answer": 1,
+    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
+  },
+  {
+    "id": 95,
+    "question": "Chủ nghĩa Mác – Lênin có hai chức năng cơ bản nào?",
+    "options": [
+      "Thế giới quan và nhận thức luận",
+      "Thế giới quan và phương pháp luận",
+      "Bản thể luận và nhận thức luận",
+      "Thế giới quan và bản thể luận"
+    ],
+    "answer": 1,
+    "hint": "Hai chức năng cơ bản của triết học Mác – Lênin là chức năng thế giới quan và chức năng phương pháp luận."
+  },
+  {
+    "id": 96,
+    "question": "[MOCK] 'Dân chủ XHCN' khác với 'dân chủ tư sản' ở điểm cơ bản nào?",
+    "options": [
+      "Dân chủ XHCN là dân chủ cho giai cấp vô sản và nhân dân lao động",
+      "Dân chủ XHCN chỉ dành cho cán bộ nhà nước",
+      "Dân chủ XHCN không cần thiết vì nhà nước đại diện cho dân",
+      "Dân chủ XHCN và dân chủ tư sản không có điểm khác"
+    ],
+    "answer": 0,
+    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
+  },
+  {
+    "id": 97,
+    "question": "[MOCK] Vai trò của khoa học – công nghệ trong xây dựng CNXH ở Việt Nam được Hồ Chí Minh xác định là gì?",
+    "options": [
+      "Là một sân chơi riêng của giới trí thức",
+      "Là then chốt để phát triển đất nước",
+      "Là yếu tố phụ, không quan trọng",
+      "Chỉ phục vụ quốc phòng"
+    ],
+    "answer": 1,
+    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
+  },
+  {
+    "id": 98,
+    "question": "[MOCK] 'Dân chủ XHCN' khác với 'dân chủ tư sản' ở điểm cơ bản nào?",
+    "options": [
+      "Dân chủ XHCN là dân chủ cho giai cấp vô sản và nhân dân lao động",
+      "Dân chủ XHCN chỉ dành cho cán bộ nhà nước",
+      "Dân chủ XHCN không cần thiết vì nhà nước đại diện cho dân",
+      "Dân chủ XHCN và dân chủ tư sản không có điểm khác"
+    ],
+    "answer": 0,
+    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
+  },
+  {
+    "id": 99,
+    "question": "Chủ nghĩa xã hội khoa học ra đời vào thế kỷ nào?",
+    "options": [
+      "Thế kỷ XVII",
+      "Thế kỷ XVIII",
+      "Thế kỷ XIX",
+      "Thế kỷ XX"
+    ],
+    "answer": 2,
+    "hint": "Chủ nghĩa xã hội khoa học ra đời vào những năm 40 của thế kỷ XIX, gắn liền với tên tuổi của C. Mác và Ph. Ăngghen."
+  },
+  {
+    "id": 100,
+    "question": "[MOCK] Ý nghĩa của việc học tập và làm theo tấm gương đạo đức Hồ Chí Minh là gì?",
+    "options": [
+      "Để hoàn thành chỉ tiêu thi đua",
+      "Để xây dựng Đảng trong sạch, vững mạnh và phát triển đất nước",
+      "Để đánh giá xếp loại cán bộ cuối năm",
+      "Để phục vụ công tác tuyên truyền"
+    ],
+    "answer": 1,
+    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
+  },
+  {
+    "id": 101,
+    "question": "[MOCK] Vai trò lãnh đạo của Đảng Cộng sản Việt Nam đối với Nhà nước được thể hiện ở đâu?",
+    "options": [
+      "Đảng trực tiếp điều hành bộ máy nhà nước hằng ngày",
+      "Đảng lãnh đạo Nhà nước thông qua đường lối, chủ trương và công tác cán bộ",
+      "Đảng chỉ tham gia lãnh đạo trong lĩnh vực quốc phòng",
+      "Đảng lãnh đạo thông qua phong trào quần chúng"
+    ],
+    "answer": 1,
+    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
+  },
+  {
+    "id": 102,
+    "question": "Theo Hiến pháp 2013, quyền con người và quyền công dân được quy định tại chương nào?",
+    "options": [
+      "Chương I",
+      "Chương II",
+      "Chương III",
+      "Chương IV"
+    ],
+    "answer": 1,
+    "hint": "Chương II của Hiến pháp 2013 quy định về quyền con người, quyền và nghĩa vụ cơ bản của công dân."
+  },
+  {
+    "id": 103,
+    "question": "[MOCK] Vai trò lãnh đạo của Đảng Cộng sản Việt Nam đối với Nhà nước được thể hiện ở đâu?",
+    "options": [
+      "Đảng trực tiếp điều hành bộ máy nhà nước hằng ngày",
+      "Đảng lãnh đạo Nhà nước thông qua đường lối, chủ trương và công tác cán bộ",
+      "Đảng chỉ tham gia lãnh đạo trong lĩnh vực quốc phòng",
+      "Đảng lãnh đạo thông qua phong trào quần chúng"
+    ],
+    "answer": 1,
+    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
+  },
+  {
+    "id": 104,
     "question": "[MOCK] Vai trò của nhân dân trong hệ thống chính trị Việt Nam được thể hiện qua nguyên tắc nào?",
     "options": [
       "Nhân dân là đối tượng quản lý của Nhà nước",
@@ -478,5 +1246,1157 @@
     ],
     "answer": 1,
     "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
+  },
+  {
+    "id": 105,
+    "question": "Phạm trù nào phản ánh mối liên hệ bản chất, tất nhiên, bên trong của sự vật?",
+    "options": [
+      "Hiện tượng",
+      "Bản chất",
+      "Nội dung",
+      "Hình thức"
+    ],
+    "answer": 1,
+    "hint": "Bản chất là phạm trù phản ánh cái chung, cái tất yếu, cái bên trong quyết định sự tồn tại và phát triển của sự vật."
+  },
+  {
+    "id": 106,
+    "question": "[MOCK] 'Cơ sở hạ tầng' trong một hình thái kinh tế – xã hội bao gồm?",
+    "options": [
+      "Hệ tư tưởng, văn hóa, khoa học",
+      "Toàn bộ quan hệ sản xuất và lực lượng sản xuất",
+      "Chỉ bao gồm hệ thống chính trị",
+      "Chỉ bao gồm tôn giáo và tín ngưỡng"
+    ],
+    "answer": 1,
+    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
+  },
+  {
+    "id": 107,
+    "question": "An ninh quốc gia bao gồm những nội dung nào?",
+    "options": [
+      "An ninh chính trị và an ninh kinh tế",
+      "An ninh chính trị, an ninh kinh tế, an ninh văn hóa tư tưởng, an ninh xã hội",
+      "An ninh quân sự và an ninh biên giới",
+      "An ninh nội bộ và an ninh đối ngoại"
+    ],
+    "answer": 1,
+    "hint": "An ninh quốc gia bao gồm an ninh trên tất cả các lĩnh vực: chính trị, kinh tế, văn hóa tư tưởng, xã hội, quốc phòng, đối ngoại..."
+  },
+  {
+    "id": 108,
+    "question": "[MOCK] Theo Hồ Chí Minh, cán bộ là gì?",
+    "options": [
+      "Là người được nhân dân ủy thác quyền lực để phục vụ nhân dân",
+      "Là người đứng trên nhân dân",
+      "Là người có đặc quyền trong bộ máy nhà nước",
+      "Là người đại diện cho Đảng quản lý xã hội"
+    ],
+    "answer": 0,
+    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
+  },
+  {
+    "id": 109,
+    "question": "[MOCK] Phép biện chứng duy vật gồm bao nhiêu quy luật cơ bản?",
+    "options": [
+      "Hai quy luật",
+      "Ba quy luật",
+      "Bốn quy luật",
+      "Năm quy luật"
+    ],
+    "answer": 1,
+    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
+  },
+  {
+    "id": 110,
+    "question": "[MOCK] Vai trò của nhân dân trong hệ thống chính trị Việt Nam được thể hiện qua nguyên tắc nào?",
+    "options": [
+      "Nhân dân là đối tượng quản lý của Nhà nước",
+      "Nhân dân là gốc, là chủ thể của quyền lực nhà nước",
+      "Nhân dân tham gia lãnh đạo thông qua đại biểu được chỉ định",
+      "Nhân dân không có vai trò trực tiếp"
+    ],
+    "answer": 1,
+    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
+  },
+  {
+    "id": 111,
+    "question": "Pháp luật là gì?",
+    "options": [
+      "Là hệ thống quy tắc xử sự do xã hội đặt ra",
+      "Là hệ thống quy tắc xử sự do nhà nước ban hành và bảo đảm thực hiện",
+      "Là các quy định do tổ chức chính trị ban hành",
+      "Là các phong tục tập quán được văn bản hóa"
+    ],
+    "answer": 1,
+    "hint": "Pháp luật là hệ thống quy tắc xử sự chung do nhà nước ban hành hoặc thừa nhận và bảo đảm thực hiện bằng quyền lực nhà nước."
+  },
+  {
+    "id": 112,
+    "question": "[MOCK] Bản chất của Nhà nước pháp quyền XHCN Việt Nam được xác định bởi yếu tố nào?",
+    "options": [
+      "Cơ chế thị trường tự do",
+      "Sự lãnh đạo của Đảng Cộng sản và quyền làm chủ của nhân dân",
+      "Truyền thống phong kiến lâu đời",
+      "Ảnh hưởng của luật pháp phương Tây"
+    ],
+    "answer": 1,
+    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
+  },
+  {
+    "id": 113,
+    "question": "Theo Hiến pháp 2013, quyền con người và quyền công dân được quy định tại chương nào?",
+    "options": [
+      "Chương I",
+      "Chương II",
+      "Chương III",
+      "Chương IV"
+    ],
+    "answer": 1,
+    "hint": "Chương II của Hiến pháp 2013 quy định về quyền con người, quyền và nghĩa vụ cơ bản của công dân."
+  },
+  {
+    "id": 114,
+    "question": "Giá trị thặng dư là gì?",
+    "options": [
+      "Phần giá trị mới dôi ra ngoài giá trị sức lao động do công nhân tạo ra",
+      "Tổng giá trị hàng hóa trừ đi chi phí sản xuất",
+      "Lợi nhuận mà nhà tư bản thu được",
+      "Phần giá trị còn lại sau khi trừ tiền lương"
+    ],
+    "answer": 0,
+    "hint": "Giá trị thặng dư (m) là phần giá trị mới dôi ra ngoài giá trị sức lao động, do công nhân làm thuê tạo ra và bị nhà tư bản chiếm không."
+  },
+  {
+    "id": 115,
+    "question": "[MOCK] Đặc trưng nào KHÔNG thuộc về chủ nghĩa xã hội?",
+    "options": [
+      "Sở hữu tư nhân về tư liệu sản xuất là chủ đạo",
+      "Có nền kinh tế phát triển cao, dựa trên lực lượng sản xuất hiện đại",
+      "Có nhà nước của nhân dân, do nhân dân, vì nhân dân",
+      "Có nền dân chủ XHCN"
+    ],
+    "answer": 0,
+    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
+  },
+  {
+    "id": 116,
+    "question": "Triết học Mác – Lênin nghiên cứu những quy luật chung nhất của lĩnh vực nào?",
+    "options": [
+      "Tự nhiên, xã hội và tư duy",
+      "Kinh tế và chính trị",
+      "Văn hóa và xã hội",
+      "Khoa học và công nghệ"
+    ],
+    "answer": 0,
+    "hint": "Triết học Mác – Lênin là khoa học về những quy luật chung nhất của tự nhiên, xã hội và tư duy."
+  },
+  {
+    "id": 117,
+    "question": "An ninh quốc gia bao gồm những nội dung nào?",
+    "options": [
+      "An ninh chính trị và an ninh kinh tế",
+      "An ninh chính trị, an ninh kinh tế, an ninh văn hóa tư tưởng, an ninh xã hội",
+      "An ninh quân sự và an ninh biên giới",
+      "An ninh nội bộ và an ninh đối ngoại"
+    ],
+    "answer": 1,
+    "hint": "An ninh quốc gia bao gồm an ninh trên tất cả các lĩnh vực: chính trị, kinh tế, văn hóa tư tưởng, xã hội, quốc phòng, đối ngoại..."
+  },
+  {
+    "id": 118,
+    "question": "[MOCK] Tính tất yếu khách quan của con đường đi lên chủ nghĩa xã hội ở Việt Nam thể hiện ở điểm nào?",
+    "options": [
+      "Do lựa chọn chủ quan của một số nhà lãnh đạo",
+      "Do mâu thuẫn của xã hội và yêu cầu phát triển khách quan",
+      "Do sức ép từ các cường quốc quốc tế",
+      "Do ngẫu nhiên lịch sử"
+    ],
+    "answer": 1,
+    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
+  },
+  {
+    "id": 119,
+    "question": "Trong tư tưởng Hồ Chí Minh, đạo đức cách mạng gồm những phẩm chất nào?",
+    "options": [
+      "Trí, dũng, nhân, tín",
+      "Cần, kiệm, liêm, chính, chí công vô tư",
+      "Trung, hiếu, nhân, nghĩa",
+      "Đức, trí, thể, mỹ"
+    ],
+    "answer": 1,
+    "hint": "Hồ Chí Minh coi cần, kiệm, liêm, chính, chí công vô tư là những phẩm chất đạo đức cách mạng cơ bản."
+  },
+  {
+    "id": 120,
+    "question": "Hình thức cao nhất của vận động là gì?",
+    "options": [
+      "Vận động cơ học",
+      "Vận động vật lý",
+      "Vận động hóa học",
+      "Vận động xã hội"
+    ],
+    "answer": 3,
+    "hint": "Theo Ăngghen, vận động xã hội là hình thức vận động cao nhất và phức tạp nhất."
+  },
+  {
+    "id": 121,
+    "question": "[MOCK] Vai trò của khoa học – công nghệ trong xây dựng CNXH ở Việt Nam được Hồ Chí Minh xác định là gì?",
+    "options": [
+      "Là một sân chơi riêng của giới trí thức",
+      "Là then chốt để phát triển đất nước",
+      "Là yếu tố phụ, không quan trọng",
+      "Chỉ phục vụ quốc phòng"
+    ],
+    "answer": 1,
+    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
+  },
+  {
+    "id": 122,
+    "question": "[MOCK] Vai trò lãnh đạo của Đảng Cộng sản Việt Nam đối với Nhà nước được thể hiện ở đâu?",
+    "options": [
+      "Đảng trực tiếp điều hành bộ máy nhà nước hằng ngày",
+      "Đảng lãnh đạo Nhà nước thông qua đường lối, chủ trương và công tác cán bộ",
+      "Đảng chỉ tham gia lãnh đạo trong lĩnh vực quốc phòng",
+      "Đảng lãnh đạo thông qua phong trào quần chúng"
+    ],
+    "answer": 1,
+    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
+  },
+  {
+    "id": 123,
+    "question": "[MOCK] Nguyên lý 'lấy dân làm gốc' (dân vi bản) trong tư tưởng Hồ Chí Minh có ý nghĩa gì?",
+    "options": [
+      "Nhà nước đặt lợi ích nhân dân làm mục tiêu phục vụ",
+      "Nhân dân phải phục tùng tuyệt đối nhà nước",
+      "Nhân dân tự quản lý không cần nhà nước",
+      "Đảng thay mặt nhân dân ra quyết định"
+    ],
+    "answer": 0,
+    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
+  },
+  {
+    "id": 124,
+    "question": "[MOCK] Nguyên tắc nào là cơ bản nhất trong đạo đức Hồ Chí Minh?",
+    "options": [
+      "Vì lợi ích chung",
+      "Vì bản thân trước",
+      "Vì gia đình rồi mới đến xã hội",
+      "Vì quốc gia là trên hết"
+    ],
+    "answer": 0,
+    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
+  },
+  {
+    "id": 125,
+    "question": "Theo Hiến pháp 2013, quyền con người và quyền công dân được quy định tại chương nào?",
+    "options": [
+      "Chương I",
+      "Chương II",
+      "Chương III",
+      "Chương IV"
+    ],
+    "answer": 1,
+    "hint": "Chương II của Hiến pháp 2013 quy định về quyền con người, quyền và nghĩa vụ cơ bản của công dân."
+  },
+  {
+    "id": 126,
+    "question": "Chủ nghĩa Mác – Lênin có hai chức năng cơ bản nào?",
+    "options": [
+      "Thế giới quan và nhận thức luận",
+      "Thế giới quan và phương pháp luận",
+      "Bản thể luận và nhận thức luận",
+      "Thế giới quan và bản thể luận"
+    ],
+    "answer": 1,
+    "hint": "Hai chức năng cơ bản của triết học Mác – Lênin là chức năng thế giới quan và chức năng phương pháp luận."
+  },
+  {
+    "id": 127,
+    "question": "[MOCK] Phạm trù 'cách mạng xã hội' trong triết học Mác – Lênin được hiểu là gì?",
+    "options": [
+      "Sự thay đổi hình thức nhà nước",
+      "Sự chuyển biến có tính chất bước ngoặt trong toàn bộ đời sống xã hội",
+      "Sự thay đổi trong phương thức sản xuất nông nghiệp",
+      "Sự điều chỉnh quan hệ ngoại giao giữa các quốc gia"
+    ],
+    "answer": 1,
+    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
+  },
+  {
+    "id": 128,
+    "question": "[MOCK] Bản chất của Nhà nước pháp quyền XHCN Việt Nam được xác định bởi yếu tố nào?",
+    "options": [
+      "Cơ chế thị trường tự do",
+      "Sự lãnh đạo của Đảng Cộng sản và quyền làm chủ của nhân dân",
+      "Truyền thống phong kiến lâu đời",
+      "Ảnh hưởng của luật pháp phương Tây"
+    ],
+    "answer": 1,
+    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
+  },
+  {
+    "id": 129,
+    "question": "Tư tưởng Hồ Chí Minh về đại đoàn kết dân tộc có vai trò gì?",
+    "options": [
+      "Là phương tiện đấu tranh",
+      "Là chiến lược cách mạng",
+      "Là đường lối tạm thời",
+      "Là sách lược trước mắt"
+    ],
+    "answer": 1,
+    "hint": "Đại đoàn kết dân tộc là một chiến lược cách mạng, không phải là sách lược hay thủ đoạn chính trị."
+  },
+  {
+    "id": 130,
+    "question": "Phương thức sản xuất bao gồm hai mặt nào?",
+    "options": [
+      "Cơ sở hạ tầng và kiến trúc thượng tầng",
+      "Lực lượng sản xuất và quan hệ sản xuất",
+      "Sản xuất và tiêu dùng",
+      "Kinh tế và chính trị"
+    ],
+    "answer": 1,
+    "hint": "Phương thức sản xuất là sự thống nhất giữa lực lượng sản xuất và quan hệ sản xuất."
+  },
+  {
+    "id": 131,
+    "question": "[MOCK] Vai trò của nhân dân trong hệ thống chính trị Việt Nam được thể hiện qua nguyên tắc nào?",
+    "options": [
+      "Nhân dân là đối tượng quản lý của Nhà nước",
+      "Nhân dân là gốc, là chủ thể của quyền lực nhà nước",
+      "Nhân dân tham gia lãnh đạo thông qua đại biểu được chỉ định",
+      "Nhân dân không có vai trò trực tiếp"
+    ],
+    "answer": 1,
+    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
+  },
+  {
+    "id": 132,
+    "question": "Nhà nước Cộng hòa Xã hội Chủ nghĩa Việt Nam là nhà nước pháp quyền của ai?",
+    "options": [
+      "Của Đảng Cộng sản",
+      "Của giai cấp công nhân",
+      "Của nhân dân, do nhân dân, vì nhân dân",
+      "Của toàn thể dân tộc Việt Nam"
+    ],
+    "answer": 2,
+    "hint": "Nhà nước pháp quyền xã hội chủ nghĩa Việt Nam là nhà nước của nhân dân, do nhân dân, vì nhân dân."
+  },
+  {
+    "id": 133,
+    "question": "[MOCK] 'Quy luật giá trị' điều chỉnh nền kinh tế hàng hóa dựa trên yếu tố nào?",
+    "options": [
+      "Cung – cầu hàng hóa trên thị trường",
+      "Lao động xã hội cần thiết hao phí để sản xuất hàng hóa",
+      "Mệnh lệnh hành chính của nhà nước",
+      "Giá cả do nhà sản xuất định trước"
+    ],
+    "answer": 1,
+    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
+  },
+  {
+    "id": 134,
+    "question": "[MOCK] Lực lượng sản xuất bao gồm những yếu tố nào?",
+    "options": [
+      "Người lao động và tư liệu sản xuất",
+      "Chỉ bao gồm máy móc thiết bị",
+      "Chỉ bao gồm con người",
+      "Bao gồm tất cả tiền tệ trong nền kinh tế"
+    ],
+    "answer": 0,
+    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
+  },
+  {
+    "id": 135,
+    "question": "[MOCK] Phép biện chứng duy vật gồm bao nhiêu quy luật cơ bản?",
+    "options": [
+      "Hai quy luật",
+      "Ba quy luật",
+      "Bốn quy luật",
+      "Năm quy luật"
+    ],
+    "answer": 1,
+    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
+  },
+  {
+    "id": 136,
+    "question": "Triết học Mác – Lênin nghiên cứu những quy luật chung nhất của lĩnh vực nào?",
+    "options": [
+      "Tự nhiên, xã hội và tư duy",
+      "Kinh tế và chính trị",
+      "Văn hóa và xã hội",
+      "Khoa học và công nghệ"
+    ],
+    "answer": 0,
+    "hint": "Triết học Mác – Lênin là khoa học về những quy luật chung nhất của tự nhiên, xã hội và tư duy."
+  },
+  {
+    "id": 137,
+    "question": "[MOCK] Theo C. Mác, cấu trúc xã hội tư bản gồm hai tầng nào?",
+    "options": [
+      "Tầng lãnh đạo và tầng cơ sở",
+      "Cơ sở hạ tầng và kiến trúc thượng tầng",
+      "Nhà nước và thị trường",
+      "Doanh nghiệp và người lao động"
+    ],
+    "answer": 1,
+    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
+  },
+  {
+    "id": 138,
+    "question": "[MOCK] Nguyên lý 'lấy dân làm gốc' (dân vi bản) trong tư tưởng Hồ Chí Minh có ý nghĩa gì?",
+    "options": [
+      "Nhà nước đặt lợi ích nhân dân làm mục tiêu phục vụ",
+      "Nhân dân phải phục tùng tuyệt đối nhà nước",
+      "Nhân dân tự quản lý không cần nhà nước",
+      "Đảng thay mặt nhân dân ra quyết định"
+    ],
+    "answer": 0,
+    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
+  },
+  {
+    "id": 139,
+    "question": "[MOCK] Phạm trù 'cách mạng xã hội' trong triết học Mác – Lênin được hiểu là gì?",
+    "options": [
+      "Sự thay đổi hình thức nhà nước",
+      "Sự chuyển biến có tính chất bước ngoặt trong toàn bộ đời sống xã hội",
+      "Sự thay đổi trong phương thức sản xuất nông nghiệp",
+      "Sự điều chỉnh quan hệ ngoại giao giữa các quốc gia"
+    ],
+    "answer": 1,
+    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
+  },
+  {
+    "id": 140,
+    "question": "[MOCK] Theo C. Mác, cấu trúc xã hội tư bản gồm hai tầng nào?",
+    "options": [
+      "Tầng lãnh đạo và tầng cơ sở",
+      "Cơ sở hạ tầng và kiến trúc thượng tầng",
+      "Nhà nước và thị trường",
+      "Doanh nghiệp và người lao động"
+    ],
+    "answer": 1,
+    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
+  },
+  {
+    "id": 141,
+    "question": "[MOCK] Vai trò của khoa học – công nghệ trong xây dựng CNXH ở Việt Nam được Hồ Chí Minh xác định là gì?",
+    "options": [
+      "Là một sân chơi riêng của giới trí thức",
+      "Là then chốt để phát triển đất nước",
+      "Là yếu tố phụ, không quan trọng",
+      "Chỉ phục vụ quốc phòng"
+    ],
+    "answer": 1,
+    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
+  },
+  {
+    "id": 142,
+    "question": "Kinh tế chính trị Mác – Lênin nghiên cứu đối tượng chính là gì?",
+    "options": [
+      "Lực lượng sản xuất",
+      "Quan hệ sản xuất",
+      "Phương thức sản xuất",
+      "Kiến trúc thượng tầng"
+    ],
+    "answer": 1,
+    "hint": "Kinh tế chính trị Mác – Lênin nghiên cứu quan hệ sản xuất trong sự tác động qua lại với lực lượng sản xuất và kiến trúc thượng tầng."
+  },
+  {
+    "id": 143,
+    "question": "[MOCK] Khái niệm 'tích lũy tư bản' nghĩa là gì?",
+    "options": [
+      "Biến một phần giá trị thặng dư thành tư bản để mở rộng sản xuất",
+      "Gộp vốn của nhiều doanh nghiệp thành tập đoàn",
+      "Chuyển đổi tư bản cố định sang tư bản lưu động",
+      "Tăng lãi suất ngân hàng"
+    ],
+    "answer": 0,
+    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
+  },
+  {
+    "id": 144,
+    "question": "[MOCK] Nguyên lý 'lấy dân làm gốc' (dân vi bản) trong tư tưởng Hồ Chí Minh có ý nghĩa gì?",
+    "options": [
+      "Nhà nước đặt lợi ích nhân dân làm mục tiêu phục vụ",
+      "Nhân dân phải phục tùng tuyệt đối nhà nước",
+      "Nhân dân tự quản lý không cần nhà nước",
+      "Đảng thay mặt nhân dân ra quyết định"
+    ],
+    "answer": 0,
+    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
+  },
+  {
+    "id": 145,
+    "question": "[MOCK] Theo Hồ Chí Minh, cán bộ là gì?",
+    "options": [
+      "Là người được nhân dân ủy thác quyền lực để phục vụ nhân dân",
+      "Là người đứng trên nhân dân",
+      "Là người có đặc quyền trong bộ máy nhà nước",
+      "Là người đại diện cho Đảng quản lý xã hội"
+    ],
+    "answer": 0,
+    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
+  },
+  {
+    "id": 146,
+    "question": "Hàng hóa có những thuộc tính nào?",
+    "options": [
+      "Giá trị và giá cả",
+      "Giá trị sử dụng và giá trị",
+      "Giá trị sử dụng và giá cả",
+      "Chất lượng và số lượng"
+    ],
+    "answer": 1,
+    "hint": "Hàng hóa có hai thuộc tính: giá trị sử dụng (công dụng) và giá trị (lao động xã hội cần thiết kết tinh trong hàng hóa)."
+  },
+  {
+    "id": 147,
+    "question": "Phương thức sản xuất bao gồm hai mặt nào?",
+    "options": [
+      "Cơ sở hạ tầng và kiến trúc thượng tầng",
+      "Lực lượng sản xuất và quan hệ sản xuất",
+      "Sản xuất và tiêu dùng",
+      "Kinh tế và chính trị"
+    ],
+    "answer": 1,
+    "hint": "Phương thức sản xuất là sự thống nhất giữa lực lượng sản xuất và quan hệ sản xuất."
+  },
+  {
+    "id": 148,
+    "question": "Chủ nghĩa Mác – Lênin có hai chức năng cơ bản nào?",
+    "options": [
+      "Thế giới quan và nhận thức luận",
+      "Thế giới quan và phương pháp luận",
+      "Bản thể luận và nhận thức luận",
+      "Thế giới quan và bản thể luận"
+    ],
+    "answer": 1,
+    "hint": "Hai chức năng cơ bản của triết học Mác – Lênin là chức năng thế giới quan và chức năng phương pháp luận."
+  },
+  {
+    "id": 149,
+    "question": "Phạm trù nào phản ánh mối liên hệ bản chất, tất nhiên, bên trong của sự vật?",
+    "options": [
+      "Hiện tượng",
+      "Bản chất",
+      "Nội dung",
+      "Hình thức"
+    ],
+    "answer": 1,
+    "hint": "Bản chất là phạm trù phản ánh cái chung, cái tất yếu, cái bên trong quyết định sự tồn tại và phát triển của sự vật."
+  },
+  {
+    "id": 150,
+    "question": "Phạm trù nào phản ánh mối liên hệ bản chất, tất nhiên, bên trong của sự vật?",
+    "options": [
+      "Hiện tượng",
+      "Bản chất",
+      "Nội dung",
+      "Hình thức"
+    ],
+    "answer": 1,
+    "hint": "Bản chất là phạm trù phản ánh cái chung, cái tất yếu, cái bên trong quyết định sự tồn tại và phát triển của sự vật."
+  },
+  {
+    "id": 151,
+    "question": "[MOCK] Tính tất yếu khách quan của con đường đi lên chủ nghĩa xã hội ở Việt Nam thể hiện ở điểm nào?",
+    "options": [
+      "Do lựa chọn chủ quan của một số nhà lãnh đạo",
+      "Do mâu thuẫn của xã hội và yêu cầu phát triển khách quan",
+      "Do sức ép từ các cường quốc quốc tế",
+      "Do ngẫu nhiên lịch sử"
+    ],
+    "answer": 1,
+    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
+  },
+  {
+    "id": 152,
+    "question": "[MOCK] Nguyên tắc nào là cơ bản nhất trong đạo đức Hồ Chí Minh?",
+    "options": [
+      "Vì lợi ích chung",
+      "Vì bản thân trước",
+      "Vì gia đình rồi mới đến xã hội",
+      "Vì quốc gia là trên hết"
+    ],
+    "answer": 0,
+    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
+  },
+  {
+    "id": 153,
+    "question": "Quốc phòng toàn dân là gì?",
+    "options": [
+      "Là sức mạnh quốc phòng của lực lượng vũ trang",
+      "Là nền quốc phòng mang tính chất toàn dân, toàn diện",
+      "Là sức mạnh quân sự của đất nước",
+      "Là sự phòng thủ của các lực lượng quân đội"
+    ],
+    "answer": 1,
+    "hint": "Quốc phòng toàn dân là nền quốc phòng mang tính chất 'của dân, do dân, vì dân', có tính toàn dân, toàn diện."
+  },
+  {
+    "id": 154,
+    "question": "[MOCK] Lực lượng sản xuất bao gồm những yếu tố nào?",
+    "options": [
+      "Người lao động và tư liệu sản xuất",
+      "Chỉ bao gồm máy móc thiết bị",
+      "Chỉ bao gồm con người",
+      "Bao gồm tất cả tiền tệ trong nền kinh tế"
+    ],
+    "answer": 0,
+    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
+  },
+  {
+    "id": 155,
+    "question": "[MOCK] Mục đích của công tác tư tưởng trong Đảng là gì?",
+    "options": [
+      "Xây dựng nền tảng tinh thần cho toàn Đảng và xã hội",
+      "Tuyên truyền đối ngoại",
+      "Quản lý báo chí nhà nước",
+      "Đánh giá cán bộ theo hệ số"
+    ],
+    "answer": 0,
+    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
+  },
+  {
+    "id": 156,
+    "question": "[MOCK] 'Dân chủ XHCN' khác với 'dân chủ tư sản' ở điểm cơ bản nào?",
+    "options": [
+      "Dân chủ XHCN là dân chủ cho giai cấp vô sản và nhân dân lao động",
+      "Dân chủ XHCN chỉ dành cho cán bộ nhà nước",
+      "Dân chủ XHCN không cần thiết vì nhà nước đại diện cho dân",
+      "Dân chủ XHCN và dân chủ tư sản không có điểm khác"
+    ],
+    "answer": 0,
+    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
+  },
+  {
+    "id": 157,
+    "question": "Quy luật nào được coi là 'hạt nhân' của phép biện chứng duy vật?",
+    "options": [
+      "Quy luật lượng – chất",
+      "Quy luật phủ định của phủ định",
+      "Quy luật thống nhất và đấu tranh của các mặt đối lập",
+      "Quy luật nhân quả"
+    ],
+    "answer": 2,
+    "hint": "Quy luật thống nhất và đấu tranh của các mặt đối lập (quy luật mâu thuẫn) là hạt nhân của phép biện chứng."
+  },
+  {
+    "id": 158,
+    "question": "[MOCK] Tư tưởng Hồ Chí Minh về phát triển kinh tế nhấn mạnh nguyên tắc nào?",
+    "options": [
+      "Phát triển dựa trên tăng trưởng GDP là mục tiêu duy nhất",
+      "Phát triển toàn diện, hài hòa giữa tăng trưởng và công bằng xã hội",
+      "Chỉ phát triển công nghiệp nặng",
+      "Dựa hoàn toàn vào vốn đầu tư nước ngoài"
+    ],
+    "answer": 1,
+    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
+  },
+  {
+    "id": 159,
+    "question": "[MOCK] Vai trò lãnh đạo của Đảng Cộng sản Việt Nam đối với Nhà nước được thể hiện ở đâu?",
+    "options": [
+      "Đảng trực tiếp điều hành bộ máy nhà nước hằng ngày",
+      "Đảng lãnh đạo Nhà nước thông qua đường lối, chủ trương và công tác cán bộ",
+      "Đảng chỉ tham gia lãnh đạo trong lĩnh vực quốc phòng",
+      "Đảng lãnh đạo thông qua phong trào quần chúng"
+    ],
+    "answer": 1,
+    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
+  },
+  {
+    "id": 160,
+    "question": "[MOCK] Theo Hồ Chí Minh, cán bộ là gì?",
+    "options": [
+      "Là người được nhân dân ủy thác quyền lực để phục vụ nhân dân",
+      "Là người đứng trên nhân dân",
+      "Là người có đặc quyền trong bộ máy nhà nước",
+      "Là người đại diện cho Đảng quản lý xã hội"
+    ],
+    "answer": 0,
+    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
+  },
+  {
+    "id": 161,
+    "question": "Hình thức cao nhất của vận động là gì?",
+    "options": [
+      "Vận động cơ học",
+      "Vận động vật lý",
+      "Vận động hóa học",
+      "Vận động xã hội"
+    ],
+    "answer": 3,
+    "hint": "Theo Ăngghen, vận động xã hội là hình thức vận động cao nhất và phức tạp nhất."
+  },
+  {
+    "id": 162,
+    "question": "[MOCK] Mục đích của công tác tư tưởng trong Đảng là gì?",
+    "options": [
+      "Xây dựng nền tảng tinh thần cho toàn Đảng và xã hội",
+      "Tuyên truyền đối ngoại",
+      "Quản lý báo chí nhà nước",
+      "Đánh giá cán bộ theo hệ số"
+    ],
+    "answer": 0,
+    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
+  },
+  {
+    "id": 163,
+    "question": "Theo quan điểm của chủ nghĩa duy vật biện chứng, vật chất là gì?",
+    "options": [
+      "Là thực tại khách quan được con người nhận thức",
+      "Là tất cả những gì tồn tại xung quanh con người",
+      "Là thực tại khách quan tồn tại độc lập với ý thức con người",
+      "Là những gì con người có thể cảm nhận được"
+    ],
+    "answer": 2,
+    "hint": "Vật chất là phạm trù triết học dùng để chỉ thực tại khách quan, tồn tại không phụ thuộc vào ý thức con người."
+  },
+  {
+    "id": 164,
+    "question": "Quốc phòng toàn dân là gì?",
+    "options": [
+      "Là sức mạnh quốc phòng của lực lượng vũ trang",
+      "Là nền quốc phòng mang tính chất toàn dân, toàn diện",
+      "Là sức mạnh quân sự của đất nước",
+      "Là sự phòng thủ của các lực lượng quân đội"
+    ],
+    "answer": 1,
+    "hint": "Quốc phòng toàn dân là nền quốc phòng mang tính chất 'của dân, do dân, vì dân', có tính toàn dân, toàn diện."
+  },
+  {
+    "id": 165,
+    "question": "[MOCK] Khái niệm 'tích lũy tư bản' nghĩa là gì?",
+    "options": [
+      "Biến một phần giá trị thặng dư thành tư bản để mở rộng sản xuất",
+      "Gộp vốn của nhiều doanh nghiệp thành tập đoàn",
+      "Chuyển đổi tư bản cố định sang tư bản lưu động",
+      "Tăng lãi suất ngân hàng"
+    ],
+    "answer": 0,
+    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
+  },
+  {
+    "id": 166,
+    "question": "[MOCK] Tư tưởng Hồ Chí Minh về phát triển kinh tế nhấn mạnh nguyên tắc nào?",
+    "options": [
+      "Phát triển dựa trên tăng trưởng GDP là mục tiêu duy nhất",
+      "Phát triển toàn diện, hài hòa giữa tăng trưởng và công bằng xã hội",
+      "Chỉ phát triển công nghiệp nặng",
+      "Dựa hoàn toàn vào vốn đầu tư nước ngoài"
+    ],
+    "answer": 1,
+    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
+  },
+  {
+    "id": 167,
+    "question": "Ý thức xã hội bao gồm những cấp độ nào?",
+    "options": [
+      "Ý thức cá nhân và ý thức tập thể",
+      "Ý thức thông thường và ý thức lý luận (ý thức khoa học)",
+      "Ý thức chủ quan và ý thức khách quan",
+      "Ý thức tích cực và ý thức tiêu cực"
+    ],
+    "answer": 1,
+    "hint": "Ý thức xã hội có hai cấp độ: ý thức thông thường (tâm lý xã hội) và ý thức lý luận (hệ tư tưởng)."
+  },
+  {
+    "id": 168,
+    "question": "Nhà nước Cộng hòa Xã hội Chủ nghĩa Việt Nam là nhà nước pháp quyền của ai?",
+    "options": [
+      "Của Đảng Cộng sản",
+      "Của giai cấp công nhân",
+      "Của nhân dân, do nhân dân, vì nhân dân",
+      "Của toàn thể dân tộc Việt Nam"
+    ],
+    "answer": 2,
+    "hint": "Nhà nước pháp quyền xã hội chủ nghĩa Việt Nam là nhà nước của nhân dân, do nhân dân, vì nhân dân."
+  },
+  {
+    "id": 169,
+    "question": "Phạm trù nào phản ánh mối liên hệ bản chất, tất nhiên, bên trong của sự vật?",
+    "options": [
+      "Hiện tượng",
+      "Bản chất",
+      "Nội dung",
+      "Hình thức"
+    ],
+    "answer": 1,
+    "hint": "Bản chất là phạm trù phản ánh cái chung, cái tất yếu, cái bên trong quyết định sự tồn tại và phát triển của sự vật."
+  },
+  {
+    "id": 170,
+    "question": "Quốc phòng toàn dân là gì?",
+    "options": [
+      "Là sức mạnh quốc phòng của lực lượng vũ trang",
+      "Là nền quốc phòng mang tính chất toàn dân, toàn diện",
+      "Là sức mạnh quân sự của đất nước",
+      "Là sự phòng thủ của các lực lượng quân đội"
+    ],
+    "answer": 1,
+    "hint": "Quốc phòng toàn dân là nền quốc phòng mang tính chất 'của dân, do dân, vì dân', có tính toàn dân, toàn diện."
+  },
+  {
+    "id": 171,
+    "question": "[MOCK] Tư tưởng Hồ Chí Minh về phát triển kinh tế nhấn mạnh nguyên tắc nào?",
+    "options": [
+      "Phát triển dựa trên tăng trưởng GDP là mục tiêu duy nhất",
+      "Phát triển toàn diện, hài hòa giữa tăng trưởng và công bằng xã hội",
+      "Chỉ phát triển công nghiệp nặng",
+      "Dựa hoàn toàn vào vốn đầu tư nước ngoài"
+    ],
+    "answer": 1,
+    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
+  },
+  {
+    "id": 172,
+    "question": "[MOCK] Vai trò của nhân dân trong hệ thống chính trị Việt Nam được thể hiện qua nguyên tắc nào?",
+    "options": [
+      "Nhân dân là đối tượng quản lý của Nhà nước",
+      "Nhân dân là gốc, là chủ thể của quyền lực nhà nước",
+      "Nhân dân tham gia lãnh đạo thông qua đại biểu được chỉ định",
+      "Nhân dân không có vai trò trực tiếp"
+    ],
+    "answer": 1,
+    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
+  },
+  {
+    "id": 173,
+    "question": "[MOCK] Mục đích của công tác tư tưởng trong Đảng là gì?",
+    "options": [
+      "Xây dựng nền tảng tinh thần cho toàn Đảng và xã hội",
+      "Tuyên truyền đối ngoại",
+      "Quản lý báo chí nhà nước",
+      "Đánh giá cán bộ theo hệ số"
+    ],
+    "answer": 0,
+    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
+  },
+  {
+    "id": 174,
+    "question": "[MOCK] Nguyên tắc nào là cơ bản nhất trong đạo đức Hồ Chí Minh?",
+    "options": [
+      "Vì lợi ích chung",
+      "Vì bản thân trước",
+      "Vì gia đình rồi mới đến xã hội",
+      "Vì quốc gia là trên hết"
+    ],
+    "answer": 0,
+    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
+  },
+  {
+    "id": 175,
+    "question": "Nhà nước Cộng hòa Xã hội Chủ nghĩa Việt Nam là nhà nước pháp quyền của ai?",
+    "options": [
+      "Của Đảng Cộng sản",
+      "Của giai cấp công nhân",
+      "Của nhân dân, do nhân dân, vì nhân dân",
+      "Của toàn thể dân tộc Việt Nam"
+    ],
+    "answer": 2,
+    "hint": "Nhà nước pháp quyền xã hội chủ nghĩa Việt Nam là nhà nước của nhân dân, do nhân dân, vì nhân dân."
+  },
+  {
+    "id": 176,
+    "question": "[MOCK] Phép biện chứng duy vật gồm bao nhiêu quy luật cơ bản?",
+    "options": [
+      "Hai quy luật",
+      "Ba quy luật",
+      "Bốn quy luật",
+      "Năm quy luật"
+    ],
+    "answer": 1,
+    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
+  },
+  {
+    "id": 177,
+    "question": "Theo Hiến pháp 2013, quyền con người và quyền công dân được quy định tại chương nào?",
+    "options": [
+      "Chương I",
+      "Chương II",
+      "Chương III",
+      "Chương IV"
+    ],
+    "answer": 1,
+    "hint": "Chương II của Hiến pháp 2013 quy định về quyền con người, quyền và nghĩa vụ cơ bản của công dân."
+  },
+  {
+    "id": 178,
+    "question": "[MOCK] Tính tất yếu khách quan của con đường đi lên chủ nghĩa xã hội ở Việt Nam thể hiện ở điểm nào?",
+    "options": [
+      "Do lựa chọn chủ quan của một số nhà lãnh đạo",
+      "Do mâu thuẫn của xã hội và yêu cầu phát triển khách quan",
+      "Do sức ép từ các cường quốc quốc tế",
+      "Do ngẫu nhiên lịch sử"
+    ],
+    "answer": 1,
+    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
+  },
+  {
+    "id": 179,
+    "question": "[MOCK] Nguyên tắc nào là cơ bản nhất trong đạo đức Hồ Chí Minh?",
+    "options": [
+      "Vì lợi ích chung",
+      "Vì bản thân trước",
+      "Vì gia đình rồi mới đến xã hội",
+      "Vì quốc gia là trên hết"
+    ],
+    "answer": 0,
+    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
+  },
+  {
+    "id": 180,
+    "question": "[MOCK] Đặc trưng nào KHÔNG thuộc về chủ nghĩa xã hội?",
+    "options": [
+      "Sở hữu tư nhân về tư liệu sản xuất là chủ đạo",
+      "Có nền kinh tế phát triển cao, dựa trên lực lượng sản xuất hiện đại",
+      "Có nhà nước của nhân dân, do nhân dân, vì nhân dân",
+      "Có nền dân chủ XHCN"
+    ],
+    "answer": 0,
+    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
+  },
+  {
+    "id": 181,
+    "question": "[MOCK] Khái niệm 'tích lũy tư bản' nghĩa là gì?",
+    "options": [
+      "Biến một phần giá trị thặng dư thành tư bản để mở rộng sản xuất",
+      "Gộp vốn của nhiều doanh nghiệp thành tập đoàn",
+      "Chuyển đổi tư bản cố định sang tư bản lưu động",
+      "Tăng lãi suất ngân hàng"
+    ],
+    "answer": 0,
+    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
+  },
+  {
+    "id": 182,
+    "question": "Triết học Mác – Lênin nghiên cứu những quy luật chung nhất của lĩnh vực nào?",
+    "options": [
+      "Tự nhiên, xã hội và tư duy",
+      "Kinh tế và chính trị",
+      "Văn hóa và xã hội",
+      "Khoa học và công nghệ"
+    ],
+    "answer": 0,
+    "hint": "Triết học Mác – Lênin là khoa học về những quy luật chung nhất của tự nhiên, xã hội và tư duy."
+  },
+  {
+    "id": 183,
+    "question": "Triết học Mác – Lênin nghiên cứu những quy luật chung nhất của lĩnh vực nào?",
+    "options": [
+      "Tự nhiên, xã hội và tư duy",
+      "Kinh tế và chính trị",
+      "Văn hóa và xã hội",
+      "Khoa học và công nghệ"
+    ],
+    "answer": 0,
+    "hint": "Triết học Mác – Lênin là khoa học về những quy luật chung nhất của tự nhiên, xã hội và tư duy."
+  },
+  {
+    "id": 184,
+    "question": "Chủ nghĩa xã hội khoa học ra đời vào thế kỷ nào?",
+    "options": [
+      "Thế kỷ XVII",
+      "Thế kỷ XVIII",
+      "Thế kỷ XIX",
+      "Thế kỷ XX"
+    ],
+    "answer": 2,
+    "hint": "Chủ nghĩa xã hội khoa học ra đời vào những năm 40 của thế kỷ XIX, gắn liền với tên tuổi của C. Mác và Ph. Ăngghen."
+  },
+  {
+    "id": 185,
+    "question": "Pháp luật là gì?",
+    "options": [
+      "Là hệ thống quy tắc xử sự do xã hội đặt ra",
+      "Là hệ thống quy tắc xử sự do nhà nước ban hành và bảo đảm thực hiện",
+      "Là các quy định do tổ chức chính trị ban hành",
+      "Là các phong tục tập quán được văn bản hóa"
+    ],
+    "answer": 1,
+    "hint": "Pháp luật là hệ thống quy tắc xử sự chung do nhà nước ban hành hoặc thừa nhận và bảo đảm thực hiện bằng quyền lực nhà nước."
+  },
+  {
+    "id": 186,
+    "question": "Quốc phòng toàn dân là gì?",
+    "options": [
+      "Là sức mạnh quốc phòng của lực lượng vũ trang",
+      "Là nền quốc phòng mang tính chất toàn dân, toàn diện",
+      "Là sức mạnh quân sự của đất nước",
+      "Là sự phòng thủ của các lực lượng quân đội"
+    ],
+    "answer": 1,
+    "hint": "Quốc phòng toàn dân là nền quốc phòng mang tính chất 'của dân, do dân, vì dân', có tính toàn dân, toàn diện."
+  },
+  {
+    "id": 187,
+    "question": "[MOCK] 'Quy luật giá trị' điều chỉnh nền kinh tế hàng hóa dựa trên yếu tố nào?",
+    "options": [
+      "Cung – cầu hàng hóa trên thị trường",
+      "Lao động xã hội cần thiết hao phí để sản xuất hàng hóa",
+      "Mệnh lệnh hành chính của nhà nước",
+      "Giá cả do nhà sản xuất định trước"
+    ],
+    "answer": 1,
+    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
+  },
+  {
+    "id": 188,
+    "question": "Phương thức sản xuất bao gồm hai mặt nào?",
+    "options": [
+      "Cơ sở hạ tầng và kiến trúc thượng tầng",
+      "Lực lượng sản xuất và quan hệ sản xuất",
+      "Sản xuất và tiêu dùng",
+      "Kinh tế và chính trị"
+    ],
+    "answer": 1,
+    "hint": "Phương thức sản xuất là sự thống nhất giữa lực lượng sản xuất và quan hệ sản xuất."
+  },
+  {
+    "id": 189,
+    "question": "[MOCK] Nguyên lý 'lấy dân làm gốc' (dân vi bản) trong tư tưởng Hồ Chí Minh có ý nghĩa gì?",
+    "options": [
+      "Nhà nước đặt lợi ích nhân dân làm mục tiêu phục vụ",
+      "Nhân dân phải phục tùng tuyệt đối nhà nước",
+      "Nhân dân tự quản lý không cần nhà nước",
+      "Đảng thay mặt nhân dân ra quyết định"
+    ],
+    "answer": 0,
+    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
+  },
+  {
+    "id": 190,
+    "question": "[MOCK] 'Dân chủ XHCN' khác với 'dân chủ tư sản' ở điểm cơ bản nào?",
+    "options": [
+      "Dân chủ XHCN là dân chủ cho giai cấp vô sản và nhân dân lao động",
+      "Dân chủ XHCN chỉ dành cho cán bộ nhà nước",
+      "Dân chủ XHCN không cần thiết vì nhà nước đại diện cho dân",
+      "Dân chủ XHCN và dân chủ tư sản không có điểm khác"
+    ],
+    "answer": 0,
+    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
+  },
+  {
+    "id": 191,
+    "question": "Pháp luật là gì?",
+    "options": [
+      "Là hệ thống quy tắc xử sự do xã hội đặt ra",
+      "Là hệ thống quy tắc xử sự do nhà nước ban hành và bảo đảm thực hiện",
+      "Là các quy định do tổ chức chính trị ban hành",
+      "Là các phong tục tập quán được văn bản hóa"
+    ],
+    "answer": 1,
+    "hint": "Pháp luật là hệ thống quy tắc xử sự chung do nhà nước ban hành hoặc thừa nhận và bảo đảm thực hiện bằng quyền lực nhà nước."
+  },
+  {
+    "id": 192,
+    "question": "[MOCK] Phạm trù 'cách mạng xã hội' trong triết học Mác – Lênin được hiểu là gì?",
+    "options": [
+      "Sự thay đổi hình thức nhà nước",
+      "Sự chuyển biến có tính chất bước ngoặt trong toàn bộ đời sống xã hội",
+      "Sự thay đổi trong phương thức sản xuất nông nghiệp",
+      "Sự điều chỉnh quan hệ ngoại giao giữa các quốc gia"
+    ],
+    "answer": 1,
+    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
+  },
+  {
+    "id": 193,
+    "question": "Theo Hiến pháp 2013, quyền con người và quyền công dân được quy định tại chương nào?",
+    "options": [
+      "Chương I",
+      "Chương II",
+      "Chương III",
+      "Chương IV"
+    ],
+    "answer": 1,
+    "hint": "Chương II của Hiến pháp 2013 quy định về quyền con người, quyền và nghĩa vụ cơ bản của công dân."
+  },
+  {
+    "id": 194,
+    "question": "Hàng hóa có những thuộc tính nào?",
+    "options": [
+      "Giá trị và giá cả",
+      "Giá trị sử dụng và giá trị",
+      "Giá trị sử dụng và giá cả",
+      "Chất lượng và số lượng"
+    ],
+    "answer": 1,
+    "hint": "Hàng hóa có hai thuộc tính: giá trị sử dụng (công dụng) và giá trị (lao động xã hội cần thiết kết tinh trong hàng hóa)."
+  },
+  {
+    "id": 195,
+    "question": "[MOCK] Phạm trù 'cách mạng xã hội' trong triết học Mác – Lênin được hiểu là gì?",
+    "options": [
+      "Sự thay đổi hình thức nhà nước",
+      "Sự chuyển biến có tính chất bước ngoặt trong toàn bộ đời sống xã hội",
+      "Sự thay đổi trong phương thức sản xuất nông nghiệp",
+      "Sự điều chỉnh quan hệ ngoại giao giữa các quốc gia"
+    ],
+    "answer": 1,
+    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
+  },
+  {
+    "id": 196,
+    "question": "Ý thức xã hội bao gồm những cấp độ nào?",
+    "options": [
+      "Ý thức cá nhân và ý thức tập thể",
+      "Ý thức thông thường và ý thức lý luận (ý thức khoa học)",
+      "Ý thức chủ quan và ý thức khách quan",
+      "Ý thức tích cực và ý thức tiêu cực"
+    ],
+    "answer": 1,
+    "hint": "Ý thức xã hội có hai cấp độ: ý thức thông thường (tâm lý xã hội) và ý thức lý luận (hệ tư tưởng)."
+  },
+  {
+    "id": 197,
+    "question": "[MOCK] Theo C. Mác, cấu trúc xã hội tư bản gồm hai tầng nào?",
+    "options": [
+      "Tầng lãnh đạo và tầng cơ sở",
+      "Cơ sở hạ tầng và kiến trúc thượng tầng",
+      "Nhà nước và thị trường",
+      "Doanh nghiệp và người lao động"
+    ],
+    "answer": 1,
+    "hint": "[Câu hỏi mô phỏng — thay bằng nội dung thật trước khi dùng.]"
+  },
+  {
+    "id": 198,
+    "question": "An ninh quốc gia bao gồm những nội dung nào?",
+    "options": [
+      "An ninh chính trị và an ninh kinh tế",
+      "An ninh chính trị, an ninh kinh tế, an ninh văn hóa tư tưởng, an ninh xã hội",
+      "An ninh quân sự và an ninh biên giới",
+      "An ninh nội bộ và an ninh đối ngoại"
+    ],
+    "answer": 1,
+    "hint": "An ninh quốc gia bao gồm an ninh trên tất cả các lĩnh vực: chính trị, kinh tế, văn hóa tư tưởng, xã hội, quốc phòng, đối ngoại..."
+  },
+  {
+    "id": 199,
+    "question": "Chủ nghĩa Mác – Lênin có hai chức năng cơ bản nào?",
+    "options": [
+      "Thế giới quan và nhận thức luận",
+      "Thế giới quan và phương pháp luận",
+      "Bản thể luận và nhận thức luận",
+      "Thế giới quan và bản thể luận"
+    ],
+    "answer": 1,
+    "hint": "Hai chức năng cơ bản của triết học Mác – Lênin là chức năng thế giới quan và chức năng phương pháp luận."
+  },
+  {
+    "id": 200,
+    "question": "Trong tư tưởng Hồ Chí Minh, đạo đức cách mạng gồm những phẩm chất nào?",
+    "options": [
+      "Trí, dũng, nhân, tín",
+      "Cần, kiệm, liêm, chính, chí công vô tư",
+      "Trung, hiếu, nhân, nghĩa",
+      "Đức, trí, thể, mỹ"
+    ],
+    "answer": 1,
+    "hint": "Hồ Chí Minh coi cần, kiệm, liêm, chính, chí công vô tư là những phẩm chất đạo đức cách mạng cơ bản."
   }
 ]

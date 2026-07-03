@@ -113,14 +113,8 @@ class QuizApp {
         </div>
       </div>
 
-      <div class="progress-rail">
-        <div class="progress-bar">
-          ${this.renderProgressSegments()}
-        </div>
-        <div class="rail-meta">
-          <span class="question-counter">${current} / ${total}</span>
-        </div>
-      </div>
+      ${this.renderProgressBar()}
+      ${this.renderGridModal()}
     `;
   }
 
@@ -149,29 +143,89 @@ class QuizApp {
     `;
   }
 
-  renderProgressSegments() {
-    return this.questions.map((_, i) => {
-      let className = 'progress-segment';
-      // Allow clicking any answered question, any before current, or the furthest reached.
-      // In dev mode, bypass the gate so every question is reachable.
-      const isClickable = i !== this.currentIndex && (this.devMode || this.results[i] || i <= this.furthestIndex);
+  renderProgressBar() {
+    const total = this.questions.length;
+    const current = this.currentIndex + 1;
+    const answeredCount = Object.keys(this.results).length;
+    const fillPercent = total > 0 ? (answeredCount / total) * 100 : 0;
+    const markerPercent = total > 1 ? (this.currentIndex / (total - 1)) * 100 : 0;
 
+    return `
+      <div class="progress-rail" role="button" tabindex="0">
+        <div class="continuous-bar">
+          <div class="bar-fill" style="width: ${fillPercent}%"></div>
+          <div class="bar-marker" style="left: ${markerPercent}%"></div>
+        </div>
+        <div class="rail-meta">
+          <span class="question-counter">Câu ${current} / ${total}</span>
+          <span class="percentage-label">${Math.round(fillPercent)}% hoàn thành</span>
+        </div>
+      </div>
+    `;
+  }
+
+  renderGridModal() {
+    let cells = '';
+    for (let i = 0; i < this.questions.length; i++) {
+      let className = 'grid-cell';
+      const isClickable = i !== this.currentIndex && (this.devMode || this.results[i] || i <= this.furthestIndex);
+      
       if (this.results[i] === 'correct') {
-        className += ' answered-correct';
+        className += ' correct';
       } else if (this.results[i] === 'incorrect') {
-        className += ' answered-incorrect';
+        className += ' incorrect';
       } else if (i === this.currentIndex) {
-        className += ' active';
-      } else if (i < this.currentIndex) {
-        className += ' completed';
+        className += ' current';
       }
 
       if (isClickable) {
         className += ' clickable';
       }
 
-      return `<div class="${className}" data-seg-index="${i}" ${isClickable ? 'role="button" tabindex="0"' : ''}></div>`;
-    }).join('');
+      cells += `<div class="${className}" data-index="${i}" ${isClickable ? 'role="button" tabindex="0"' : ''}>${i + 1}</div>`;
+    }
+
+    return `
+      <div class="grid-modal" id="grid-modal">
+        <div class="grid-backdrop" id="grid-backdrop"></div>
+        <div class="grid-sheet">
+          <div class="grid-header">
+            <span class="grid-title">Chọn câu hỏi</span>
+            <button class="icon-btn btn-close-grid">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+              </svg>
+            </button>
+          </div>
+          <div class="grid-content">
+            <div class="cells-container">${cells}</div>
+          </div>
+          <div class="grid-legend">
+            <span><span class="legend-dot correct"></span> Đúng</span>
+            <span><span class="legend-dot incorrect"></span> Sai</span>
+            <span><span class="legend-dot current"></span> Đang làm</span>
+          </div>
+        </div>
+      </div>
+    `;
+  }
+
+  toggleGridModal(show) {
+    const modal = document.getElementById('grid-modal');
+    if (modal) {
+      if (show) {
+        modal.classList.add('show');
+        // Scroll to current after animation starts
+        setTimeout(() => {
+          const currentCell = modal.querySelector('.grid-cell.current');
+          if (currentCell) {
+            currentCell.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }
+        }, 50);
+      } else {
+        modal.classList.remove('show');
+      }
+    }
   }
 
   renderResultsScreen() {
@@ -263,11 +317,23 @@ class QuizApp {
         return;
       }
 
-      // Progress segment click (go back only)
-      const segment = target.closest('.progress-segment.clickable');
-      if (segment) {
-        const segIndex = parseInt(segment.dataset.segIndex);
-        this.goToQuestion(segIndex);
+      // Progress rail click (open grid modal)
+      if (target.closest('.progress-rail')) {
+        this.toggleGridModal(true);
+        return;
+      }
+
+      // Close grid modal
+      if (target.closest('.btn-close-grid') || target.classList.contains('grid-backdrop')) {
+        this.toggleGridModal(false);
+        return;
+      }
+
+      // Grid cell click
+      const cell = target.closest('.grid-cell.clickable');
+      if (cell) {
+        const idx = parseInt(cell.dataset.index);
+        this.goToQuestion(idx);
         return;
       }
 
