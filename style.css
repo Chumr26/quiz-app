@@ -302,7 +302,7 @@ body {
 .quiz-content {
   flex: 1;
   overflow: hidden;
-  padding: 0 24px;
+  /* Padding removed from here and moved to .quiz-pane so it doesn't clip swipe animations */
   scrollbar-width: thin;
   scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
   position: relative;
@@ -332,6 +332,7 @@ body {
   overflow-x: hidden;
   overflow-y: auto;
   background: var(--bg-surface);
+  padding: 0 24px;
   scrollbar-width: none; /* Firefox */
 }
 
@@ -991,7 +992,7 @@ body {
     padding: 8px 16px max(10px, env(safe-area-inset-bottom));
   }
 
-  .quiz-content {
+  .quiz-pane {
     padding: 0 16px;
   }
 
