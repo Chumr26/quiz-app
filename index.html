@@ -22,9 +22,17 @@
 <body>
 
   <div class="quiz-container" id="quiz-app">
-    <!-- Quiz content is rendered by JavaScript -->
-    <div style="display:flex;align-items:center;justify-content:center;min-height:400px;color:#9aa0a6;">
-      Đang tải câu hỏi...
+    <!-- Skeleton shown until QuizApp.render() replaces it with the picker. -->
+    <div class="quiz-header">
+      <div class="header-top">
+        <span class="quiz-title">Ôn tập Giáo dục Chính trị</span>
+      </div>
+      <p class="part-picker-subtitle">&nbsp;</p>
+    </div>
+    <div class="quiz-content">
+      <div class="part-picker">
+        <div class="skeleton-card" aria-hidden="true"></div>
+      </div>
     </div>
   </div>
 

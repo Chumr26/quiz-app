@@ -3,7 +3,10 @@ import './style.css';
 
 class QuizApp {
   constructor() {
-    this.questions = [];
+    this.allQuestions = [];   // loaded once, full 200-item set
+    this.questions = [];      // 40-item slice for the active part
+    this.partIndex = 0;       // 0..4 once a part is chosen
+    this.isShowingPicker = true;
     this.currentIndex = 0;
     this.furthestIndex = 0; // tracks the furthest question reached
     this.answers = {}; // { questionIndex: selectedOptionIndex }
@@ -31,11 +34,11 @@ class QuizApp {
     try {
       const response = await fetch('./questions.json');
       if (!response.ok) throw new Error('Failed to load questions');
-      this.questions = await response.json();
+      this.allQuestions = await response.json();
       this.quizTitle = `Ôn tập Giáo dục Chính trị`;
     } catch (error) {
       console.error('Error loading questions:', error);
-      this.questions = [{
+      this.allQuestions = [{
         id: 1,
         question: 'Could not load questions. Please check that questions.json exists.',
         options: ['Reload page'],
@@ -49,6 +52,11 @@ class QuizApp {
   render() {
     const container = document.getElementById('quiz-app');
 
+    if (this.isShowingPicker) {
+      container.innerHTML = this.renderPickerScreen();
+      return;
+    }
+
     if (this.isShowingResult) {
       container.innerHTML = this.renderResultsScreen();
       this.animateResultsBar();
@@ -57,6 +65,25 @@ class QuizApp {
 
     container.innerHTML = this.renderQuizScreen();
     this.bindTouchListeners();
+  }
+
+  // ==================== PART PICKER ====================
+  startPart(i) {
+    if (this.autoAdvanceTimer) clearTimeout(this.autoAdvanceTimer);
+    this.partIndex = i;
+    if (i === 'full') {
+      this.questions = [...this.allQuestions];
+    } else {
+      const start = i * 40;
+      this.questions = this.allQuestions.slice(start, start + 40);
+    }
+    this.currentIndex = 0;
+    this.furthestIndex = 0;
+    this.answers = {};
+    this.results = {};
+    this.isShowingResult = false;
+    this.isShowingPicker = false;
+    this.render();
   }
 
   bindTouchListeners() {
@@ -161,6 +188,16 @@ class QuizApp {
         </div>
       </div>
     `;
+  }
+
+  renderProgressSegments() {
+    return this.questions.map((_, i) => {
+      const status = this.results[i];
+      const cls = status === 'correct' ? 'answered-correct'
+        : status === 'incorrect' ? 'answered-incorrect'
+        : '';
+      return `<div class="progress-segment ${cls}"></div>`;
+    }).join('');
   }
 
   renderGridModal() {
@@ -293,9 +330,42 @@ class QuizApp {
 
           <div class="results-actions">
             <button class="btn btn-outline" id="btn-review">Xem lại</button>
-            <button class="btn btn-filled" id="btn-restart">Làm lại</button>
+            <button class="btn btn-outline" id="btn-restart">Làm lại phần này</button>
+            <button class="btn btn-filled" id="btn-back-picker">Chọn phần khác</button>
           </div>
         </div>
+      </div>
+    `;
+  }
+
+  // ==================== PART PICKER SCREEN ====================
+  renderPickerScreen() {
+    const partSize = 40;
+    const total = this.allQuestions.length;
+    const totalParts = Math.ceil(total / partSize);
+    const fullCard = `
+      <button class="part-card part-card-full" data-mode="full" type="button">
+        <span class="part-card-title">Toàn bộ ${total} câu</span>
+      </button>
+    `;
+    const partCards = Array.from({ length: totalParts }, (_, i) => {
+      const start = i * partSize + 1;
+      const end = Math.min((i + 1) * partSize, total);
+      return `
+        <button class="part-card" data-part-index="${i}" type="button">
+          <span class="part-card-title">Câu ${start} – ${end}</span>
+        </button>
+      `;
+    }).join('');
+    return `
+      <div class="quiz-header">
+        <div class="header-top">
+          <span class="quiz-title">Ôn tập Giáo dục Chính trị</span>
+          ${this.devMode ? '<span class="dev-badge">DEV</span>' : ''}
+        </div>
+      </div>
+      <div class="quiz-content">
+        <div class="part-picker">${fullCard}${partCards}</div>
       </div>
     `;
   }
@@ -308,6 +378,13 @@ class QuizApp {
 
     appEl.addEventListener('click', (e) => {
       const target = e.target;
+
+      // Part-picker card (placed first so it wins over option/segment routes)
+      const partCard = target.closest('.part-card');
+      if (partCard) {
+        this.startPart(partCard.dataset.mode === 'full' ? 'full' : parseInt(partCard.dataset.partIndex));
+        return;
+      }
 
       // Option click
       const option = target.closest('.option-item[role="button"]');
@@ -345,6 +422,12 @@ class QuizApp {
       // Review
       if (target.closest('#btn-review')) {
         this.review();
+        return;
+      }
+
+      // Back to picker
+      if (target.closest('#btn-back-picker')) {
+        this.backToPicker();
         return;
       }
     });
@@ -663,6 +746,18 @@ class QuizApp {
     this.answers = {};
     this.results = {};
     this.isShowingResult = false;
+    this.render();
+  }
+
+  backToPicker() {
+    if (this.autoAdvanceTimer) clearTimeout(this.autoAdvanceTimer);
+    this.questions = [];
+    this.currentIndex = 0;
+    this.furthestIndex = 0;
+    this.answers = {};
+    this.results = {};
+    this.isShowingResult = false;
+    this.isShowingPicker = true;
     this.render();
   }
 

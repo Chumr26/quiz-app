@@ -911,6 +911,90 @@ body {
   border-color: var(--accent-blue);
 }
 
+/* ==================== PART PICKER ==================== */
+.part-picker-subtitle {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin: 0 0 16px;
+  padding: 0 24px;
+}
+
+.part-picker {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 24px 24px 28px;
+}
+
+.part-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 18px 18px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-default);
+  background: var(--bg-option);
+  color: var(--text-primary);
+  font-family: var(--font-primary);
+  text-align: center;
+  cursor: pointer;
+  transition: background var(--transition-fast), border-color var(--transition-fast), transform var(--transition-fast);
+  user-select: none;
+}
+
+.part-card:hover {
+  background: var(--bg-option-hover);
+  border-color: var(--border-hover);
+}
+
+.part-card:active {
+  transform: scale(0.99);
+}
+
+.part-card:focus-visible {
+  outline: 2px solid var(--accent-blue);
+  outline-offset: 2px;
+}
+
+.part-card-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.part-card-full {
+  background: var(--bg-option-selected);
+  border-color: var(--accent-blue);
+  color: var(--accent-blue);
+}
+
+.part-card-full:hover {
+  background: var(--btn-outline-hover-bg);
+  border-color: var(--accent-blue-hover);
+}
+
+.part-card-full .part-card-title {
+  color: var(--accent-blue);
+}
+
+/* Skeleton card shown by index.html before the JS-built picker replaces it. */
+.skeleton-card {
+  height: 64px;
+  border-radius: var(--radius-md);
+  background: linear-gradient(90deg,
+    var(--bg-option) 0%,
+    var(--bg-option-hover) 50%,
+    var(--bg-option) 100%);
+  background-size: 200% 100%;
+  animation: skeleton-shimmer 1.4s ease-in-out infinite;
+}
+
+@keyframes skeleton-shimmer {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
 /* ==================== RESPONSIVE ==================== */
 @media (max-width: 640px) {
   body {

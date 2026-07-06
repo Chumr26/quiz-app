@@ -1,8 +1,8 @@
 {
   "id": "/quiz-app/index.html",
-  "name": "Ôn tập Giáo dục Chính trị K26",
+  "name": "Ôn tập Giáo dục Chính trị",
   "short_name": "Quiz GDCT",
-  "description": "Trọn bộ câu hỏi ôn tập Giáo dục Chính trị K26",
+  "description": "Trọn bộ câu hỏi ôn tập Giáo dục Chính trị",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
