@@ -17,7 +17,8 @@ class QuizApp {
     this.audioCtx = null; // lazy-init on first interaction
     this.touch = { active: false, startX: 0, startY: 0, offset: 0, lastDy: 0 };
     this.lastSwipeDirection = null; // 'right'|'left'|null — set by onTouchEnd, consumed by renderQuizScreen
-    this.devMode = new URLSearchParams(location.search).get('dev') === '1';
+    this.devMode = localStorage.getItem('quiz-dev-mode') === '1'
+      || new URLSearchParams(location.search).get('dev') === '1';
 
     this.init();
   }
@@ -51,6 +52,7 @@ class QuizApp {
   // ==================== RENDERING ====================
   render() {
     const container = document.getElementById('quiz-app');
+    container.classList.toggle('dev-mode', this.devMode);
 
     if (this.isShowingPicker) {
       container.innerHTML = this.renderPickerScreen();
@@ -127,13 +129,7 @@ class QuizApp {
     const current = this.currentIndex + 1;
 
     return `
-      <div class="quiz-header">
-        <div class="header-top">
-          <span class="quiz-title" title="${this.quizTitle}">${this.quizTitle}</span>
-          ${this.devMode ? '<span class="dev-badge">DEV</span>' : ''}
-        </div>
-      </div>
-
+      ${this.renderDevToggle()}
       <div class="quiz-content">
         <div class="quiz-stack" id="quiz-stack">
           ${this.renderPane(q, this.currentIndex, 'current', swipeFromLeft)}
@@ -288,13 +284,7 @@ class QuizApp {
     }
 
     return `
-      <div class="quiz-header">
-        <div class="header-top">
-          <span class="quiz-title">${this.quizTitle}</span>
-          ${this.devMode ? '<span class="dev-badge">DEV</span>' : ''}
-        </div>
-      </div>
-
+      ${this.renderDevToggle()}
       <div class="progress-section">
         <div class="progress-bar">
           ${this.renderProgressSegments()}
@@ -337,6 +327,20 @@ class QuizApp {
     `;
   }
 
+  // Floating "DEV ON/OFF" button rendered on all 3 screens. position: fixed
+  // in CSS pins it to the top-right corner regardless of where in the DOM it
+  // lives, so the templates can drop it at the top of the screen.
+  renderDevToggle() {
+    return `
+      <button class="dev-toggle ${this.devMode ? 'on' : 'off'}"
+              title="${this.devMode ? 'Disable dev mode' : 'Enable dev mode'}"
+              aria-label="Toggle dev mode"
+              aria-pressed="${this.devMode}">
+        DEV ${this.devMode ? 'ON' : 'OFF'}
+      </button>
+    `;
+  }
+
   // ==================== PART PICKER SCREEN ====================
   renderPickerScreen() {
     const partSize = 40;
@@ -363,9 +367,9 @@ class QuizApp {
             <span class="picker-eyebrow">Ôn tập</span>
             <h1 class="picker-display">Giáo dục Chính trị</h1>
           </div>
-          ${this.devMode ? '<span class="dev-badge">DEV</span>' : ''}
         </div>
       </div>
+      ${this.renderDevToggle()}
       <div class="quiz-content">
         <div class="part-picker">${fullCard}${partCards}</div>
       </div>
@@ -380,6 +384,14 @@ class QuizApp {
 
     appEl.addEventListener('click', (e) => {
       const target = e.target;
+
+      // Dev mode toggle (position: fixed, top-right) — checked first so a click
+      // on the button never bubbles to .part-card / .option-item / .grid-cell.
+      const devToggle = target.closest('.dev-toggle');
+      if (devToggle) {
+        this.setDevMode(!this.devMode);
+        return;
+      }
 
       // Part-picker card (placed first so it wins over option/segment routes)
       const partCard = target.closest('.part-card');
@@ -544,9 +556,9 @@ class QuizApp {
 
   tryGoForward() {
     const target = this.currentIndex + 1;
-    // At the last question, return false so the bump animation plays instead of
-    // going out of bounds. In dev mode, bypass the furthestIndex gate so swipes
-    // can traverse freely between questions.
+    // At the last question, return false so the gated snap-back fires instead
+    // of going out of bounds. In dev mode, bypass the furthestIndex gate so
+    // swipes can traverse freely between questions.
     if (target >= this.questions.length) return false;
     if (this.devMode || target <= this.furthestIndex) {
       this.goToQuestion(target);
@@ -747,6 +759,23 @@ class QuizApp {
       this.currentIndex--;
       this.render();
     }
+  }
+
+  setDevMode(on) {
+    this.devMode = on;
+    if (on) {
+      localStorage.setItem('quiz-dev-mode', '1');
+    } else {
+      localStorage.removeItem('quiz-dev-mode');
+    }
+
+    // Mirror to URL so refresh/share preserves the toggle.
+    const url = new URL(location.href);
+    if (on) url.searchParams.set('dev', '1');
+    else url.searchParams.delete('dev');
+    history.replaceState(null, '', url);
+
+    this.render();
   }
 
   restart() {
