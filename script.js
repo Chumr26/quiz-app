@@ -32,15 +32,14 @@ class QuizApp {
       const response = await fetch('./questions.json');
       if (!response.ok) throw new Error('Failed to load questions');
       this.questions = await response.json();
-      this.quizTitle = `${this.questions.length} câu ôn tập Giáo dục Chính trị`;
+      this.quizTitle = `Ôn tập Giáo dục Chính trị`;
     } catch (error) {
       console.error('Error loading questions:', error);
       this.questions = [{
         id: 1,
         question: 'Could not load questions. Please check that questions.json exists.',
         options: ['Reload page'],
-        answer: 0,
-        hint: 'Make sure questions.json is in the same folder as index.html.'
+        answer: 0
       }];
       this.quizTitle = 'Quiz App';
     }
