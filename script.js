@@ -83,6 +83,7 @@ class QuizApp {
     this.results = {};
     this.isShowingResult = false;
     this.isShowingPicker = false;
+    history.pushState({ screen: 'quiz' }, '');
     this.render();
   }
 
@@ -174,13 +175,11 @@ class QuizApp {
     const current = this.currentIndex + 1;
     const answeredCount = Object.keys(this.results).length;
     const fillPercent = total > 0 ? (answeredCount / total) * 100 : 0;
-    const markerPercent = total > 1 ? (this.currentIndex / (total - 1)) * 100 : 0;
 
     return `
       <div class="progress-rail" role="button" tabindex="0">
         <div class="continuous-bar">
           <div class="bar-fill" style="width: ${fillPercent}%"></div>
-          <div class="bar-marker" style="left: ${markerPercent}%"></div>
         </div>
         <div class="rail-meta">
           <span class="question-counter">Câu ${current} / ${total}</span>
@@ -358,9 +357,12 @@ class QuizApp {
       `;
     }).join('');
     return `
-      <div class="quiz-header">
-        <div class="header-top">
-          <span class="quiz-title">Ôn tập Giáo dục Chính trị</span>
+      <div class="quiz-header picker-header">
+        <div class="picker-title">
+          <div class="picker-title-text">
+            <span class="picker-eyebrow">Ôn tập</span>
+            <h1 class="picker-display">Giáo dục Chính trị</h1>
+          </div>
           ${this.devMode ? '<span class="dev-badge">DEV</span>' : ''}
         </div>
       </div>
@@ -454,6 +456,12 @@ class QuizApp {
         case '4': case 'd': case 'D':
           this.selectOption(3);
           break;
+      }
+    });
+
+    window.addEventListener('popstate', () => {
+      if (!this.isShowingPicker && !this.isShowingResult) {
+        this.backToPicker();
       }
     });
   }
@@ -608,6 +616,18 @@ class QuizApp {
     }, 200);
   }
 
+  // Shared snap-back: gated-swipe path and under-threshold path both fall
+  // through here so the user sees identical feedback whether the swipe failed
+  // to navigate (edge case) or never qualified (under 50px / diagonal).
+  snapBack(el) {
+    el.style.transition = 'transform 180ms ease-out';
+    el.style.setProperty('--swipe-offset', '0px');
+    setTimeout(() => {
+      el.style.transition = '';
+      el.classList.remove('swiping');
+    }, 200);
+  }
+
   onTouchEnd(e) {
     if (!this.touch.active) return;
     // Another finger is still down — don't navigate, just snap back.
@@ -644,23 +664,13 @@ class QuizApp {
       }
       // Navigation didn't fire (e.g., gated by furthestIndex) — undo the direction.
       this.lastSwipeDirection = null;
-      // At edge → bump feedback then snap back.
-      el.classList.add('swipe-bump');
-      setTimeout(() => {
-        el.classList.remove('swipe-bump');
-        el.style.setProperty('--swipe-offset', '0px');
-        el.classList.remove('swiping');
-      }, 220);
+      // At edge → snap back via shared helper (same as under-threshold).
+      this.snapBack(el);
       return;
     }
 
-    // Diagonal / vertical / under-threshold → smooth snap back.
-    el.style.transition = 'transform 180ms ease-out';
-    el.style.setProperty('--swipe-offset', '0px');
-    setTimeout(() => {
-      el.style.transition = '';
-      el.classList.remove('swiping');
-    }, 200);
+    // Diagonal / vertical / under-threshold → snap back via shared helper.
+    this.snapBack(el);
   }
 
   // ==================== ACTIONS ====================
