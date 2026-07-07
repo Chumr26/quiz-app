@@ -307,6 +307,12 @@ body {
   padding: 2px 0;
 }
 
+@media (max-width: 640px) {
+  .progress-segments {
+    grid-template-columns: repeat(20, 1fr);
+  }
+}
+
 .progress-segments .seg {
   height: 8px;
   border-radius: 2px;

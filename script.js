@@ -326,6 +326,16 @@ class QuizApp {
         className += ' disabled';
       }
       isInteractive = false;
+    } else if (result === 'incorrect') {
+      // Exam mode: locked-in wrong pick. Highlight the pick red, the correct one green.
+      if (index === correctAnswer) {
+        className += ' correct';
+      } else if (index === selectedOption) {
+        className += ' incorrect';
+      } else {
+        className += ' disabled';
+      }
+      isInteractive = false;
     }
 
     return `
@@ -1506,7 +1516,7 @@ class QuizApp {
       return;
     }
 
-    // mode === 'exam': record selection immediately, no auto-advance.
+    // mode === 'exam': record selection immediately, show feedback, then auto-advance.
     if (isCorrect) {
       this.answers[idx] = index;
       this.results[idx] = 'correct';
@@ -1519,11 +1529,36 @@ class QuizApp {
       this.playWrongSound();
     }
 
-    // If this was the last question, jump to results screen.
-    if (Object.keys(this.results).length === this.questions.length) {
-      this.isShowingResult = true;
+    // Clear any leftover feedback classes from a prior pick on this same question.
+    document.querySelectorAll('.options-list .option-item').forEach((el) => {
+      el.classList.remove('correct', 'incorrect', 'disabled');
+    });
+
+    // Patch in place so the user sees their feedback before auto-advance.
+    const picked = document.querySelector(`.option-item[data-index="${index}"]`);
+    if (picked) picked.classList.add(isCorrect ? 'correct' : 'incorrect');
+    const correctIdx = q.answer;
+    if (!isCorrect) {
+      const correctEl = document.querySelector(`.option-item[data-index="${correctIdx}"]`);
+      if (correctEl) correctEl.classList.add('correct');
     }
-    this.render();
+    document.querySelectorAll('.options-list .option-item').forEach((el) => {
+      const i = el.dataset.index;
+      if (i !== String(index) && i !== String(correctIdx)) el.classList.add('disabled');
+    });
+
+    if (this.autoAdvanceTimer) clearTimeout(this.autoAdvanceTimer);
+    this.autoAdvanceTimer = setTimeout(() => {
+      // Last question answered → results screen. Otherwise advance.
+      if (Object.keys(this.results).length === this.questions.length) {
+        this.isShowingResult = true;
+        this.render();
+      } else if (this.currentIndex < this.questions.length - 1) {
+        this.currentIndex++;
+        this.furthestIndex = Math.max(this.furthestIndex, this.currentIndex);
+        this.render();
+      }
+    }, 800);
   }
 
   goToQuestion(index) {
