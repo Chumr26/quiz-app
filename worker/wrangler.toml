@@ -1,0 +1,14 @@
+name = "leaderboard-proxy"
+main = "leaderboard-proxy.ts"
+compatibility_date = "2024-09-23"
+
+# Operator: paste the ID returned by `npx wrangler kv namespace create LEADERBOARD_RL` below.
+[[kv_namespaces]]
+binding = "RL_KV"
+id = "afe9a5132ae2479783c7db1490672c2b"
+
+# Operator: these are CONFIG (not secrets). Use [vars], NOT `wrangler secret put`.
+# Set GH_REPO to "OWNER/REPO" and ALLOWED_ORIGINS to your Pages URL + localhost:5173.
+[vars]
+GH_REPO = "Chumr26/quiz-app"
+ALLOWED_ORIGINS = "https://Chumr26.github.io,http://localhost:5173"

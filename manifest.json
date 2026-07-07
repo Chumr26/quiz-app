@@ -9,6 +9,7 @@
   "background_color": "#131314",
   "theme_color": "#131314",
   "orientation": "any",
+  "workerUrl": "https://leaderboard-proxy.cuchum.workers.dev",
   "icons": [
     {
       "src": "icons/icon-192.png",
