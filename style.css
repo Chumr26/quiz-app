@@ -1086,6 +1086,13 @@ body {
   z-index: 2;
 }
 
+.grid-cell.answered {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.4);
+  color: var(--text-primary);
+  opacity: 1;
+}
+
 .grid-legend {
   display: flex;
   align-items: center;
@@ -1125,6 +1132,11 @@ body {
 .legend-dot.current {
   background: rgba(138, 180, 248, 0.15);
   border-color: var(--accent-blue);
+}
+
+.legend-dot.answered {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.4);
 }
 
 /* ==================== PART PICKER ==================== */
@@ -1707,6 +1719,66 @@ body {
   font-size: 12px;
   opacity: 0.65;
   margin: 6px 0 0;
+}
+
+.settings-subtitle {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 20px 0 10px;
+}
+
+.subject-row {
+  margin-bottom: 12px;
+}
+
+.settings-select {
+  width: 100%;
+  background: var(--surface, rgba(255, 255, 255, 0.04));
+  color: var(--text, #e8e8e8);
+  border: 1px solid var(--border, rgba(255, 255, 255, 0.12));
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 15px;
+  box-sizing: border-box;
+}
+
+.settings-select option {
+  background: var(--bg-surface, #1e1e1e);
+  color: var(--text, #e8e8e8);
+}
+
+.subject-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.settings-btn {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text, #e8e8e8);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.settings-btn:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.settings-btn.btn-danger {
+  color: #ff5252;
+  border-color: rgba(255, 82, 82, 0.3);
+}
+
+.settings-btn.btn-danger:hover:not(:disabled) {
+  background: rgba(255, 82, 82, 0.1);
+}
+
+.settings-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .settings-save {

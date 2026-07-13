@@ -135,6 +135,14 @@ class QuizApp {
     // Leaderboard state (phase 1)
     this.isShowingLeaderboard = false;
     this.isShowingSettings = false;
+    this.subjects = [];
+    try {
+      this.subjects = JSON.parse(localStorage.getItem('quiz-app.subjects')) || [];
+    } catch {
+      this.subjects = [];
+    }
+    this.activeSubjectId = localStorage.getItem('quiz-app.activeSubjectId') || 'default';
+
     this.currentLeaderboardFilter = 'all'; // 'all' | 0..5
     this.leaderboardCache = { ts: 0, data: null }; // 60s in-memory cache; Phase 2 swaps in real fetch
     this.workerUrl = ''; // read from manifest.json.workerUrl at runtime in Phase 2
@@ -157,13 +165,35 @@ class QuizApp {
 
   // ==================== DATA LOADING ====================
   async loadQuestions() {
+    let defaultQuestions = [];
     try {
       const response = await fetch('./questions.json');
-      if (!response.ok) throw new Error('Failed to load questions');
-      this.allQuestions = await response.json();
-      this.quizTitle = `Ôn tập Giáo dục Chính trị`;
+      if (response.ok) {
+        defaultQuestions = await response.json();
+      }
     } catch (error) {
-      console.error('Error loading questions:', error);
+      console.error('Error loading default questions:', error);
+    }
+
+    if (defaultQuestions.length > 0) {
+      const defaultSubj = this.subjects.find(s => s.id === 'default');
+      if (!defaultSubj) {
+        this.subjects.unshift({
+          id: 'default',
+          title: 'Ôn tập Giáo dục Chính trị',
+          questions: defaultQuestions
+        });
+      } else {
+        defaultSubj.questions = defaultQuestions;
+      }
+    }
+
+    const activeSubj = this.subjects.find(s => s.id === this.activeSubjectId) || this.subjects[0];
+    if (activeSubj) {
+      this.allQuestions = activeSubj.questions;
+      this.quizTitle = activeSubj.title;
+      this.activeSubjectId = activeSubj.id;
+    } else {
       this.allQuestions = [{
         id: 1,
         question: 'Could not load questions. Please check that questions.json exists.',
@@ -318,7 +348,15 @@ class QuizApp {
     let className = 'option-item';
     let isInteractive = true;
 
-    if (result === 'correct') {
+    const isExamActive = this.mode === 'exam' && !this.isShowingResult;
+
+    if (isExamActive) {
+      if (result !== undefined && selectedOption !== undefined) {
+        if (index === selectedOption) {
+          className += ' selected';
+        }
+      }
+    } else if (result === 'correct') {
       // Correct answer found — show it, disable everything else
       if (index === correctAnswer) {
         className += ' correct';
@@ -327,7 +365,7 @@ class QuizApp {
       }
       isInteractive = false;
     } else if (result === 'incorrect') {
-      // Exam mode: locked-in wrong pick. Highlight the pick red, the correct one green.
+      // Practice mode / Exam results: highlight the pick red, the correct one green.
       if (index === correctAnswer) {
         className += ' correct';
       } else if (index === selectedOption) {
@@ -393,7 +431,11 @@ class QuizApp {
       let className = 'grid-cell';
       const isClickable = i !== this.currentIndex && (this.devMode || this.results[i] || i <= this.furthestIndex);
       
-      if (this.results[i] === 'correct') {
+      const isExamActive = this.mode === 'exam' && !this.isShowingResult;
+      
+      if (isExamActive && this.results[i]) {
+        className += ' answered';
+      } else if (this.results[i] === 'correct') {
         className += ' correct';
       } else if (this.results[i] === 'incorrect') {
         className += ' incorrect';
@@ -424,9 +466,14 @@ class QuizApp {
             <div class="cells-container">${cells}</div>
           </div>
           <div class="grid-legend">
-            <span><span class="legend-dot correct"></span> Đúng</span>
-            <span><span class="legend-dot incorrect"></span> Sai</span>
-            <span><span class="legend-dot current"></span> Đang làm</span>
+            ${this.mode === 'exam' && !this.isShowingResult ? `
+              <span><span class="legend-dot answered"></span> Đã làm</span>
+              <span><span class="legend-dot current"></span> Đang làm</span>
+            ` : `
+              <span><span class="legend-dot correct"></span> Đúng</span>
+              <span><span class="legend-dot incorrect"></span> Sai</span>
+              <span><span class="legend-dot current"></span> Đang làm</span>
+            `}
           </div>
         </div>
       </div>
@@ -852,6 +899,10 @@ class QuizApp {
   }
 
   renderSettingsScreen() {
+    const subjectOptions = this.subjects.map(s => 
+      `<option value="${s.id}" ${s.id === this.activeSubjectId ? 'selected' : ''}>${s.title}</option>`
+    ).join('');
+    
     return `
       <div class="settings-screen">
         <div class="settings-header">
@@ -865,6 +916,21 @@ class QuizApp {
                  value="${this.leaderboardName.replace(/"/g, '&quot;')}" />
           <p class="settings-hint">Tối đa 24 ký tự. Khi trống, nút gửi bảng xếp hạng sẽ bị ẩn.</p>
         </div>
+        
+        <div class="settings-section">
+          <h3 class="settings-subtitle">Quản lý môn học</h3>
+          <div class="subject-row">
+            <select class="settings-select" id="settings-subject">
+              ${subjectOptions}
+            </select>
+          </div>
+          <div class="subject-actions">
+            <button class="settings-btn" type="button" data-action="subject-import">Nhập từ file (JSON)</button>
+            <input type="file" id="subject-file-input" accept=".json" style="display: none;" />
+            <button class="settings-btn btn-danger" type="button" data-action="subject-delete" ${this.activeSubjectId === 'default' ? 'disabled' : ''}>Xóa môn này</button>
+          </div>
+        </div>
+
         <button class="settings-save" type="button" data-action="settings-save">Lưu</button>
         <div class="settings-status" data-role="settings-status"></div>
       </div>
@@ -909,7 +975,6 @@ class QuizApp {
       <div class="quiz-header picker-header">
         <div class="picker-title">
           <div class="picker-title-text">
-            <span class="picker-eyebrow">Chế độ</span>
             <h1 class="picker-display">Giáo dục Chính trị</h1>
           </div>
         </div>
@@ -1013,8 +1078,59 @@ class QuizApp {
   bindEvents() {
     const appEl = document.getElementById('quiz-app');
 
+    appEl.addEventListener('change', (e) => {
+      const target = e.target;
+      if (target.id === 'settings-subject') {
+        this.activeSubjectId = target.value;
+        localStorage.setItem('quiz-app.activeSubjectId', this.activeSubjectId);
+        this.loadQuestions().then(() => this.render());
+      } else if (target.id === 'subject-file-input') {
+        const file = target.files[0];
+        if (!file) return;
+        const reader = new FileReader();
+        reader.onload = async (event) => {
+          try {
+            const data = JSON.parse(event.target.result);
+            if (!Array.isArray(data) || data.length === 0 || !data[0].question || !data[0].options) {
+              throw new Error('Định dạng JSON không hợp lệ (cần mảng các câu hỏi).');
+            }
+            const id = 'subj-' + Date.now();
+            const title = file.name.replace('.json', '');
+            this.subjects.push({ id, title, questions: data });
+            localStorage.setItem('quiz-app.subjects', JSON.stringify(this.subjects.filter(s => s.id !== 'default')));
+            this.activeSubjectId = id;
+            localStorage.setItem('quiz-app.activeSubjectId', id);
+            await this.loadQuestions();
+            this.render();
+          } catch (err) {
+            alert('File không hợp lệ hoặc lỗi: ' + err.message);
+          }
+        };
+        reader.readAsText(file);
+        target.value = ''; // Reset input
+      }
+    });
+
     appEl.addEventListener('click', (e) => {
       const target = e.target;
+
+      if (target.closest('[data-action="subject-import"]')) {
+        const input = document.getElementById('subject-file-input');
+        if (input) input.click();
+        return;
+      }
+
+      if (target.closest('[data-action="subject-delete"]')) {
+        if (this.activeSubjectId === 'default') return;
+        if (confirm('Bạn có chắc muốn xóa môn này?')) {
+          this.subjects = this.subjects.filter(s => s.id !== this.activeSubjectId);
+          localStorage.setItem('quiz-app.subjects', JSON.stringify(this.subjects.filter(s => s.id !== 'default')));
+          this.activeSubjectId = 'default';
+          localStorage.setItem('quiz-app.activeSubjectId', 'default');
+          this.loadQuestions().then(() => this.render());
+        }
+        return;
+      }
 
       // Dev mode toggle (position: fixed, top-right) — checked first so a click
       // on the button never bubbles to .part-card / .option-item / .grid-cell.
@@ -1521,31 +1637,21 @@ class QuizApp {
       this.answers[idx] = index;
       this.results[idx] = 'correct';
       this.vibrate(50);
-      this.playCorrectSound();
     } else {
       this.answers[idx] = index;
       this.results[idx] = 'incorrect';
-      this.vibrate([40, 30, 40]);
-      this.playWrongSound();
+      this.vibrate(50);
     }
 
     // Clear any leftover feedback classes from a prior pick on this same question.
     document.querySelectorAll('.options-list .option-item').forEach((el) => {
-      el.classList.remove('correct', 'incorrect', 'disabled');
+      el.classList.remove('correct', 'incorrect', 'disabled', 'selected');
     });
 
-    // Patch in place so the user sees their feedback before auto-advance.
+    // Patch in place so the user sees their selection before auto-advance.
     const picked = document.querySelector(`.option-item[data-index="${index}"]`);
-    if (picked) picked.classList.add(isCorrect ? 'correct' : 'incorrect');
-    const correctIdx = q.answer;
-    if (!isCorrect) {
-      const correctEl = document.querySelector(`.option-item[data-index="${correctIdx}"]`);
-      if (correctEl) correctEl.classList.add('correct');
-    }
-    document.querySelectorAll('.options-list .option-item').forEach((el) => {
-      const i = el.dataset.index;
-      if (i !== String(index) && i !== String(correctIdx)) el.classList.add('disabled');
-    });
+    if (picked) picked.classList.add('selected');
+    
 
     if (this.autoAdvanceTimer) clearTimeout(this.autoAdvanceTimer);
     this.autoAdvanceTimer = setTimeout(() => {
