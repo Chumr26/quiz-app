@@ -660,17 +660,19 @@ class QuizApp {
             <button class="btn btn-outline" id="btn-restart">Thử lại</button>
             <button class="btn btn-filled" id="btn-back-picker">Về danh sách phần</button>
           </div>
-          ${this.leaderboardName ? `
-            <button class="btn btn-outline btn-leaderboard-submit" type="button"
-                    data-action="leaderboard-submit"
-                    ${this.workerUrl ? '' : 'disabled title="Bảng xếp hạng chưa cấu hình"'}
-                    data-mode="${this.mode}" data-part="${this.partIndex}">
-              🏆 Gửi điểm lên bảng xếp hạng
-            </button>
-            <div class="leaderboard-submit-status" data-role="leaderboard-submit-status"></div>
-          ` : `
-            <p class="leaderboard-hint">Đặt tên trong <button type="button" class="link-btn" data-action="open-settings">Cài đặt</button> để gửi điểm.</p>
-          `}
+          <div style="display: none;">
+            ${this.leaderboardName ? `
+              <button class="btn btn-outline btn-leaderboard-submit" type="button"
+                      data-action="leaderboard-submit"
+                      ${this.workerUrl ? '' : 'disabled title="Bảng xếp hạng chưa cấu hình"'}
+                      data-mode="${this.mode}" data-part="${this.partIndex}">
+                🏆 Gửi điểm lên bảng xếp hạng
+              </button>
+              <div class="leaderboard-submit-status" data-role="leaderboard-submit-status"></div>
+            ` : `
+              <p class="leaderboard-hint">Đặt tên trong <button type="button" class="link-btn" data-action="open-settings">Cài đặt</button> để gửi điểm.</p>
+            `}
+          </div>
         </div>
       </div>
     `;
@@ -1000,14 +1002,7 @@ class QuizApp {
   // in CSS pins it to the top-right corner regardless of where in the DOM it
   // lives, so the templates can drop it at the top of the screen.
   renderDevToggle() {
-    return `
-      <button class="dev-toggle ${this.devMode ? 'on' : 'off'}"
-              title="${this.devMode ? 'Disable dev mode' : 'Enable dev mode'}"
-              aria-label="Toggle dev mode"
-              aria-pressed="${this.devMode}">
-        DEV ${this.devMode ? 'ON' : 'OFF'}
-      </button>
-    `;
+    return ``;
   }
 
   // ==================== PART PICKER SCREEN ====================
@@ -1058,7 +1053,7 @@ class QuizApp {
         </div>
         <div class="part-picker">${fullCard}${partCards}</div>
         ${this.renderHistorySection()}
-        <div class="picker-nav">
+        <div class="picker-nav" style="display: none;">
           <button class="picker-nav-btn" type="button" data-action="open-leaderboard">
             🏆 Bảng xếp hạng
           </button>
