@@ -204,6 +204,33 @@ class QuizApp {
     }
   }
 
+  saveProgress() {
+    if (this.isShowingPicker || this.isShowingSettings || this.isShowingLeaderboard) return;
+    const key = `quiz-app.progress.${this.activeSubjectId}.${this.mode}.${this.partIndex}`;
+    const data = {
+      currentIndex: this.currentIndex,
+      furthestIndex: this.furthestIndex,
+      answers: this.answers,
+      results: this.results,
+      firstTryCorrect: this.firstTryCorrect,
+      retryCount: this.retryCount,
+      examStartTime: this.examStartTime,
+      examEndTime: this.examEndTime,
+      examFinished: this.examFinished,
+      isShowingResult: this.isShowingResult
+    };
+    try {
+      localStorage.setItem(key, JSON.stringify(data));
+    } catch (e) {}
+  }
+
+  clearProgress() {
+    const key = `quiz-app.progress.${this.activeSubjectId}.${this.mode}.${this.partIndex}`;
+    try {
+      localStorage.removeItem(key);
+    } catch (e) {}
+  }
+
   // ==================== RENDERING ====================
   render() {
     const container = document.getElementById('quiz-app');
@@ -265,17 +292,38 @@ class QuizApp {
       this.questions = this.allQuestions.slice(start, start + 40);
     }
     this.mode = mode;
-    this.currentIndex = 0;
-    this.furthestIndex = 0;
-    this.answers = {};
-    this.results = {};
-    this.firstTryCorrect = {};
-    this.retryCount = {};
-    this.examStartTime = mode === 'exam' ? Date.now() : 0;
-    this.examEndTime = 0;
-    this.examFinished = false;
-    this.isShowingResult = false;
     this.isShowingPicker = false;
+
+    const key = `quiz-app.progress.${this.activeSubjectId}.${this.mode}.${this.partIndex}`;
+    let saved = null;
+    try {
+      saved = JSON.parse(localStorage.getItem(key));
+    } catch (e) {}
+
+    if (saved) {
+      this.currentIndex = saved.currentIndex || 0;
+      this.furthestIndex = saved.furthestIndex || 0;
+      this.answers = saved.answers || {};
+      this.results = saved.results || {};
+      this.firstTryCorrect = saved.firstTryCorrect || {};
+      this.retryCount = saved.retryCount || {};
+      this.examStartTime = saved.examStartTime || (mode === 'exam' ? Date.now() : 0);
+      this.examEndTime = saved.examEndTime || 0;
+      this.examFinished = saved.examFinished || false;
+      this.isShowingResult = saved.isShowingResult || false;
+    } else {
+      this.currentIndex = 0;
+      this.furthestIndex = 0;
+      this.answers = {};
+      this.results = {};
+      this.firstTryCorrect = {};
+      this.retryCount = {};
+      this.examStartTime = mode === 'exam' ? Date.now() : 0;
+      this.examEndTime = 0;
+      this.examFinished = false;
+      this.isShowingResult = false;
+    }
+
     history.pushState({ screen: 'quiz' }, '');
     this.render();
     if (mode === 'exam') {
@@ -436,7 +484,11 @@ class QuizApp {
       if (isExamActive && this.results[i]) {
         className += ' answered';
       } else if (this.results[i] === 'correct') {
-        className += ' correct';
+        if (this.mode === 'practice') {
+          className += this.firstTryCorrect[i] ? ' correct-first-try' : ' correct-retry';
+        } else {
+          className += ' correct';
+        }
       } else if (this.results[i] === 'incorrect') {
         className += ' incorrect';
       } else if (i === this.currentIndex) {
@@ -469,11 +521,18 @@ class QuizApp {
             ${this.mode === 'exam' && !this.isShowingResult ? `
               <span><span class="legend-dot answered"></span> Đã làm</span>
               <span><span class="legend-dot current"></span> Đang làm</span>
+            ` : this.mode === 'practice' ? `
+              <span><span class="legend-dot correct-first-try"></span> Lần 1 đúng</span>
+              <span><span class="legend-dot correct-retry"></span> Làm lại đúng</span>
+              <span><span class="legend-dot current"></span> Đang làm</span>
             ` : `
               <span><span class="legend-dot correct"></span> Đúng</span>
               <span><span class="legend-dot incorrect"></span> Sai</span>
               <span><span class="legend-dot current"></span> Đang làm</span>
             `}
+          </div>
+          <div class="grid-actions" style="padding: 12px 24px; text-align: center; border-top: 1px solid rgba(255, 255, 255, 0.06);">
+            <button class="settings-btn btn-danger" type="button" data-action="reset-progress">Làm lại từ đầu</button>
           </div>
         </div>
       </div>
@@ -1132,6 +1191,14 @@ class QuizApp {
         return;
       }
 
+      if (target.closest('[data-action="reset-progress"]')) {
+        if (confirm('Bạn có chắc muốn làm lại từ đầu? Mọi kết quả hiện tại sẽ bị xóa.')) {
+          this.clearProgress();
+          this.startPart(this.partIndex, this.mode);
+        }
+        return;
+      }
+
       // Dev mode toggle (position: fixed, top-right) — checked first so a click
       // on the button never bubbles to .part-card / .option-item / .grid-cell.
       const devToggle = target.closest('.dev-toggle');
@@ -1607,20 +1674,25 @@ class QuizApp {
           if (el.dataset.index !== String(index)) el.classList.add('disabled');
         });
 
+        this.saveProgress();
+
         if (this.autoAdvanceTimer) clearTimeout(this.autoAdvanceTimer);
         this.autoAdvanceTimer = setTimeout(() => {
           if (this.currentIndex < this.questions.length - 1) {
             this.currentIndex++;
             this.furthestIndex = Math.max(this.furthestIndex, this.currentIndex);
+            this.saveProgress();
             this.render();
           } else if (Object.keys(this.results).length === this.questions.length) {
             this.isShowingResult = true;
+            this.saveProgress();
             this.render();
           }
         }, 600);
       } else {
         // Practice wrong: count retry, do NOT set results, no auto-advance.
         this.retryCount[idx] = (this.retryCount[idx] || 0) + 1;
+        this.saveProgress();
         const wrongEl = document.querySelector(`.option-item[data-index="${index}"]`);
         if (wrongEl) {
           this.vibrate([40, 30, 40]);
@@ -1652,16 +1724,19 @@ class QuizApp {
     const picked = document.querySelector(`.option-item[data-index="${index}"]`);
     if (picked) picked.classList.add('selected');
     
+    this.saveProgress();
 
     if (this.autoAdvanceTimer) clearTimeout(this.autoAdvanceTimer);
     this.autoAdvanceTimer = setTimeout(() => {
       // Last question answered → results screen. Otherwise advance.
       if (Object.keys(this.results).length === this.questions.length) {
         this.isShowingResult = true;
+        this.saveProgress();
         this.render();
       } else if (this.currentIndex < this.questions.length - 1) {
         this.currentIndex++;
         this.furthestIndex = Math.max(this.furthestIndex, this.currentIndex);
+        this.saveProgress();
         this.render();
       }
     }, 800);
@@ -1680,6 +1755,7 @@ class QuizApp {
 
     this.currentIndex = index;
     this.isShowingResult = false;
+    this.saveProgress();
     this.render();
   }
 
@@ -1689,6 +1765,7 @@ class QuizApp {
       if (this.autoAdvanceTimer) clearTimeout(this.autoAdvanceTimer);
 
       this.currentIndex--;
+      this.saveProgress();
       this.render();
     }
   }
